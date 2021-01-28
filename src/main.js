@@ -1,7 +1,10 @@
-import '~/assets/sass/styles.scss'
+// vuetify
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
+
+// custom scss
+import '~/assets/sass/styles.scss'
 
 export default function(Vue, { appOptions, head }) {
     head.link.push({
