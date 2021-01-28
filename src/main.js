@@ -1,8 +1,9 @@
+import '~/assets/sass/styles.scss'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
-export default function (Vue, { appOptions, head }) {
+export default function(Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
         href:

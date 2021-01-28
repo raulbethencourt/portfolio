@@ -57,12 +57,3 @@ query {
     }
 }
 </static-query>
-
-<style>
-.v-application--wrap {
-    flex-direction: row;
-}
-.v-main {
-    flex: 1 0;
-}
-</style>
