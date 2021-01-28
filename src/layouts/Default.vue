@@ -1,12 +1,16 @@
 <template>
     <v-app>
-        <v-navigation-drawer permanent>
+        <v-navigation-drawer 
+        width="240px" 
+        class="lime darken-4"
+        dark
+        permanent>
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title">
-                        Application
+                        Raul Bethencourt (G)
                     </v-list-item-title>
-                    <v-list-item-subtitle> subtext </v-list-item-subtitle>
+                    <v-list-item-subtitle> Web Developer </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
 
@@ -35,9 +39,10 @@ export default {
     data() {
         return {
             items: [
-                { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-                { title: 'Photos', icon: 'mdi-image' },
-                { title: 'About', icon: 'mdi-help-box' }
+                { title: 'About', icon: 'mdi-account-box-outline' },
+                { title: 'Projects', icon: 'mdi-apps' },
+                { title: 'Education', icon: 'mdi-school-outline' },
+                { title: 'Contact', icon: 'mdi-message-text-outline' }
             ],
             right: null
         }
@@ -47,9 +52,9 @@ export default {
 
 <static-query>
 query {
-  metadata {
-    siteName
-  }
+    metadata {
+        siteName
+    }
 }
 </static-query>
 
@@ -57,6 +62,7 @@ query {
 .v-application--wrap {
     flex-direction: row;
 }
-
-/* TODO 1:19:10 */
+.v-main {
+    flex: 1 0;
+}
 </style>
