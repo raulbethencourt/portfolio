@@ -1,7 +1,18 @@
 <template>
     <Layout>
-        <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-        <g-image alt="Example image" src="~/assets/images/profile.png" width="135" />
+
+        <section>
+
+            <g-image alt="Example image" src="~/assets/images/profile.png" width="400" />
+            <div
+              :class="`text-${classes[0][0]}`"
+              class="transition-swing"
+              v-text="text"
+            >
+            </div>
+
+        </section>
+
     </Layout>
 </template>
 
@@ -9,7 +20,13 @@
 export default {
     metaInfo: {
         title: 'Raul Bethencourt (G)'
-    }
+    },
+    data: () => ({
+      model: null,
+      classes: [
+        ['h1', "Hi, I'm Raul"],
+        ],
+    }),
 }
 </script>
 
