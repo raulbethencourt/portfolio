@@ -1,18 +1,26 @@
 <template>
     <Layout>
-
         <section>
-
-            <g-image alt="Example image" src="~/assets/images/profile.png" width="400" />
-            <div
-              :class="`text-${classes[0][0]}`"
-              class="transition-swing"
-              v-text="text"
-            >
-            </div>
-
+            <v-container>
+                <v-row no-gutters>
+                    <v-col sm="6">
+                        <g-image
+                            alt="Example image"
+                            src="~/assets/images/profile.png"
+                            width="400"
+                        />
+                    </v-col>
+                    <v-col sm="6">
+                        <div class="d-flex flex-column">
+                            <h1 class="text-h1 font-weight-bold">
+                                Hi, I'm Raul.
+                            </h1>
+                            <p class="text-h4">I'm a Web developer...</p>
+                        </div>
+                    </v-col>
+                </v-row>
+            </v-container>
         </section>
-
     </Layout>
 </template>
 
@@ -20,13 +28,6 @@
 export default {
     metaInfo: {
         title: 'Raul Bethencourt (G)'
-    },
-    data: () => ({
-      model: null,
-      classes: [
-        ['h1', "Hi, I'm Raul"],
-        ],
-    }),
+    }
 }
 </script>
-
