@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gitmoji-cli": "^3.2.18",
+    "gridsome": "^0.7.0",
+    "vuetify": "^2.4.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-plugin-gridsome": "^1.6.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1",
+    "style-resources-loader": "^1.4.1",
+    "vue-eslint-parser": "^7.4.1",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
