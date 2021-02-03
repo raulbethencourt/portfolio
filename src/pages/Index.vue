@@ -25,6 +25,7 @@
 </template>
 
 <script>
+// TODO import components 1:59
 export default {
     metaInfo: {
         title: 'Raul Bethencourt (G)'
