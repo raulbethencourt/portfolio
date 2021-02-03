@@ -1,10 +1,6 @@
 <template>
     <v-app>
-        <v-navigation-drawer 
-        width="240px" 
-        class="lime darken-4"
-        dark
-        permanent>
+        <v-navigation-drawer width="240px">
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title">
