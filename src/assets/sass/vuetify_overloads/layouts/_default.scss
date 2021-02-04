@@ -1,5 +1,12 @@
 .v-application--wrap {
     flex-direction: row;
+
+    .nav-bar {
+        background-color: $dark;
+
+        .nav-bar__title {
+        }
+    }
 }
 
 .v-main {
