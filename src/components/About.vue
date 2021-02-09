@@ -4,7 +4,7 @@
             dark
             src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
         >
-            <v-row align="center" justify="around">
+            <v-row class="d-flex justify-space-around align-center">
                 <v-col cols="6" class="d-flex justify-center">
                     <g-image
                         class="rounded-circle portrait"

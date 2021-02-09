@@ -42,7 +42,7 @@ export default {
         return {
             items: [
                 { title: 'About', icon: 'mdi-account-box-outline' },
-                { title: 'Projects', icon: 'mdi-apps' },
+                { title: 'Projects', icon: 'mdi-console' },
                 { title: 'Education', icon: 'mdi-school-outline' },
                 { title: 'Contact', icon: 'mdi-message-text-outline' }
             ],

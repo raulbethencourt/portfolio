@@ -3,13 +3,11 @@
 
     .nav-bar {
         background-color: $dark;
-
-        .nav-bar__title {
-        }
+    }
+    
+    .v-main {
+        flex: 1 0;
     }
 }
 
-.v-main {
-    flex: 1 0;
-}
 

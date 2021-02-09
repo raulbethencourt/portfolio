@@ -13,7 +13,7 @@
                         :key="project.image"
                         v-model="isActive"
                         :options="{
-                            threshold: 0.5
+                            threshold: 1
                         }"
                         min-height="200"
                         transition="fade-transition"
@@ -66,7 +66,8 @@
 <script>
 export default {
     data: () => ({
-        show: false
+        show: false,
+        
     }),
     data() {
         return {
@@ -112,7 +113,8 @@ export default {
                     description: 'Here I have another Symfony project',
                     image: 'cauldron'
                 }
-            ]
+            ],
+            isActive: false
         }
     },
     methods: {
