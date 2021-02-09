@@ -25,3 +25,13 @@ This is the project you get when you run `gridsome create new-project`.
 * white: #f2f5f7;
 * blue: #89bdd6;
 * dark: #29586c;
+
+## Fix babel bug
+
+```
+rm -rf dist node_modules package-lock.json
+export VUE_CLI_BABEL_TRANSPILE_MODULES=true
+npm install
+gridsome build
+# ... works
+```
