@@ -1,7 +1,14 @@
 .v-application--wrap {
     flex-direction: row;
+
+    .nav-bar {
+        background-color: $dark;
+    }
+    
+    .v-main {
+        flex: 1 0;
+        margin-left: 240px;
+    }
 }
 
-.v-main {
-    flex: 1 0;
-}
+

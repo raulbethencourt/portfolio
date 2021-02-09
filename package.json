@@ -9,7 +9,8 @@
   "dependencies": {
     "gitmoji-cli": "^3.2.18",
     "gridsome": "^0.7.0",
-    "vuetify": "^2.4.3"
+    "vuetify": "^2.4.3",
+    "vuetify-loader": "^1.7.2"
   },
   "devDependencies": {
     "eslint": "^7.18.0",
