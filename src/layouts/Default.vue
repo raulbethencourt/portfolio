@@ -4,6 +4,8 @@
             width="240px"
             class="nav-bar"
             dark
+            permanent
+            fixed
         >
             <v-list-item>
                 <v-list-item-content class="nav-bar__title">
@@ -19,7 +21,7 @@
             <v-divider></v-divider>
 
             <v-list dense nav>
-                <v-list-item v-for="item in items" :key="item.title" link>
+                <v-list-item v-for="item in items" :key="item.title" link :to="`#${item.title.toLowerCase()}`">
                     <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-item-icon>

@@ -1,38 +1,52 @@
 <template>
-    <section>
+    <section class="education-section" id="education">
         <v-container>
             <v-row>
                 <h2 class="text-h2"></h2>
             </v-row>
 
             <v-row>
-                <v-timeline>
+                <v-timeline reverse>
                     <v-timeline-item
-                        v-for="(year, i) in years"
+                        v-for="(diplome, i) in diplomes"
                         :key="i"
-                        :color="year.color"
+                        :color="diplome.color"
                         small
                     >
                         <template v-slot:opposite>
                             <span
-                                :class="`headline font-weight-bold ${year.color}--text`"
-                                v-text="year.year"
+                                :class="`headline font-weight-bold ${diplome.color}--text`"
+                                v-text="diplome.year"
                             ></span>
                         </template>
-                        <div class="py-4">
-                            <h2
-                                :class="`headline font-weight-light mb-4 ${year.color}--text`"
-                            >
-                                Lorem ipsum
-                            </h2>
-                            <div>
-                                Lorem ipsum dolor sit amet, no nam oblique
-                                veritus. Commune scaevola imperdiet nec ut, sed
-                                euismod convenire principes at. Est et nobis
-                                iisque percipit, an vim zril disputando
-                                voluptatibus, vix an salutandi sententiae.
-                            </div>
-                        </div>
+                        <v-card>
+                            <v-card-title class="purple lighten-2">
+                                <h2
+                                    class="display-1 white--text font-weight-light"
+                                >
+                                    {{ diplome.title }}
+                                </h2>
+                            </v-card-title>
+                            <v-container>
+                                <v-row>
+                                    <v-col cols="12" md="10">
+                                        Lorem ipsum dolor sit amet, no nam
+                                        oblique veritus. Commune scaevola
+                                        imperdiet nec ut, sed euismod convenire
+                                        principes at. Est et nobis iisque
+                                        percipit.
+                                    </v-col>
+                                    <v-col
+                                        class="hidden-sm-and-down text-right"
+                                        md="2"
+                                    >
+                                        <v-icon size="64">
+                                            mdi-calendar-text
+                                        </v-icon>
+                                    </v-col>
+                                </v-row>
+                            </v-container>
+                        </v-card>
                     </v-timeline-item>
                 </v-timeline>
             </v-row>
@@ -50,34 +64,38 @@ export default {
             title: 'education',
             diplomes: [
                 {
-                    title: '',
-                    ecole: '',
-                    ville: '',
-                    description: ''
+                    title: 'Titre professionnel Développeur Web et Web mobile',
+                    school: 'Elan formation',
+                    city: 'strasbourg',
+                    description: '',
+                    year: '2020',
+                    color: 'purple'
+                },
+                {
+                    title: 'Titre professionnel Développeur Web et Web mobile',
+                    school: 'Elan formation',
+                    city: 'strasbourg',
+                    description: '',
+                    year: '2020',
+                    color: 'purple'
+                },
+                {
+                    title: 'Titre professionnel Développeur Web et Web mobile',
+                    school: 'Elan formation',
+                    city: 'strasbourg',
+                    description: '',
+                    year: '2020',
+                    color: 'purple'
+                },
+                {
+                    title: 'Titre professionnel Développeur Web et Web mobile',
+                    school: 'Elan formation',
+                    city: 'strasbourg',
+                    description: '',
+                    year: '2020',
+                    color: 'purple'
                 }
             ],
-            years: [
-                {
-                    color: 'cyan',
-                    year: '1960'
-                },
-                {
-                    color: 'green',
-                    year: '1970'
-                },
-                {
-                    color: 'pink',
-                    year: '1980'
-                },
-                {
-                    color: 'amber',
-                    year: '1990'
-                },
-                {
-                    color: 'orange',
-                    year: '2000'
-                }
-            ]
         }
     }
 }
