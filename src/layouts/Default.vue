@@ -1,6 +1,10 @@
 <template>
     <v-app>
-        <v-navigation-drawer width="240px" class="nav-bar" dark>
+        <v-navigation-drawer
+            width="240px"
+            class="nav-bar"
+            dark
+        >
             <v-list-item>
                 <v-list-item-content class="nav-bar__title">
                     <v-list-item-title class="text-h6">

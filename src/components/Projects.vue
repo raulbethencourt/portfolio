@@ -6,57 +6,58 @@
                     <h1>Projects</h1>
                 </v-col>
             </v-row>
-            <v-row>
-                <v-col>
-                    <v-card
+            <v-row class="justify-space-around mb-8 mt-10">
+                <template>
+                    <v-lazy
                         v-for="project in projects"
-                        :key="project.title"
-                        class="mx-auto"
-                        max-width="344"
+                        :key="project.image"
+                        v-model="isActive"
+                        :options="{
+                            threshold: 0.5
+                        }"
+                        min-height="200"
+                        transition="fade-transition"
+                        class="mb-15"
+                        max-width="40%"
                     >
-                        <v-img
-                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                            height="200px"
-                        ></v-img>
+                        <v-card>
+                            <v-img
+                                height="300px"
+                                :src="
+                                    require(`@/assets/images/${project.image}.png`)
+                                "
+                                position="top center"
+                            >
+                            </v-img>
 
-                        <v-card-title> Top western road trips </v-card-title>
+                            <v-card-title
+                                class="text-uppercase font-weight-bold text-h4"
+                            >
+                                {{ project.title }}
+                            </v-card-title>
 
-                        <v-card-subtitle>
-                            1,000 miles of wonder
-                        </v-card-subtitle>
+                            <v-card-text class="text--primary">
+                                {{ truncate(project.description) }}
+                            </v-card-text>
 
-                        <v-card-actions>
-                            <v-btn color="orange lighten-2" text>
-                                Explore
-                            </v-btn>
+                            <v-card-actions>
+                                <v-btn
+                                    color="orange lighten-2"
+                                    text
+                                    :href="project.url"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                >
+                                    Explore
+                                </v-btn>
 
-                            <v-spacer></v-spacer>
-
-                            <v-btn icon @click="show = !show">
-                                <v-icon>{{
-                                    show ? 'mdi-chevron-up' : 'mdi-chevron-down'
-                                }}</v-icon>
-                            </v-btn>
-                        </v-card-actions>
-
-                        <v-expand-transition>
-                            <div v-show="show">
-                                <v-divider></v-divider>
-
-                                <v-card-text>
-                                    I'm a thing. But, like most politicians, he
-                                    promised more than he could deliver. You
-                                    won't have time for sleeping, soldier, not
-                                    with all the bed making you'll be doing.
-                                    Then we'll go with that data file! Hey, you
-                                    add a one and two zeros to that or we walk!
-                                    You're going to do his laundry? I've got to
-                                    find a way to escape.
-                                </v-card-text>
-                            </div>
-                        </v-expand-transition>
-                    </v-card>
-                </v-col>
+                                <v-btn text>
+                                    <v-icon large>mdi-github</v-icon>
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-lazy>
+                </template>
             </v-row>
         </v-container>
     </section>
@@ -72,12 +73,54 @@ export default {
             projects: [
                 {
                     title: 'Plataforme',
-                    github: //TODO 2:14
+                    url: 'https://github.com/raulbethencourt/plataform',
+                    description:
+                        'A pedagogique platafomr, handcraft made for Contact et propotion.',
+                    image: 'plateforme'
                 },
                 {
-                    title: 'Dynamo-Location'
+                    title: 'Dynamo-Location',
+                    url: 'https://www.dynamo-location.fr',
+                    description:
+                        'In this project I actuallised the front side.',
+                    image: 'dynamo'
+                },
+                {
+                    title: 'Agence inmobilier',
+                    url: 'https://github.com/raulbethencourt/inmogence',
+                    description:
+                        'Grafikart tutorial to learn how to use Symfony. Its realstates agency project.',
+                    image: 'inmoagence'
+                },
+                {
+                    title: 'todo-list',
+                    url: 'https://raulbethencourt.github.io/todo_list/',
+                    description:
+                        'This is a vanilla Javascript project, to creates a ToDo App.',
+                    image: 'todo'
+                },
+                {
+                    title: 'morpion',
+                    url: 'https://raulbethencourt.github.io/morpion/',
+                    description:
+                        'This is a JQuery project to do a Morpion Game',
+                    image: 'morpion'
+                },
+                {
+                    title: 'cauldron-overflow',
+                    url: 'https://github.com/raulbethencourt/cauldron_overflow',
+                    description: 'Here I have another Symfony project',
+                    image: 'cauldron'
                 }
             ]
+        }
+    },
+    methods: {
+        truncate(str) {
+            if (str.length > 80) {
+                return str.slice(0, 79) + '...'
+            }
+            return str
         }
     }
 }

@@ -1,0 +1,15 @@
+.full-screen {
+    min-height: 100vh;
+}
+
+.v-parallax {
+    display: flex;
+    align-items: center;
+    min-height: inherit;
+
+    .v-parallax__image-container {
+        .v-parallax__image{
+            top: -500px;
+        }
+    }
+}
