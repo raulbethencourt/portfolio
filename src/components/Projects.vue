@@ -3,13 +3,13 @@
         <v-container>
             <v-row>
                 <v-col>
-                    <h1>Projects</h1>
+                    <h1>{{ $static.texts.edges[0].node.projects.title }}</h1>
                 </v-col>
             </v-row>
             <v-row class="justify-space-around mb-8 mt-10">
                 <template>
                     <v-lazy
-                        v-for="project in projects"
+                        v-for="project in $static.texts.edges[0].node.projects.works"
                         :key="project.image"
                         v-model="isActive"
                         :options="{
@@ -24,7 +24,9 @@
                             <v-img
                                 height="300px"
                                 :src="
-                                    require(`@/assets/images/${project.image}.png`)
+                                    require(`@/assets/images/${
+                                        project.image
+                                    }.png`)
                                 "
                                 position="top center"
                             >
@@ -67,56 +69,8 @@
 export default {
     data: () => ({
         show: false,
-        
+        isActive: false
     }),
-    data() {
-        return {
-            projects: [
-                {
-                    title: 'Plataforme',
-                    url: 'https://github.com/raulbethencourt/plataform',
-                    description:
-                        'A pedagogique platafomr, handcraft made for Contact et propotion.',
-                    image: 'plateforme'
-                },
-                {
-                    title: 'Dynamo-Location',
-                    url: 'https://www.dynamo-location.fr',
-                    description:
-                        'In this project I actuallised the front side.',
-                    image: 'dynamo'
-                },
-                {
-                    title: 'Agence inmobilier',
-                    url: 'https://github.com/raulbethencourt/inmogence',
-                    description:
-                        'Grafikart tutorial to learn how to use Symfony. Its realstates agency project.',
-                    image: 'inmoagence'
-                },
-                {
-                    title: 'todo-list',
-                    url: 'https://raulbethencourt.github.io/todo_list/',
-                    description:
-                        'This is a vanilla Javascript project, to creates a ToDo App.',
-                    image: 'todo'
-                },
-                {
-                    title: 'morpion',
-                    url: 'https://raulbethencourt.github.io/morpion/',
-                    description:
-                        'This is a JQuery project to do a Morpion Game',
-                    image: 'morpion'
-                },
-                {
-                    title: 'cauldron-overflow',
-                    url: 'https://github.com/raulbethencourt/cauldron_overflow',
-                    description: 'Here I have another Symfony project',
-                    image: 'cauldron'
-                }
-            ],
-            isActive: false
-        }
-    },
     methods: {
         truncate(str) {
             if (str.length > 80) {
@@ -127,3 +81,23 @@ export default {
     }
 }
 </script>
+
+<static-query>
+query {
+    texts: allEnglishTexts {
+        edges {
+            node {
+                projects {
+                    title
+                    works {
+                        title
+                        url
+                        description
+                        image
+                    }
+                }
+            }
+        }
+    }
+}
+</static-query>

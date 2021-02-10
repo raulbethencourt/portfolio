@@ -1,0 +1,12 @@
+{
+    "sidebar": {
+        "title": "raul bethencourt (G)",
+        "subtitle": "web developer",
+        "items": [
+            { "title": "About", "icon": "mdi-account-box-outline" },
+            { "title": "Projects", "icon": "mdi-console" },
+            { "title": "Education", "icon": "mdi-school-outline" },
+            { "title": "Contact", "icon": "mdi-message-text-outline" }
+        ]
+    }
+}

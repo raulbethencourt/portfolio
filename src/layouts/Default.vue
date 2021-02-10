@@ -1,19 +1,12 @@
 <template>
     <v-app>
-        <v-navigation-drawer
-            width="240px"
-            class="nav-bar"
-            dark
-            permanent
-            fixed
-        >
+        <v-navigation-drawer width="240px" class="nav-bar" dark permanent fixed>
             <v-list-item>
                 <v-list-item-content class="nav-bar__title">
-                    <v-list-item-title class="text-h6">
-                        Raul Bethencourt (G)
-                    </v-list-item-title>
-                    <v-list-item-subtitle class="subtitle-1">
-                        Web Developer
+                    <v-list-item-title class="text-h6">{{
+                        $static.texts.edges[0].node.sidebar.title
+                    }}</v-list-item-title>
+                    <v-list-item-subtitle class="subtitle-1">{{$static.texts.edges[0].node.sidebar.subtitle}}
                     </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
@@ -21,7 +14,12 @@
             <v-divider></v-divider>
 
             <v-list dense nav>
-                <v-list-item v-for="item in items" :key="item.title" link :to="`#${item.title.toLowerCase()}`">
+                <v-list-item
+                    v-for="item in $static.texts.edges[0].node.sidebar.items"
+                    :key="item.title"
+                    link
+                    :to="`#${item.title.toLowerCase()}`"
+                >
                     <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-item-icon>
@@ -42,12 +40,6 @@
 export default {
     data() {
         return {
-            items: [
-                { title: 'About', icon: 'mdi-account-box-outline' },
-                { title: 'Projects', icon: 'mdi-console' },
-                { title: 'Education', icon: 'mdi-school-outline' },
-                { title: 'Contact', icon: 'mdi-message-text-outline' }
-            ],
             right: null
         }
     }
@@ -56,8 +48,19 @@ export default {
 
 <static-query>
 query {
-    metadata {
-        siteName
+    texts: allEnglishTexts {
+        edges {
+            node {
+                sidebar {
+                    title
+                    subtitle
+                    items {
+                        title
+                        icon
+                    }
+                }
+            }
+        }
     }
 }
 </static-query>

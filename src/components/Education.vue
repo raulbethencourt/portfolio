@@ -15,7 +15,11 @@
                     >
                         <template v-slot:opposite>
                             <span
-                                :class="`headline font-weight-bold ${diplome.color}--text`"
+                                :class="
+                                    `headline font-weight-bold ${
+                                        diplome.color
+                                    }--text`
+                                "
                                 v-text="diplome.year"
                             ></span>
                         </template>
@@ -58,45 +62,28 @@
 export default {
     data: () => ({
         show: false
-    }),
-    data() {
-        return {
-            title: 'education',
-            diplomes: [
-                {
-                    title: 'Titre professionnel Développeur Web et Web mobile',
-                    school: 'Elan formation',
-                    city: 'strasbourg',
-                    description: '',
-                    year: '2020',
-                    color: 'purple'
-                },
-                {
-                    title: 'Titre professionnel Développeur Web et Web mobile',
-                    school: 'Elan formation',
-                    city: 'strasbourg',
-                    description: '',
-                    year: '2020',
-                    color: 'purple'
-                },
-                {
-                    title: 'Titre professionnel Développeur Web et Web mobile',
-                    school: 'Elan formation',
-                    city: 'strasbourg',
-                    description: '',
-                    year: '2020',
-                    color: 'purple'
-                },
-                {
-                    title: 'Titre professionnel Développeur Web et Web mobile',
-                    school: 'Elan formation',
-                    city: 'strasbourg',
-                    description: '',
-                    year: '2020',
-                    color: 'purple'
+    })
+}
+</script>
+
+<static-query>
+query {
+    texts: allEnglishTexts {
+        edges {
+            node {
+                education {
+                    title
+                    diplomes {
+                        title
+                        school
+                        city
+                        description
+                        year
+                        color
+                    }
                 }
-            ],
+            }
         }
     }
 }
-</script>
+</static-query>

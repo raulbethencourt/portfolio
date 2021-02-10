@@ -19,12 +19,19 @@ This is the project you get when you run `gridsome create new-project`.
 
 ## Design
 
-### Colors pallete
+### Colors pallete dark
 * green: #6d6e41;
 * sand: #a9845c;
 * white: #f2f5f7;
 * blue: #89bdd6;
 * dark: #29586c;
+
+### Colors pallete light
+*
+*
+*
+*
+*
 
 ## Fix babel bug
 
