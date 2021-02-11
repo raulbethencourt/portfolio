@@ -137,5 +137,10 @@
                 "color": "purple"
             }
         ]
-    }
+    },
+    "testimonys": [
+        "author": i18n
+
+    ]
+    
 }
