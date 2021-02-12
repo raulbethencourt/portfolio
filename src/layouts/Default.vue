@@ -6,7 +6,8 @@
                     <v-list-item-title class="text-h6">{{
                         $static.texts.edges[0].node.sidebar.title
                     }}</v-list-item-title>
-                    <v-list-item-subtitle class="subtitle-1">{{$static.texts.edges[0].node.sidebar.subtitle}}
+                    <v-list-item-subtitle class="subtitle-1"
+                        >{{ $static.texts.edges[0].node.sidebar.subtitle }}
                     </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
@@ -29,6 +30,11 @@
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
+            <template v-slot:append>
+                <div class="pa-5">
+                    <LocaleSwitcher />
+                </div>
+            </template>
         </v-navigation-drawer>
         <v-main>
             <slot />
@@ -37,18 +43,22 @@
 </template>
 
 <script>
+import LocaleSwitcher from '~/components/LocaleSwitcher.vue'
 export default {
     data() {
         return {
             right: null
         }
+    },
+    components: {
+        LocaleSwitcher
     }
 }
 </script>
 
 <static-query>
-query {
-    texts: allEnglishTexts {
+query($locale: String) {
+    texts: allDocuments(lang: $locale) {
         edges {
             node {
                 sidebar {

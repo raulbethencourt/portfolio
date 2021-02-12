@@ -3757,7 +3757,7 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz#21fdc8fbcd9c795cc0321f0563702095751511a8"
   integrity sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
 
-eslint@^7.18.0:
+eslint@^7.19.0:
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.19.0.tgz#6719621b196b5fad72e43387981314e5d0dc3f41"
   integrity sha512-CGlMgJY56JZ9ZSYhJuhow61lMPPjUzWmChFya71Z/jilVos7mR/jPgaEfVGgMBY5DshbKdG8Ezb8FDCHcoMEMg==
@@ -4895,6 +4895,11 @@ graphql@^14.4.2:
   integrity sha512-l0xWZpoPKpppFzMfvVyFmp9vLN7w/ZZJPefUicMCepfJeQ8sMcztloGYY9DfjVPo6tIUDzU5Hw3MUbIjj9AVVA==
   dependencies:
     iterall "^1.2.2"
+
+gridsome-helper-json@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gridsome-helper-json/-/gridsome-helper-json-1.0.3.tgz#ad18ca2e15e1d9f1a6524507fc3b87b99bcee9d2"
+  integrity sha512-CgXlq3PGpBRj8RMnLSYs46Hvl5q9Up9kwuMAcYlvS4sNgH5j4Ao7hbY+HI62PaYTeIdffiJidLEIeZVCmZCrFA==
 
 gridsome-plugin-i18n@^1.6.0:
   version "1.6.0"

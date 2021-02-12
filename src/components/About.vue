@@ -14,9 +14,13 @@
                     />
                 </v-col>
                 <v-col cols="5">
-                    <h1 class="text-h1 font-weight-bold mb-5">{{ $static.texts.edges[0].node.about.title }}</h1>
+                    <h1>Current locale: {{ $i18n.locale }}</h1>
+                    <h1 class="text-h1 font-weight-bold mb-5">
+                        {{ $static.texts.edges[0].node.about.title }}
+                    </h1>
                     <h6
-                        v-for="text in $static.texts.edges[0].node.about.description"
+                        v-for="text in $static.texts.edges[0].node.about
+                            .description"
                         v-bind:key="text"
                         class="text-h6"
                     >
@@ -37,8 +41,8 @@ export default {
 </script>
 
 <static-query>
-query {
-    texts: allEnglishTexts {
+query($locale: String) {
+    texts: allDocuments(lang: $locale) {
         edges {
             node {
                 about {
@@ -50,4 +54,3 @@ query {
     }
 }
 </static-query>
-

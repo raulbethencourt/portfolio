@@ -26,4 +26,9 @@ export default function(Vue, { appOptions, head }) {
 
     // Set default layout as a global component
     Vue.component('Layout', DefaultLayout)
+
+    // Set locals with I18n
+    appOptions.i18n.setLocaleMessage('es', require('./locales/es.json'))
+    appOptions.i18n.setLocaleMessage('fr', require('./locales/fr.json'))
+    appOptions.i18n.setLocaleMessage('en', require('./locales/en.json'))
 }

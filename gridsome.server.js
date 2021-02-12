@@ -1,6 +1,6 @@
 const nodeExternals = require('webpack-node-externals')
 
-module.exports = function(api) {
+module.exports = function (api) {
     api.chainWebpack((config, { isServer }) => {
         // vuetify
         if (isServer) {
@@ -12,25 +12,17 @@ module.exports = function(api) {
         }
     })
 
-    api.loadSource(async actions => {
-        const English = require('./src/data/en.json')
-        const French = require('./src/data/fr.json')
-        const Spanish = require('./src/data/sp.json')
+    api.loadSource(async (actions) => {
+        const English = require('./src/locales/en.json')
+        const French = require('./src/locales/fr.json')
+        const Spanish = require('./src/locales/es.json')
 
-        const EnglishTexts = actions.addCollection({
-            typeName: 'EnglishTexts'
+        const _allDocuments = actions.addCollection({
+            typeName: '_allDocuments'
         })
 
-        const FrenchTexts = actions.addCollection({
-            typeName: 'FrenchTexts'
-        })
-
-        const SpanishTexts = actions.addCollection({
-            typeName: 'SpanishTexts'
-        })
-        
-        EnglishTexts.addNode(English)
-        FrenchTexts.addNode(French)
-        SpanishTexts.addNode(Spanish)
+        _allDocuments.addNode(English)
+        _allDocuments.addNode(French)
+        _allDocuments.addNode(Spanish)
     })
 }

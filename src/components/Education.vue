@@ -8,7 +8,7 @@
             <v-row>
                 <v-timeline reverse>
                     <v-timeline-item
-                        v-for="(diplome, i) in diplomes"
+                        v-for="(diplome, i) in $static.texts.edges[0].node.education.diplomes"
                         :key="i"
                         :color="diplome.color"
                         small
@@ -67,8 +67,8 @@ export default {
 </script>
 
 <static-query>
-query {
-    texts: allEnglishTexts {
+query($locale: String) {
+    texts: allDocuments(lang: $locale) {
         edges {
             node {
                 education {

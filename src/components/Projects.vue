@@ -83,8 +83,8 @@ export default {
 </script>
 
 <static-query>
-query {
-    texts: allEnglishTexts {
+query($locale: String) {
+    texts: allDocuments {
         edges {
             node {
                 projects {

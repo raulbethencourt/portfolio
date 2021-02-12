@@ -10,12 +10,13 @@
     "@playlyfe/gql": "^2.6.2",
     "gitmoji-cli": "^3.2.18",
     "gridsome": "^0.7.0",
+    "gridsome-helper-json": "^1.0.3",
     "gridsome-plugin-i18n": "^1.6.0",
     "vuetify": "^2.4.3",
     "vuetify-loader": "^1.7.2"
   },
   "devDependencies": {
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-plugin-gridsome": "^1.6.1",
     "eslint-plugin-vue": "^7.5.0",
     "node-sass": "^5.0.0",
