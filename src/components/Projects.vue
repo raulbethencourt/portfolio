@@ -3,13 +3,13 @@
         <v-container>
             <v-row>
                 <v-col>
-                    <h1>{{ $static.texts.edges[0].node.projects.title }}</h1>
+                    <h1>{{ $page.texts.edges[0].node.projects.title }}</h1>
                 </v-col>
             </v-row>
             <v-row class="justify-space-around mb-8 mt-10">
                 <template>
                     <v-lazy
-                        v-for="project in $static.texts.edges[0].node.projects.works"
+                        v-for="project in $page.texts.edges[0].node.projects.works"
                         :key="project.image"
                         v-model="isActive"
                         :options="{
@@ -81,23 +81,3 @@ export default {
     }
 }
 </script>
-
-<static-query>
-query($locale: String) {
-    texts: allDocuments {
-        edges {
-            node {
-                projects {
-                    title
-                    works {
-                        title
-                        url
-                        description
-                        image
-                    }
-                }
-            }
-        }
-    }
-}
-</static-query>

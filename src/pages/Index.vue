@@ -25,3 +25,58 @@ export default {
     }
 }
 </script>
+
+<page-query>
+query sidebar($locale: String) {
+    texts: allDocuments(filter: { lang: { eq: $locale } }) {
+        edges {
+            node {
+                sidebar {
+                    title
+                    subtitle
+                    items {
+                        title
+                        icon
+                    }
+                }
+                about {
+                    title
+                    description
+                }
+                projects {
+                    title
+                    works {
+                        title
+                        url
+                        description
+                        image
+                    }
+                }
+                experience {
+                    title
+                    jobs {
+                        title
+                        company
+                        city
+                        description
+                        description
+                        year
+                        color
+                    }
+                }
+                education {
+                    title
+                    diplomes {
+                        title
+                        school
+                        city
+                        description
+                        year
+                        color
+                    }
+                }
+            }
+        }
+    }
+}
+</page-query>

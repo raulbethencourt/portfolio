@@ -1,143 +1,142 @@
 {
-    "fr": {
-        "sidebar": {
-            "title": "raul bethencourt (G)",
-            "subtitle": "développeur web",
-            "items": [
-                { "title": "profile", "icon": "mdi-account-box-outline" },
-                { "title": "travails", "icon": "mdi-console" },
-                { "title": "formation", "icon": "mdi-school-outline" },
-                { "title": "Contact", "icon": "mdi-message-text-outline" }
-            ]
-        },
-        "about": {
-            "title": "Bonjour, Je suis Raul.",
-            "description": [
-                "My goal today is to establish my expertise as a web developer for an agency. For this, I have three pillars which are:",
-                "A technical pillar. I did my training at Élan and I am a specialist in PHP and the Symfony framework.",
-                "My second pillar is curiosity for technical innovations. What drives me right now is the use of JavaScript and in particular the Vue.js framework.",
-                "And finally a relational pillar. He seems to me to be a nice colleague and I enjoy sharing my resources and helping others."
-            ]
-        },
-        "projects": {
-            "title": "projects",
-            "works": [
-                {
-                    "title": "Plataforme",
-                    "url": "https://github.com/raulbethencourt/plataform",
-                    "description": "A pedagogique platafomr, handcraft made for Contact et propotion.",
-                    "image": "plateforme"
-                },
-                {
-                    "title": "Dynamo-Location",
-                    "url": "https://dynamo-location.fr/fr/",
-                    "description": "In this project I actuallised the front side.",
-                    "image": "dynamo"
-                },
-                {
-                    "title": "Agence inmobilier",
-                    "url": "https://github.com/raulbethencourt/inmogence",
-                    "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
-                    "image": "inmoagence"
-                },
-                {
-                    "title": "todo-list",
-                    "url": "https://raulbethencourt.github.io/todo_list/",
-                    "description": "This is a vanilla Javascript project, to creates a ToDo App.",
-                    "image": "todo"
-                },
-                {
-                    "title": "morpion",
-                    "url": "https://raulbethencourt.github.io/morpion/",
-                    "description": "This is a JQuery project to do a Morpion Game",
-                    "image": "morpion"
-                },
-                {
-                    "title": "cauldron-overflow",
-                    "url": "https://github.com/raulbethencourt/cauldron_overflow",
-                    "description": "Here I have another Symfony project",
-                    "image": "cauldron"
-                }
-            ]
-        },
-        "experience": {
-            "title": "education",
-            "jobs": [
-                {
-                    "title": "Développeur web front-end",
-                    "company": "Agence My Client is Rich",
-                    "city": "strasbourg",
-                    "description": [
-                        "Dans le cadre de cette poste,  j'ai été amené à réaliser les missions suivantes:",
-                        "Développement de sites sur Wordpress",
-                        "Maintenance de sites internet",
-                        "Intégration HTML/CSS"
-                    ],
-                    "year": "2020",
-                    "color": "purple"
-                },
-                {
-                    "title": "Assistant charpentier",
-                    "company": "constructions renovations immobiliers cri gasser fils",
-                    "city": "strasbourg",
-                    "description": "Fabrication et pose de charpentes. Pose de bardages.",
-                    "year": "2017",
-                    "color": "purple"
-                },
-                {
-                    "title": "Menuisier",
-                    "company": "\"Arguion\", \"La Moderna\" et \"Ehalt\"",
-                    "city": "Tenerife, Espagne et Strasbourg, Françe",
-                    "description": "Plusieurs postes comme menuisier (atelier et pose) dans différentes entreprises.",
-                    "year": "2017",
-                    "color": "purple"
-                },
-                {
-                    "title": "Encadreur qualité",
-                    "company": "artedrago sl",
-                    "city": "La Orotava, Canaries, Espagne",
-                    "description": "Participation à toutes les étapes du processus de fabrication dans l'élaboration des cadres.",
-                    "year": "2012",
-                    "color": "purple"
-                }
-            ]
-        },
-        "education": {
-            "title": "education",
-            "diplomes": [
-                {
-                    "title": "Titre professionnel Développeur Web et Web mobile",
-                    "school": "Elan formation",
-                    "city": "strasbourg",
-                    "description": "Le développeur web et web mobile développe ou fait évoluer des applications orientées web, ou web mobile ou les deux à la fois, en respectant les normes et standards reconnus par la profession et en suivant l'état de l'art de la sécurité informatique à toutes les étapes. Ces applications sont destinées à des internautes ou des salariés d'entreprise.",
-                    "year": "2020",
-                    "color": "purple"
-                },
-                {
-                    "title": "CAP charpentier bois",
-                    "school": "Les Compagnons du Devoir",
-                    "city": "nancy",
-                    "description": "Le titulaire de ce diplôme travaille au sein d'entreprises des secteurs de la charpente et de la construction bois. Il intervient en construction, réhabilitation, rénovation ou restauration de bâtiments et de locaux. Selon les chantiers, il travaille de façon autonome ou en équipe.",
-                    "year": "2019",
-                    "color": "cyan"
-                },
-                {
-                    "title": "Bac pro Technicien menuisier-agenceur",
-                    "school": "Instituto Geneto",
-                    "city": "la laguna - Spain",
-                    "description": "Le titulaire de ce bac pro intervient en atelier et sur chantier pour fabriquer et mettre en oeuvre différents ouvrages de menuiserie extérieure et intérieure ainsi que des aménagements de pièces, bureaux, cuisines, salles de bains, magasins, salles d'exposition, lieux de réunion...",
-                    "year": "2012",
-                    "color": "purple"
-                },
-                {
-                    "title": "Maîtrise Beaux-arts / arts plastiques",
-                    "school": "Universidad de La Laguna",
-                    "city": "la laguna - Spain",
-                    "description": "El Grado en Bellas Artes por la Universidad de La Laguna tiene como objetivo formar artistas y profesionales de las artes visuales con competencias en los procesos de creación y/o experimentación interdisciplinar en todos los ámbitos laborales que abarcan las artes visuales en el siglo XXI.",
-                    "year": "2007",
-                    "color": "purple"
-                }
-            ]
-        }
+    "lang": "fr",
+    "sidebar": {
+        "title": "raul bethencourt (G)",
+        "subtitle": "développeur web",
+        "items": [
+            { "title": "profile", "icon": "mdi-account-box-outline" },
+            { "title": "travails", "icon": "mdi-console" },
+            { "title": "formation", "icon": "mdi-school-outline" },
+            { "title": "Contact", "icon": "mdi-message-text-outline" }
+        ]
+    },
+    "about": {
+        "title": "Bonjour, Je suis Raul.",
+        "description": [
+            "My goal today is to establish my expertise as a web developer for an agency. For this, I have three pillars which are:",
+            "A technical pillar. I did my training at Élan and I am a specialist in PHP and the Symfony framework.",
+            "My second pillar is curiosity for technical innovations. What drives me right now is the use of JavaScript and in particular the Vue.js framework.",
+            "And finally a relational pillar. He seems to me to be a nice colleague and I enjoy sharing my resources and helping others."
+        ]
+    },
+    "projects": {
+        "title": "projects",
+        "works": [
+            {
+                "title": "Plataforme",
+                "url": "https://github.com/raulbethencourt/plataform",
+                "description": "A pedagogique platafomr, handcraft made for Contact et propotion.",
+                "image": "plateforme"
+            },
+            {
+                "title": "Dynamo-Location",
+                "url": "https://dynamo-location.fr/fr/",
+                "description": "In this project I actuallised the front side.",
+                "image": "dynamo"
+            },
+            {
+                "title": "Agence inmobilier",
+                "url": "https://github.com/raulbethencourt/inmogence",
+                "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
+                "image": "inmoagence"
+            },
+            {
+                "title": "todo-list",
+                "url": "https://raulbethencourt.github.io/todo_list/",
+                "description": "This is a vanilla Javascript project, to creates a ToDo App.",
+                "image": "todo"
+            },
+            {
+                "title": "morpion",
+                "url": "https://raulbethencourt.github.io/morpion/",
+                "description": "This is a JQuery project to do a Morpion Game",
+                "image": "morpion"
+            },
+            {
+                "title": "cauldron-overflow",
+                "url": "https://github.com/raulbethencourt/cauldron_overflow",
+                "description": "Here I have another Symfony project",
+                "image": "cauldron"
+            }
+        ]
+    },
+    "experience": {
+        "title": "education",
+        "jobs": [
+            {
+                "title": "Développeur web front-end",
+                "company": "Agence My Client is Rich",
+                "city": "strasbourg",
+                "description": [
+                    "Dans le cadre de cette poste,  j'ai été amené à réaliser les missions suivantes:",
+                    "Développement de sites sur Wordpress",
+                    "Maintenance de sites internet",
+                    "Intégration HTML/CSS"
+                ],
+                "year": "2020",
+                "color": "purple"
+            },
+            {
+                "title": "Assistant charpentier",
+                "company": "constructions renovations immobiliers cri gasser fils",
+                "city": "strasbourg",
+                "description": "Fabrication et pose de charpentes. Pose de bardages.",
+                "year": "2017",
+                "color": "purple"
+            },
+            {
+                "title": "Menuisier",
+                "company": "\"Arguion\", \"La Moderna\" et \"Ehalt\"",
+                "city": "Tenerife, Espagne et Strasbourg, Françe",
+                "description": "Plusieurs postes comme menuisier (atelier et pose) dans différentes entreprises.",
+                "year": "2017",
+                "color": "purple"
+            },
+            {
+                "title": "Encadreur qualité",
+                "company": "artedrago sl",
+                "city": "La Orotava, Canaries, Espagne",
+                "description": "Participation à toutes les étapes du processus de fabrication dans l'élaboration des cadres.",
+                "year": "2012",
+                "color": "purple"
+            }
+        ]
+    },
+    "education": {
+        "title": "education",
+        "diplomes": [
+            {
+                "title": "Titre professionnel Développeur Web et Web mobile",
+                "school": "Elan formation",
+                "city": "strasbourg",
+                "description": "Le développeur web et web mobile développe ou fait évoluer des applications orientées web, ou web mobile ou les deux à la fois, en respectant les normes et standards reconnus par la profession et en suivant l'état de l'art de la sécurité informatique à toutes les étapes. Ces applications sont destinées à des internautes ou des salariés d'entreprise.",
+                "year": "2020",
+                "color": "purple"
+            },
+            {
+                "title": "CAP charpentier bois",
+                "school": "Les Compagnons du Devoir",
+                "city": "nancy",
+                "description": "Le titulaire de ce diplôme travaille au sein d'entreprises des secteurs de la charpente et de la construction bois. Il intervient en construction, réhabilitation, rénovation ou restauration de bâtiments et de locaux. Selon les chantiers, il travaille de façon autonome ou en équipe.",
+                "year": "2019",
+                "color": "cyan"
+            },
+            {
+                "title": "Bac pro Technicien menuisier-agenceur",
+                "school": "Instituto Geneto",
+                "city": "la laguna - Spain",
+                "description": "Le titulaire de ce bac pro intervient en atelier et sur chantier pour fabriquer et mettre en oeuvre différents ouvrages de menuiserie extérieure et intérieure ainsi que des aménagements de pièces, bureaux, cuisines, salles de bains, magasins, salles d'exposition, lieux de réunion...",
+                "year": "2012",
+                "color": "purple"
+            },
+            {
+                "title": "Maîtrise Beaux-arts / arts plastiques",
+                "school": "Universidad de La Laguna",
+                "city": "la laguna - Spain",
+                "description": "El Grado en Bellas Artes por la Universidad de La Laguna tiene como objetivo formar artistas y profesionales de las artes visuales con competencias en los procesos de creación y/o experimentación interdisciplinar en todos los ámbitos laborales que abarcan las artes visuales en el siglo XXI.",
+                "year": "2007",
+                "color": "purple"
+            }
+        ]
     }
 }

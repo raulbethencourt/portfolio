@@ -17,12 +17,12 @@ module.exports = function (api) {
         const French = require('./src/locales/fr.json')
         const Spanish = require('./src/locales/es.json')
 
-        const _allDocuments = actions.addCollection({
-            typeName: '_allDocuments'
+        const documents = actions.addCollection({
+            typeName: 'documents'
         })
 
-        _allDocuments.addNode(English)
-        _allDocuments.addNode(French)
-        _allDocuments.addNode(Spanish)
+        documents.addNode(English)
+        documents.addNode(French)
+        documents.addNode(Spanish)
     })
 }
