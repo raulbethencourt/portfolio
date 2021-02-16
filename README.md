@@ -19,9 +19,26 @@ This is the project you get when you run `gridsome create new-project`.
 
 ## Design
 
-### Colors pallete
+### Colors pallete dark
 * green: #6d6e41;
 * sand: #a9845c;
 * white: #f2f5f7;
 * blue: #89bdd6;
 * dark: #29586c;
+
+### Colors pallete light
+*
+*
+*
+*
+*
+
+## Fix babel bug
+
+```
+rm -rf dist node_modules package-lock.json
+export VUE_CLI_BABEL_TRANSPILE_MODULES=true
+npm install
+gridsome build
+# ... works
+```

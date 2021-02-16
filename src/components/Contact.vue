@@ -1,5 +1,8 @@
 <template>
-    <section class="contact-section" id="contact">
+    <section
+        class="contact-section"
+        :id="`${$page.texts.edges[0].node.sidebar.items[3].title.toLowerCase()}`"
+    >
         <v-container>
             <v-row>
                 <v-col>
