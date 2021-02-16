@@ -1,5 +1,8 @@
 <template>
-    <section class="projects-section" id="projects">
+    <section
+        class="projects-section"
+        :id="`${$page.texts.edges[0].node.sidebar.items[1].title.toLowerCase()}`"
+    >
         <v-container>
             <v-row>
                 <v-col>
@@ -9,7 +12,8 @@
             <v-row class="justify-space-around mb-8 mt-10">
                 <template>
                     <v-lazy
-                        v-for="project in $page.texts.edges[0].node.projects.works"
+                        v-for="project in $page.texts.edges[0].node.projects
+                            .works"
                         :key="project.image"
                         v-model="isActive"
                         :options="{
@@ -24,9 +28,7 @@
                             <v-img
                                 height="300px"
                                 :src="
-                                    require(`@/assets/images/${
-                                        project.image
-                                    }.png`)
+                                    require(`@/assets/images/${project.image}.png`)
                                 "
                                 position="top center"
                             >

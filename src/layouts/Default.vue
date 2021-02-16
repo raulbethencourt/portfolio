@@ -21,9 +21,6 @@
                     link
                     :to="`#${item.title.toLowerCase()}`"
                 >
-                    <g-link :to="$tp('#' + item.title.toLowerCase())">{{
-                        item.title
-                    }}</g-link>
                     <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-item-icon>

@@ -1,7 +1,7 @@
 <template>
     <section
         class="full-screen"
-        id="`{{$page.texts.edges[0].node.sidebar.items[0].title}}`"
+        :id="`${$page.texts.edges[0].node.sidebar.items[0].title.toLowerCase()}`"
     >
         <v-parallax
             dark
