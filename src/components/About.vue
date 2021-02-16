@@ -1,5 +1,8 @@
 <template>
-    <section class="full-screen" id="about">
+    <section
+        class="full-screen"
+        id="`{{$page.texts.edges[0].node.sidebar.items[0].title}}`"
+    >
         <v-parallax
             dark
             src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"

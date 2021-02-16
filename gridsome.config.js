@@ -19,10 +19,13 @@ module.exports = {
                     'es',
                     'fr'
                 ],
-                defaultLocale: 'en', // default language
                 enablePathGeneration: false,
                 routes: require('./routes.js'), // load path translation declaration from external file
-                messages: {}
+                messages: {
+                    fr: require('./src/locales/fr.json'),
+                    es: require('./src/locales/es.json'),
+                    en: require('./src/locales/en.json')
+                }
             }
         }
     ],

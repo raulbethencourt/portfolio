@@ -4,10 +4,10 @@
         "title": "raul bethencourt (G)",
         "subtitle": "programador web",
         "items": [
-            { "title": "presentacion", "icon": "mdi-account-box-outline" },
-            { "title": "proyectos", "icon": "mdi-console" },
-            { "title": "titulos", "icon": "mdi-school-outline" },
-            { "title": "contacto", "icon": "mdi-message-text-outline" }
+            { "title": "Datos", "icon": "mdi-account-box-outline" },
+            { "title": "Proyectos", "icon": "mdi-console" },
+            { "title": "Formacion", "icon": "mdi-school-outline" },
+            { "title": "Contacto", "icon": "mdi-message-text-outline" }
         ]
     },
     "about": {

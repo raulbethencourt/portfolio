@@ -4,9 +4,9 @@
         "title": "raul bethencourt (G)",
         "subtitle": "développeur web",
         "items": [
-            { "title": "profile", "icon": "mdi-account-box-outline" },
-            { "title": "travails", "icon": "mdi-console" },
-            { "title": "formation", "icon": "mdi-school-outline" },
+            { "title": "Profile", "icon": "mdi-account-box-outline" },
+            { "title": "Projets", "icon": "mdi-console" },
+            { "title": "Formation", "icon": "mdi-school-outline" },
             { "title": "Contact", "icon": "mdi-message-text-outline" }
         ]
     },

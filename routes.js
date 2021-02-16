@@ -5,19 +5,19 @@ module.exports = {
             component: './src/pages/Index.vue'
         },
         {
-            path: '/en/#about/',
+            path: '/en/#about',
             component: './src/components/About.vue'
         },
         {
-            path: '/en/#projects/',
+            path: '/en/#projects',
             component: './src/components/Projects.vue'
         },
         {
-            path: '/en/#education/',
+            path: '/en/#education',
             component: './src/components/Education.vue'
         },
         {
-            path: '/en/#contact/',
+            path: '/en/#contact',
             component: './src/components/Contact.vue'
         }
 
@@ -29,19 +29,19 @@ module.exports = {
             component: './src/pages/Index.vue'
         },
         {
-            path: '/es/#datos/',
+            path: '/es/#datos',
             component: './src/components/About.vue'
         },
         {
-            path: '/es/#proyectos/',
+            path: '/es/#proyectos',
             component: './src/components/Projects.vue'
         },
         {
-            path: '/es/#formacion/',
+            path: '/es/#formacion',
             component: './src/components/Education.vue'
         },
         {
-            path: '/es/#contacto/',
+            path: '/es/#contacto',
             component: './src/components/Contact.vue'
         }
     ],
@@ -51,15 +51,15 @@ module.exports = {
             component: './src/pages/Index.vue'
         },
         {
-            path: '/fr/#profile/',
+            path: '/fr/#profile',
             component: './src/components/About.vue'
         },
         {
-            path: '/fr/#projets/',
+            path: '/fr/#projets',
             component: './src/components/Projects.vue'
         },
         {
-            path: '/fr/#formation/',
+            path: '/fr/#formation',
             component: './src/components/Education.vue'
         },
         {

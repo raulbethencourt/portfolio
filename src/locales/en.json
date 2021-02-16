@@ -11,6 +11,7 @@
         ]
     },
     "about": {
+        "path": "about",
         "title": "Hi, I'm Raul.",
         "description": [
             "My goal today is to establish my expertise as a web developer for an agency. For this, I have three pillars which are:",
