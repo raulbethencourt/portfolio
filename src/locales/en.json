@@ -7,7 +7,10 @@
             { "title": "About", "icon": "mdi-account-box-outline" },
             { "title": "Projects", "icon": "mdi-console" },
             { "title": "Education", "icon": "mdi-school-outline" },
-            { "title": "Contact", "icon": "mdi-message-text-outline" }
+            { "title": "Contact", "icon": "mdi-message-text-outline" },
+            { "title": "Experience", "icon": "mdi-message-text-outline" },
+            { "title": "Skills", "icon": "mdi-message-text-outline" },
+            { "title": "Tetris", "icon": "mdi-message-text-outline" }
         ]
     },
     "about": {

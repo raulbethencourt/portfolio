@@ -19,6 +19,13 @@ export default function(Vue, { appOptions, head }) {
             'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
     })
 
+    head.script.push({
+        src:
+            'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit',
+        async: true,
+        defer: true
+    })
+
     const opts = {} //opts includes, vuetify themes, icons, etc.
     Vue.use(Vuetify)
 
