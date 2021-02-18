@@ -5,7 +5,7 @@
     >
         <v-parallax
             dark
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+            :src="require(`@/assets/images/sky.png`)"
         >
             <v-row class="d-flex justify-space-around align-center">
                 <v-col cols="5" class="d-flex justify-center">

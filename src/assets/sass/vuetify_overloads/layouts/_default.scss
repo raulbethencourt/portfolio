@@ -2,6 +2,15 @@
     flex-direction: row;
 
     .nav-bar {
+        .localeswitcher {
+            font-size: 0.75rem;
+            max-width: 40px;
+            max-height: 60px;
+
+            .v-icon {
+                display: none;
+            }
+        }
     }
 
     .v-main {

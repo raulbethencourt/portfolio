@@ -11,7 +11,7 @@
             <v-list-item class="px-2">
                 <v-list-item-avatar>
                     <v-img
-                        src="https://randomuser.me/api/portraits/men/85.jpg"
+                        :src="require(`@/assets/images/profile-icon.png`)"
                     ></v-img>
                 </v-list-item-avatar>
 
@@ -49,17 +49,25 @@
             </v-list>
 
             <template v-slot:append>
-                <a :href="pdfLink" download="download">CV PDF</a>
+                <v-list dense>
+                    <v-list-item>
+                        <a :href="pdfLink" download="download"
+                            ><v-icon>mdi-pdf-box</v-icon></a
+                        >
+                    </v-list-item>
 
-                <div class="pa-5">
-                    <LocaleSwitcher />
-                </div>
-                
-                <v-switch
-                    v-model="$vuetify.theme.dark"
-                    inset
-                    persistent-hint
-                ></v-switch>
+                    <v-list-item>
+                        <LocaleSwitcher />
+                    </v-list-item>
+
+                    <v-list-item>
+                        <v-switch
+                            v-model="$vuetify.theme.dark"
+                            inset
+                            persistent-hint
+                        ></v-switch>
+                    </v-list-item>
+                </v-list>
             </template>
         </v-navigation-drawer>
         <v-main>

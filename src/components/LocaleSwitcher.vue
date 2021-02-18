@@ -1,19 +1,18 @@
 <template>
-    <select v-model="currentLocale" @change="localeChanged" class="localeswitcher">
-        <option
-            v-for="locale in availableLocales"
-            :key="locale"
-            :value="locale"
-        >
-            {{ locale }}
-        </option>
-    </select>
+    <v-select
+        v-model="currentLocale"
+        @change="localeChanged"
+        class="localeswitcher"
+        :items="availableLocales"
+        outlined
+    >
+    </v-select>
 </template>
 
 <script>
 export default {
     name: 'LocaleSwitcher',
-    data: function () {
+    data: function() {
         return {
             currentLocale: this.$i18n.locale.toString(),
             availableLocales: this.$i18n.availableLocales
