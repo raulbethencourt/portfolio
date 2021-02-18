@@ -2,15 +2,15 @@
     "lang": "en",
     "sidebar": {
         "title": "raul",
-        "subtitle": "web developer",
+        "subtitle": "dev",
         "items": [
             { "title": "About", "icon": "mdi-account-box-outline" },
             { "title": "Projects", "icon": "mdi-console" },
-            { "title": "Experience", "icon": "mdi-message-text-outline" },
+            { "title": "Experience", "icon": "mdi-account-hard-hat" },
             { "title": "Education", "icon": "mdi-school-outline" },
-            { "title": "Skills", "icon": "mdi-message-text-outline" },
-            { "title": "Testimonials", "icon": "mdi-message-text-outline" },
-            { "title": "Tetris", "icon": "mdi-message-text-outline" },
+            { "title": "Skills", "icon": "mdi-hammer-wrench" },
+            { "title": "Testimonials", "icon": "mdi-account-voice" },
+            { "title": "Tetris", "icon": "mdi-nintendo-game-boy" },
             { "title": "Contact", "icon": "mdi-message-text-outline" }
         ]
     },

@@ -31,19 +31,25 @@ export default function(Vue, { appOptions, head }) {
     const opts = {
         theme: {
             themes: {
-                light: {
-                    primary: '#3f51b5',
-                    secondary: '#b0bec5',
-                    accent: '#3f51b5',
-                    error: '#b71c1c',
-                    background: '#fffaf6'                    
-                },
                 dark: {
-                    primary: '#d9ebe9',
-                    secondary: '#798f8c',
-                    accent: '#d9ebe9',
-                    error: '#b71c1c',
-                    background: '#24292e' 
+                    primary: '#458588',
+                    secondary: '#a89984',
+                    accent: '#b16286',
+                    error: '#cc241d',
+                    info: '#689d6a',
+                    success: '#98971a',
+                    warning: '#d79921',
+                    background: '#3c3836'
+                },
+                light: {
+                    primary: '#458588',
+                    secondary: '#7c6f64',
+                    accent: '#b16286',
+                    error: '#cc241d',
+                    info: '#689d6a',
+                    success: '#98971a',
+                    warning: '#d79921',
+                    background: '#ebdbb2'
                 }
             }
         }
@@ -54,4 +60,8 @@ export default function(Vue, { appOptions, head }) {
 
     // Set default layout as a global component
     Vue.component('Layout', DefaultLayout)
+
+    appOptions.i18n.setLocaleMessage('es', require('./locales/es.json'))
+    appOptions.i18n.setLocaleMessage('fr', require('./locales/fr.json'))
+    appOptions.i18n.setLocaleMessage('en', require('./locales/en.json'))
 }

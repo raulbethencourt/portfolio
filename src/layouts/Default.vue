@@ -1,7 +1,20 @@
 <template>
     <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
-        <v-navigation-drawer width="180px" class="nav-bar" permanent fixed>
-            <v-list-item>
+        <v-navigation-drawer
+            width="200px"
+            class="nav-bar"
+            v-model="drawer"
+            :mini-variant.sync="mini"
+            permanent
+            fixed
+        >
+            <v-list-item class="px-2">
+                <v-list-item-avatar>
+                    <v-img
+                        src="https://randomuser.me/api/portraits/men/85.jpg"
+                    ></v-img>
+                </v-list-item-avatar>
+
                 <v-list-item-content class="nav-bar__title">
                     <v-list-item-title class="text-h6">{{
                         $page.texts.edges[0].node.sidebar.title
@@ -10,6 +23,10 @@
                         >{{ $page.texts.edges[0].node.sidebar.subtitle }}
                     </v-list-item-subtitle>
                 </v-list-item-content>
+
+                <v-btn icon @click.stop="mini = !mini">
+                    <v-icon>mdi-chevron-left</v-icon>
+                </v-btn>
             </v-list-item>
 
             <v-divider></v-divider>
@@ -33,9 +50,11 @@
 
             <template v-slot:append>
                 <a :href="pdfLink" download="download">CV PDF</a>
+
                 <div class="pa-5">
                     <LocaleSwitcher />
                 </div>
+                
                 <v-switch
                     v-model="$vuetify.theme.dark"
                     inset
@@ -56,7 +75,9 @@ export default {
     data() {
         return {
             right: null,
-            pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf')
+            pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf'),
+            drawer: true,
+            mini: true
         }
     },
     components: {
