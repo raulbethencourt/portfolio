@@ -21,11 +21,7 @@ module.exports = {
                 ],
                 enablePathGeneration: false,
                 routes: require('./routes.js'), // load path translation declaration from external file
-                messages: {
-                    fr: require('./src/locales/fr.json'),
-                    es: require('./src/locales/es.json'),
-                    en: require('./src/locales/en.json')
-                }
+                messages: {}
             }
         }
     ],
@@ -33,7 +29,7 @@ module.exports = {
         // Load variables for all vue-files
         const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
 
-        types.forEach((type) => {
+        types.forEach(type => {
             addStyleResource(config.module.rule('scss').oneOf(type))
         })
 

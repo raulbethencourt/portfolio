@@ -5,7 +5,7 @@
     >
         <v-parallax
             dark
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+            :src="require(`@/assets/images/sky.png`)"
         >
             <v-row class="d-flex justify-space-around align-center">
                 <v-col cols="5" class="d-flex justify-center">
@@ -17,7 +17,6 @@
                     />
                 </v-col>
                 <v-col cols="5">
-                    <h1>Current locale: {{ $i18n.locale }}</h1>
                     <h1 class="text-h1 font-weight-bold mb-5">
                         {{ $page.texts.edges[0].node.about.title }}
                     </h1>

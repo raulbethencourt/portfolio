@@ -1,7 +1,20 @@
 <template>
-    <v-app>
-        <v-navigation-drawer width="240px" class="nav-bar" dark permanent fixed>
-            <v-list-item>
+    <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
+        <v-navigation-drawer
+            width="200px"
+            class="nav-bar"
+            v-model="drawer"
+            :mini-variant.sync="mini"
+            permanent
+            fixed
+        >
+            <v-list-item class="px-2">
+                <v-list-item-avatar>
+                    <v-img
+                        :src="require(`@/assets/images/profile-icon.png`)"
+                    ></v-img>
+                </v-list-item-avatar>
+
                 <v-list-item-content class="nav-bar__title">
                     <v-list-item-title class="text-h6">{{
                         $page.texts.edges[0].node.sidebar.title
@@ -10,6 +23,10 @@
                         >{{ $page.texts.edges[0].node.sidebar.subtitle }}
                     </v-list-item-subtitle>
                 </v-list-item-content>
+
+                <v-btn icon @click.stop="mini = !mini">
+                    <v-icon>mdi-chevron-left</v-icon>
+                </v-btn>
             </v-list-item>
 
             <v-divider></v-divider>
@@ -30,11 +47,27 @@
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
+
             <template v-slot:append>
-                <a :href="pdfLink" download="download">CV PDF</a>
-                <div class="pa-5">
-                    <LocaleSwitcher />
-                </div>
+                <v-list dense>
+                    <v-list-item>
+                        <a :href="pdfLink" download="download"
+                            ><v-icon>mdi-pdf-box</v-icon></a
+                        >
+                    </v-list-item>
+
+                    <v-list-item>
+                        <LocaleSwitcher />
+                    </v-list-item>
+
+                    <v-list-item>
+                        <v-switch
+                            v-model="$vuetify.theme.dark"
+                            inset
+                            persistent-hint
+                        ></v-switch>
+                    </v-list-item>
+                </v-list>
             </template>
         </v-navigation-drawer>
         <v-main>
@@ -50,11 +83,24 @@ export default {
     data() {
         return {
             right: null,
-            pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf')
+            pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf'),
+            drawer: true,
+            mini: true
         }
     },
     components: {
         LocaleSwitcher
+    },
+    props: {
+        attrs: {
+            type: Object,
+            default: () => ({})
+        }
+    },
+    computed: {
+        theme() {
+            return this.$vuetify.theme.dark ? 'dark' : 'light'
+        }
     }
 }
 </script>

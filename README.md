@@ -1,6 +1,6 @@
 # RAUL PORTFOLIO
 
-### This is my personal portfolio built with Vue.Js and Gridsome. 
+### This is my personal portfolio built with Vue.Js and Gridsome.
 
 ## Default starter for Gridsome
 
@@ -20,18 +20,26 @@ This is the project you get when you run `gridsome create new-project`.
 ## Design
 
 ### Colors pallete dark
-* green: #6d6e41;
-* sand: #a9845c;
-* white: #f2f5f7;
-* blue: #89bdd6;
-* dark: #29586c;
+
+- primary: '#458588',
+- secondary: '#a89984',
+- accent: '#b16286',
+- error: '#cc241d',
+- info: '#689d6a',
+- success: '#98971a',
+- warning: '#d79921',
+- background: '#3c3836'
 
 ### Colors pallete light
-*
-*
-*
-*
-*
+
+- primary: '#458588',
+- secondary: '#7c6f64',
+- accent: '#b16286',
+- error: '#cc241d',
+- info: '#689d6a',
+- success: '#98971a',
+- warning: '#d79921',
+- background: '#ebdbb2'
 
 ## Fix babel bug
 

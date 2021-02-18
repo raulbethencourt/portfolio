@@ -2,13 +2,26 @@
     flex-direction: row;
 
     .nav-bar {
-        background-color: $dark;
+        .localeswitcher {
+            font-size: 0.75rem;
+            max-width: 40px;
+            max-height: 60px;
+
+            .v-icon {
+                display: none;
+            }
+        }
     }
-    
+
     .v-main {
         flex: 1 0;
-        margin-left: 240px;
+        margin-left: 56px;
     }
 }
+.theme--light.v-navigation-drawer {
+    background-color: #fbf1c7;
+}
 
-
+.theme--dark.v-navigation-drawer {
+    background-color: #282828;
+}
