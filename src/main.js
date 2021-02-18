@@ -1,6 +1,8 @@
 // vuetify
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+
+// Default Layout
 import DefaultLayout from '~/layouts/Default.vue'
 
 // custom scss
@@ -26,7 +28,26 @@ export default function(Vue, { appOptions, head }) {
         defer: true
     })
 
-    const opts = {} //opts includes, vuetify themes, icons, etc.
+    const opts = {
+        theme: {
+            themes: {
+                light: {
+                    primary: '#3f51b5',
+                    secondary: '#b0bec5',
+                    accent: '#3f51b5',
+                    error: '#b71c1c',
+                    background: '#fffaf6'                    
+                },
+                dark: {
+                    primary: '#d9ebe9',
+                    secondary: '#798f8c',
+                    accent: '#d9ebe9',
+                    error: '#b71c1c',
+                    background: '#24292e' 
+                }
+            }
+        }
+    } //opts includes, vuetify themes, icons, etc.
     Vue.use(Vuetify)
 
     appOptions.vuetify = new Vuetify(opts)

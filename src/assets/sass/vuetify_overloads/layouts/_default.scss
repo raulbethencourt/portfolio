@@ -2,13 +2,17 @@
     flex-direction: row;
 
     .nav-bar {
-        background-color: $dark;
     }
     
     .v-main {
         flex: 1 0;
-        margin-left: 240px;
+        margin-left: 180px;
     }
 }
+.theme--light.v-navigation-drawer {
+    background-color: #f3f4d2;
+}
 
-
+.theme--dark.v-navigation-drawer {
+    background-color: #21252b;
+}

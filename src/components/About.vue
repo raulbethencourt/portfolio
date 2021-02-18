@@ -17,7 +17,6 @@
                     />
                 </v-col>
                 <v-col cols="5">
-                    <h1>Current locale: {{ $i18n.locale }}</h1>
                     <h1 class="text-h1 font-weight-bold mb-5">
                         {{ $page.texts.edges[0].node.about.title }}
                     </h1>

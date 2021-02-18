@@ -46,7 +46,7 @@
 
                             <v-card-actions>
                                 <v-btn
-                                    color="orange lighten-2"
+                                    color="accent"
                                     text
                                     :href="project.url"
                                     target="_blank"

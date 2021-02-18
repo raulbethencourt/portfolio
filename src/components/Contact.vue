@@ -1,10 +1,9 @@
 <template>
     <section
-        class="full-screen"
         :id="
             `${$page.texts.edges[0].node.sidebar.items[3].title.toLowerCase()}`
         "
-    >
+    ><h2 class="text-h2">Contact</h2>
         <form class="contact-form" @submit.prevent="sendEmail">
             <label>Name</label>
             <input type="text" name="user_name" />

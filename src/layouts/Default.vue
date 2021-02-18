@@ -1,6 +1,6 @@
 <template>
-    <v-app>
-        <v-navigation-drawer width="240px" class="nav-bar" dark permanent fixed>
+    <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
+        <v-navigation-drawer width="180px" class="nav-bar" permanent fixed>
             <v-list-item>
                 <v-list-item-content class="nav-bar__title">
                     <v-list-item-title class="text-h6">{{
@@ -30,11 +30,17 @@
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
+
             <template v-slot:append>
                 <a :href="pdfLink" download="download">CV PDF</a>
                 <div class="pa-5">
                     <LocaleSwitcher />
                 </div>
+                <v-switch
+                    v-model="$vuetify.theme.dark"
+                    inset
+                    persistent-hint
+                ></v-switch>
             </template>
         </v-navigation-drawer>
         <v-main>
@@ -55,6 +61,17 @@ export default {
     },
     components: {
         LocaleSwitcher
+    },
+    props: {
+        attrs: {
+            type: Object,
+            default: () => ({})
+        }
+    },
+    computed: {
+        theme() {
+            return this.$vuetify.theme.dark ? 'dark' : 'light'
+        }
     }
 }
 </script>

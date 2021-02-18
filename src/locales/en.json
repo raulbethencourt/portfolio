@@ -1,16 +1,17 @@
 {
     "lang": "en",
     "sidebar": {
-        "title": "raul bethencourt (G)",
+        "title": "raul",
         "subtitle": "web developer",
         "items": [
             { "title": "About", "icon": "mdi-account-box-outline" },
             { "title": "Projects", "icon": "mdi-console" },
-            { "title": "Education", "icon": "mdi-school-outline" },
-            { "title": "Contact", "icon": "mdi-message-text-outline" },
             { "title": "Experience", "icon": "mdi-message-text-outline" },
+            { "title": "Education", "icon": "mdi-school-outline" },
             { "title": "Skills", "icon": "mdi-message-text-outline" },
-            { "title": "Tetris", "icon": "mdi-message-text-outline" }
+            { "title": "Testimonials", "icon": "mdi-message-text-outline" },
+            { "title": "Tetris", "icon": "mdi-message-text-outline" },
+            { "title": "Contact", "icon": "mdi-message-text-outline" }
         ]
     },
     "about": {
@@ -65,7 +66,7 @@
         ]
     },
     "experience": {
-        "title": "education",
+        "title": "experience",
         "jobs": [
             {
                 "title": "Développeur web front-end",
@@ -142,5 +143,8 @@
                 "color": "purple"
             }
         ]
+    },
+    "skills": {
+
     }
 }

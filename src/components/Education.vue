@@ -1,67 +1,91 @@
 <template>
     <section
         class="education-section"
-        :id="`${$page.texts.edges[0].node.sidebar.items[2].title.toLowerCase()}`"
+        :id="
+            `${$page.texts.edges[0].node.sidebar.items[3].title.toLowerCase()}`
+        "
     >
-        <v-container>
-            <v-row>
-                <h2 class="text-h2"></h2>
-            </v-row>
+        <h2 class="text-h2 font-weight-bold mb-5">
+            {{ $page.texts.edges[0].node.education.title }}
+        </h2>
+        <v-stepper v-model="e1">
+            <v-stepper-header>
+                <v-stepper-step :complete="e1 > 1" step="1">
+                    Name of step 1
+                </v-stepper-step>
 
-            <v-row>
-                <v-timeline reverse>
-                    <v-timeline-item
-                        v-for="(diplome, i) in $page.texts.edges[0].node
-                            .education.diplomes"
-                        :key="i"
-                        :color="diplome.color"
-                        small
-                    >
-                        <template v-slot:opposite>
-                            <span
-                                :class="`headline font-weight-bold ${diplome.color}--text`"
-                                v-text="diplome.year"
-                            ></span>
-                        </template>
-                        <v-card>
-                            <v-card-title class="purple lighten-2">
-                                <h2
-                                    class="display-1 white--text font-weight-light"
-                                >
-                                    {{ diplome.title }}
-                                </h2>
-                            </v-card-title>
-                            <v-container>
-                                <v-row>
-                                    <v-col cols="12" md="10">
-                                        Lorem ipsum dolor sit amet, no nam
-                                        oblique veritus. Commune scaevola
-                                        imperdiet nec ut, sed euismod convenire
-                                        principes at. Est et nobis iisque
-                                        percipit.
-                                    </v-col>
-                                    <v-col
-                                        class="hidden-sm-and-down text-right"
-                                        md="2"
-                                    >
-                                        <v-icon size="64">
-                                            mdi-calendar-text
-                                        </v-icon>
-                                    </v-col>
-                                </v-row>
-                            </v-container>
-                        </v-card>
-                    </v-timeline-item>
-                </v-timeline>
-            </v-row>
-        </v-container>
+                <v-divider></v-divider>
+
+                <v-stepper-step :complete="e1 > 2" step="2">
+                    Name of step 2
+                </v-stepper-step>
+
+                <v-divider></v-divider>
+
+                <v-stepper-step step="3">
+                    Name of step 3
+                </v-stepper-step>
+            </v-stepper-header>
+
+            <v-stepper-items>
+                <v-stepper-content step="1">
+                    <v-card
+                        class="mb-12"
+                        color="grey lighten-1"
+                        height="200px"
+                    ></v-card>
+
+                    <v-btn color="primary" @click="e1 = 2">
+                        Continue
+                    </v-btn>
+
+                    <v-btn text>
+                        Cancel
+                    </v-btn>
+                </v-stepper-content>
+
+                <v-stepper-content step="2">
+                    <v-card
+                        class="mb-12"
+                        color="grey lighten-1"
+                        height="200px"
+                    ></v-card>
+
+                    <v-btn color="primary" @click="e1 = 3">
+                        Continue
+                    </v-btn>
+
+                    <v-btn text>
+                        Cancel
+                    </v-btn>
+                </v-stepper-content>
+
+                <v-stepper-content step="3">
+                    <v-card
+                        class="mb-12"
+                        color="grey lighten-1"
+                        height="200px"
+                    ></v-card>
+
+                    <v-btn color="primary" @click="e1 = 1">
+                        Continue
+                    </v-btn>
+
+                    <v-btn text>
+                        Cancel
+                    </v-btn>
+                </v-stepper-content>
+            </v-stepper-items>
+        </v-stepper>
     </section>
 </template>
 
 <script>
 export default {
-    data: () => ({
-        show: false
-    })
+    data() {
+        return {
+            e1: 1
+        }
+    }
 }
 </script>
