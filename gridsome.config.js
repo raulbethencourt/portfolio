@@ -16,9 +16,10 @@ module.exports = {
                 locales: [
                     // locales list
                     'en',
-                    'es',
-                    'fr'
+                    'fr',
+                    'es'
                 ],
+                defaultLocale: 'fr',
                 enablePathGeneration: false,
                 routes: require('./routes.js'), // load path translation declaration from external file
                 messages: {}

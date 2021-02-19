@@ -34,6 +34,7 @@
                         "
                     />
                 </v-col>
+                <!-- TODO responsif -->
                 <v-col
                     cols="9"
                     md="5"
