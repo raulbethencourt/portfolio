@@ -1,11 +1,17 @@
 <template>
     <section
         class="full-screen"
-        :id="`${$page.texts.edges[0].node.sidebar.items[0].title.toLowerCase()}`"
+        :id="
+            `${$page.texts.edges[0].node.sidebar.items[0].title.toLowerCase()}`
+        "
     >
         <v-parallax
             dark
-            :src="require(`@/assets/images/sky.png`)"
+            :src="
+                $vuetify.theme.dark
+                    ? require(`@/assets/images/sky.png`)
+                    : require(`@/assets/images/cauldron.png`)
+            "
         >
             <v-row class="d-flex justify-space-around align-center">
                 <v-col cols="5" class="d-flex justify-center">

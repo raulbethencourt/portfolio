@@ -4,10 +4,19 @@
         "title": "raul",
         "subtitle": "développeur web",
         "items": [
-            { "title": "Profile", "icon": "mdi-account-box-outline" },
-            { "title": "Projets", "icon": "mdi-console" },
-            { "title": "Formation", "icon": "mdi-school-outline" },
+            { "title": "About", "icon": "mdi-account-box-outline" },
+            { "title": "Projects", "icon": "mdi-console" },
+            { "title": "Experience", "icon": "mdi-account-hard-hat" },
+            { "title": "Education", "icon": "mdi-school-outline" },
+            { "title": "Skills", "icon": "mdi-hammer-wrench" },
+            { "title": "Testimonials", "icon": "mdi-account-voice" },
+            { "title": "Tetris", "icon": "mdi-nintendo-game-boy" },
             { "title": "Contact", "icon": "mdi-message-text-outline" }
+        ],
+        "append": [
+            { "title": "Curriculum", "icon": "mdi-pdf-box" },
+            { "title": "", "icon": "mdi-map" },
+            { "title": "", "icon": "mdi-invert-colors" }
         ]
     },
     "about": {
