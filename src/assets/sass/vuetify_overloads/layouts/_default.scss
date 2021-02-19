@@ -2,11 +2,16 @@
     flex-direction: row;
 
     .nav-bar {
+        .subtitle-1 {
+            text-transform: capitalize;
+        }
+
         .list-pdf {
             .dark {
                 color: black;
                 text-decoration: none;
             }
+            
             .light {
                 color: white;
                 text-decoration: none;

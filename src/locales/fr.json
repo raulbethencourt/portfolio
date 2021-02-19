@@ -2,14 +2,14 @@
     "lang": "fr",
     "sidebar": {
         "title": "raul",
-        "subtitle": "développeur web",
+        "subtitle": "dev web",
         "items": [
-            { "title": "About", "icon": "mdi-account-box-outline" },
-            { "title": "Projects", "icon": "mdi-console" },
-            { "title": "Experience", "icon": "mdi-account-hard-hat" },
-            { "title": "Education", "icon": "mdi-school-outline" },
-            { "title": "Skills", "icon": "mdi-hammer-wrench" },
-            { "title": "Testimonials", "icon": "mdi-account-voice" },
+            { "title": "Infos", "icon": "mdi-account-box-outline" },
+            { "title": "Projets", "icon": "mdi-console" },
+            { "title": "Expérience", "icon": "mdi-account-hard-hat" },
+            { "title": "Etudes", "icon": "mdi-school-outline" },
+            { "title": "Compétences", "icon": "mdi-hammer-wrench" },
+            { "title": "Témoignages", "icon": "mdi-account-voice" },
             { "title": "Tetris", "icon": "mdi-nintendo-game-boy" },
             { "title": "Contact", "icon": "mdi-message-text-outline" }
         ],

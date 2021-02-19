@@ -2,7 +2,7 @@
     "lang": "en",
     "sidebar": {
         "title": "raul",
-        "subtitle": "dev",
+        "subtitle": "dev web",
         "items": [
             { "title": "About", "icon": "mdi-account-box-outline" },
             { "title": "Projects", "icon": "mdi-console" },

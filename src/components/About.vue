@@ -9,8 +9,8 @@
             dark
             :src="
                 $vuetify.theme.dark
-                    ? require(`@/assets/images/sky.png`)
-                    : require(`@/assets/images/cauldron.png`)
+                    ? require(`@/assets/images/dark-bg.png`)
+                    : require(`@/assets/images/light-bg.png`)
             "
         >
             <v-row class="d-flex justify-space-around align-center">

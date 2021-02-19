@@ -1,7 +1,7 @@
 <template>
     <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
         <v-navigation-drawer
-            width="165px"
+            width="180px"
             class="nav-bar"
             v-model="drawer"
             :mini-variant.sync="mini"
@@ -17,7 +17,7 @@
 
                 <v-list-item-content class="nav-bar__title">
                     <v-list-item-title class="text-h6">{{
-                        $page.texts.edges[0].node.sidebar.title
+                        $page.texts.edges[0].node.sidebar.title.toUpperCase()
                     }}</v-list-item-title>
                     <v-list-item-subtitle class="subtitle-1"
                         >{{ $page.texts.edges[0].node.sidebar.subtitle }}
