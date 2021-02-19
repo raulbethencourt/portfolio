@@ -6,6 +6,10 @@
             text-transform: capitalize;
         }
 
+        .dark-profile {
+            filter: grayscale(1);
+        }
+
         .list-pdf {
             .dark {
                 color: black;

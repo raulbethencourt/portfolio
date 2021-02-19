@@ -11,7 +11,16 @@
             <v-list-item class="px-2">
                 <v-list-item-avatar>
                     <v-img
-                        :src="require(`@/assets/images/profile-icon.png`)"
+                        :src="
+                            $vuetify.theme.dark
+                                ? require(`@/assets/images/profile-light.png`)
+                                : require(`@/assets/images/profile-dark.png`)
+                        "
+                        :class="
+                            $vuetify.theme.dark
+                                ? 'dark-profile'
+                                : 'light-profile'
+                        "
                     ></v-img>
                 </v-list-item-avatar>
 
