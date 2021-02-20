@@ -1,12 +1,16 @@
 <template>
     <section
         class="projects-section"
-        :id="`${$page.texts.edges[0].node.sidebar.items[1].title.toLowerCase()}`"
+        :id="
+            `${$page.texts.edges[0].node.sidebar.items[1].title.toLowerCase()}`
+        "
     >
         <v-container>
             <v-row>
                 <v-col>
-                    <h1>{{ $page.texts.edges[0].node.projects.title }}</h1>
+                    <h2 class="text-h2 font-weight-bold mb-5">
+                        {{ $page.texts.edges[0].node.projects.title }}
+                    </h2>
                 </v-col>
             </v-row>
             <v-row class="justify-space-around mb-8 mt-10">
@@ -28,7 +32,9 @@
                             <v-img
                                 height="300px"
                                 :src="
-                                    require(`@/assets/images/${project.image}.png`)
+                                    require(`@/assets/images/${
+                                        project.image
+                                    }.png`)
                                 "
                                 position="top center"
                             >

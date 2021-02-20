@@ -1,10 +1,10 @@
 .full-screen {
-    min-height: 800px;
-
+    min-height: 1200px;
+    // TODO responsif 
     .v-parallax {
         display: flex;
         align-items: center;
-        min-height: 800px;
+        min-height: 1200px;
         padding-bottom: 50px;
 
         .v-parallax__image-container {
@@ -63,7 +63,6 @@
     }
 }
 
-
 @media #{$small-up} {
     .full-screen {
         .v-parallax {
@@ -87,22 +86,12 @@
 @media #{$large-up} {
     .full-screen {
         min-height: 100vh;
-        
+
         .v-parallax {
             min-height: 100vh;
-            
+
             .portrait {
                 width: 400px;
-            }
-        }
-    }
-}
-
-@media #{$xlarge-up} {
-    .full-screen {
-        .v-parallax {
-            .portrait {
-                width: 500px;
             }
 
             .parallax__title {
@@ -117,6 +106,16 @@
                 font-weight: 500;
                 letter-spacing: 0.0125em;
                 text-align: left;
+            }
+        }
+    }
+}
+
+@media #{$xlarge-up} {
+    .full-screen {
+        .v-parallax {
+            .portrait {
+                width: 500px;
             }
         }
     }
