@@ -1,7 +1,7 @@
 <template>
     <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
         <v-navigation-drawer
-            width="200px"
+            width="180px"
             class="nav-bar"
             v-model="drawer"
             :mini-variant.sync="mini"
@@ -11,13 +11,22 @@
             <v-list-item class="px-2">
                 <v-list-item-avatar>
                     <v-img
-                        :src="require(`@/assets/images/profile-icon.png`)"
+                        :src="
+                            $vuetify.theme.dark
+                                ? require(`@/assets/images/profile-light.png`)
+                                : require(`@/assets/images/profile-dark.png`)
+                        "
+                        :class="
+                            $vuetify.theme.dark
+                                ? 'dark-profile'
+                                : 'light-profile'
+                        "
                     ></v-img>
                 </v-list-item-avatar>
 
                 <v-list-item-content class="nav-bar__title">
                     <v-list-item-title class="text-h6">{{
-                        $page.texts.edges[0].node.sidebar.title
+                        $page.texts.edges[0].node.sidebar.title.toUpperCase()
                     }}</v-list-item-title>
                     <v-list-item-subtitle class="subtitle-1"
                         >{{ $page.texts.edges[0].node.sidebar.subtitle }}
@@ -50,22 +59,53 @@
 
             <template v-slot:append>
                 <v-list dense>
-                    <v-list-item>
-                        <a :href="pdfLink" download="download"
-                            ><v-icon>mdi-pdf-box</v-icon></a
-                        >
+                    <v-list-item class="list-pdf">
+                        <v-list-item-icon>
+                            <v-icon>{{
+                                $page.texts.edges[0].node.sidebar.append[0].icon
+                            }}</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <a
+                                :href="pdfLink"
+                                download="download"
+                                :class="$vuetify.theme.dark ? 'light' : 'dark'"
+                            >
+                                <v-list-item-title>{{
+                                    $page.texts.edges[0].node.sidebar.append[0]
+                                        .title
+                                }}</v-list-item-title>
+                            </a>
+                        </v-list-item-content>
                     </v-list-item>
 
-                    <v-list-item>
-                        <LocaleSwitcher />
+                    <v-list-item class="list-locale">
+                        <v-list-item-icon>
+                            <v-icon>{{
+                                $page.texts.edges[0].node.sidebar.append[1].icon
+                            }}</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <LocaleSwitcher />
+                        </v-list-item-content>
                     </v-list-item>
 
-                    <v-list-item>
-                        <v-switch
-                            v-model="$vuetify.theme.dark"
-                            inset
-                            persistent-hint
-                        ></v-switch>
+                    <v-list-item class="list-color">
+                        <v-list-item-icon>
+                            <v-icon>{{
+                                $page.texts.edges[0].node.sidebar.append[2].icon
+                            }}</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <v-switch
+                                v-model="$vuetify.theme.dark"
+                                inset
+                                persistent-hint
+                            ></v-switch>
+                        </v-list-item-content>
                     </v-list-item>
                 </v-list>
             </template>

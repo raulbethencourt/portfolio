@@ -2,21 +2,30 @@
     "lang": "fr",
     "sidebar": {
         "title": "raul",
-        "subtitle": "développeur web",
+        "subtitle": "dev web",
         "items": [
-            { "title": "Profile", "icon": "mdi-account-box-outline" },
+            { "title": "Infos", "icon": "mdi-account-box-outline" },
             { "title": "Projets", "icon": "mdi-console" },
-            { "title": "Formation", "icon": "mdi-school-outline" },
+            { "title": "Expérience", "icon": "mdi-account-hard-hat" },
+            { "title": "Etudes", "icon": "mdi-school-outline" },
+            { "title": "Compétences", "icon": "mdi-hammer-wrench" },
+            { "title": "Témoignages", "icon": "mdi-account-voice" },
+            { "title": "Tetris", "icon": "mdi-nintendo-game-boy" },
             { "title": "Contact", "icon": "mdi-message-text-outline" }
+        ],
+        "append": [
+            { "title": "Curriculum", "icon": "mdi-pdf-box" },
+            { "title": "", "icon": "mdi-map" },
+            { "title": "", "icon": "mdi-invert-colors" }
         ]
     },
     "about": {
-        "title": "Bonjour, Je suis Raul.",
+        "title": "Salut, Je suis Raul.",
         "description": [
-            "My goal today is to establish my expertise as a web developer for an agency. For this, I have three pillars which are:",
-            "A technical pillar. I did my training at Élan and I am a specialist in PHP and the Symfony framework.",
-            "My second pillar is curiosity for technical innovations. What drives me right now is the use of JavaScript and in particular the Vue.js framework.",
-            "And finally a relational pillar. He seems to me to be a nice colleague and I enjoy sharing my resources and helping others."
+            "Mon objectif aujourd’hui c’est d’asseoir mon expertise de développeur Web pour une agence.Pour cela, j’ai trois piliers qui sont :",
+            "Un pilier technique. J’ai fait ma formation chez Élan et je suis spécialiste du PHP et du framework Symfony.",
+            "Mon deuxième pilier c’est la curiosité pour les nouveautés techniques. C’est qui me porte en ce moment c’est l’utilisation de JavaScript et notamment du framework Vue.js.",
+            "Et pour finir un pilier relationnel. Il me semble être un collègue agréable et j’aime partager mes ressources et aider les autres."
         ]
     },
     "projects": {

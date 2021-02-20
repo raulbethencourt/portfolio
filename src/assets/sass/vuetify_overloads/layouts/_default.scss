@@ -2,13 +2,48 @@
     flex-direction: row;
 
     .nav-bar {
-        .localeswitcher {
-            font-size: 0.75rem;
-            max-width: 40px;
-            max-height: 60px;
+        .subtitle-1 {
+            text-transform: capitalize;
+        }
 
-            .v-icon {
-                display: none;
+        .dark-profile {
+            filter: grayscale(1);
+        }
+
+        .list-pdf {
+            .dark {
+                color: black;
+                text-decoration: none;
+            }
+            
+            .light {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        .list-locale {
+            .v-list-item__content {
+                padding-top: 0;
+
+                .localeswitcher {
+                    font-size: 1rem;
+                    max-height: 30px;
+                    max-width: 85%;
+                    margin: 0;
+                    padding: 0;
+
+                    .v-icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .list-color {
+            .v-input {
+                margin: 0 0 0 auto;
+                padding: 0;
             }
         }
     }

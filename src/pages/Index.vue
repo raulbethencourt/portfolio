@@ -50,6 +50,10 @@ query sidebar($locale: String) {
                         title
                         icon
                     }
+                    append {
+                        title
+                        icon
+                    }
                 }
                 about {
                     path

@@ -4,7 +4,6 @@
         @change="localeChanged"
         class="localeswitcher"
         :items="availableLocales"
-        outlined
     >
     </v-select>
 </template>

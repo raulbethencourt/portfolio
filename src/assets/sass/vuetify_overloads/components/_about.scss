@@ -1,15 +1,44 @@
 .full-screen {
-    min-height: 100vh;
-}
+    min-height: 1000px;
 
-.v-parallax {
-    display: flex;
-    align-items: center;
-    min-height: inherit;
+    .v-parallax {
+        display: flex;
+        align-items: center;
+        min-height: 100%;
 
-    .v-parallax__image-container {
-        .v-parallax__image{
-            top: -500px;
+        // TODO responsif
+
+        .v-parallax__image-container {
+            .v-parallax__image {
+                top: -500px;
+            }
         }
+
+        .portrait {
+            width: 500px;
+        }
+
+        .dark-profile {
+            filter: grayscale(1);
+            transform: scaleX(-1);
+            box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+        }
+
+        .light-profile {
+            transform: scaleX(-1);
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
+
+        .dark-text {
+            color: whitesmoke;
+        }
+
+        .light-text {
+            color: #0a0a0a;
+        }
+    }
+
+    @media #{$large-up} {
+        min-height: 100vh;
     }
 }

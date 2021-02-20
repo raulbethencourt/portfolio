@@ -2,7 +2,7 @@
     "lang": "en",
     "sidebar": {
         "title": "raul",
-        "subtitle": "dev",
+        "subtitle": "dev web",
         "items": [
             { "title": "About", "icon": "mdi-account-box-outline" },
             { "title": "Projects", "icon": "mdi-console" },
@@ -12,6 +12,11 @@
             { "title": "Testimonials", "icon": "mdi-account-voice" },
             { "title": "Tetris", "icon": "mdi-nintendo-game-boy" },
             { "title": "Contact", "icon": "mdi-message-text-outline" }
+        ],
+        "append": [
+            { "title": "Curriculum", "icon": "mdi-pdf-box" },
+            { "title": "", "icon": "mdi-map" },
+            { "title": "", "icon": "mdi-invert-colors" }
         ]
     },
     "about": {
@@ -144,7 +149,5 @@
             }
         ]
     },
-    "skills": {
-
-    }
+    "skills": {}
 }
