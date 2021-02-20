@@ -13,14 +13,13 @@
                     : require(`@/assets/images/light-bg.png`)
             "
         >
-            <v-row class="d-flex justify-space-around align-center">
+            <v-row class="d-flex justify-md-space-around justify-center align-center">
                 <v-col
                     cols="12"
                     md="5"
                     class="d-flex justify-center justify-md-end"
                 >
                     <g-image
-                        class="rounded-circle portrait"
                         alt="Example image"
                         :src="
                             $vuetify.theme.dark
@@ -29,27 +28,25 @@
                         "
                         :class="
                             $vuetify.theme.dark
-                                ? 'dark-profile'
-                                : 'light-profile'
+                                ? 'dark-profile rounded-circle portrait'
+                                : 'light-profile rounded-circle portrait'
                         "
                     />
                 </v-col>
-                <!-- TODO responsif -->
+
                 <v-col
                     cols="9"
                     md="5"
-                    :class="
-                        $vuetify.theme.dark ? 'dark-text' : 'light-text'
-                    "
+                    :class="$vuetify.theme.dark ? 'dark-text' : 'light-text'"
                 >
-                    <h1 class="text-h1 font-weight-bold mb-5">
+                    <h1 class="parallax__title font-weight-bold mb-5">
                         {{ $page.texts.edges[0].node.about.title }}
                     </h1>
                     <h6
                         v-for="text in $page.texts.edges[0].node.about
                             .description"
                         v-bind:key="text"
-                        class="text-h6"
+                        class="parallax__text"
                     >
                         {{ text }}
                     </h6>

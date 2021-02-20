@@ -2,6 +2,8 @@
     flex-direction: row;
 
     .nav-bar {
+        min-height: 100vh;
+        
         .subtitle-1 {
             text-transform: capitalize;
         }
