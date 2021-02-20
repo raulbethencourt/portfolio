@@ -1,10 +1,11 @@
 .full-screen {
-    min-height: 1000px;
+    min-height: 800px;
 
     .v-parallax {
         display: flex;
         align-items: center;
-        min-height: 1000px;
+        min-height: 800px;
+        padding-bottom: 50px;
 
         .v-parallax__image-container {
             .v-parallax__image {
@@ -13,7 +14,8 @@
         }
 
         .portrait {
-            width: 275px;
+            margin-top: 50px;
+            width: 250px;
         }
 
         .dark-profile {
@@ -48,7 +50,6 @@
             letter-spacing: 0.0125em;
             text-align: center;
         }
-
     }
 }
 
@@ -59,6 +60,41 @@
 
     .text-h6 {
         font-size: 1rem;
+    }
+}
+
+
+@media #{$small-up} {
+    .full-screen {
+        .v-parallax {
+            .portrait {
+                width: 275px;
+            }
+        }
+    }
+}
+
+@media #{$medium-up} {
+    .full-screen {
+        .v-parallax {
+            .portrait {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media #{$large-up} {
+    .full-screen {
+        min-height: 100vh;
+        
+        .v-parallax {
+            min-height: 100vh;
+            
+            .portrait {
+                width: 400px;
+            }
+        }
     }
 }
 
@@ -84,24 +120,4 @@
             }
         }
     }
-}
-
-@media #{$large-up} {
-    .full-screen {
-        min-height: 100vh;
-
-        .v-parallax {
-            min-height: 100vh;
-
-            .portrait {
-                width: 400px;
-            }
-        }
-    }
-}
-
-@media #{$medium-up} {
-}
-
-@media #{$small-up} {
 }
