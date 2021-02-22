@@ -77,9 +77,7 @@ query sidebar($locale: String) {
                         company
                         city
                         description
-                        description
                         year
-                        color
                     }
                 }
                 education {
