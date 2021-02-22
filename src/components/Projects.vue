@@ -1,12 +1,16 @@
 <template>
     <section
         class="projects-section"
-        :id="`${$page.texts.edges[0].node.sidebar.items[1].title.toLowerCase()}`"
+        :id="
+            `${$page.texts.edges[0].node.sidebar.items[1].title.toLowerCase()}`
+        "
     >
         <v-container>
             <v-row>
                 <v-col>
-                    <h1>{{ $page.texts.edges[0].node.projects.title }}</h1>
+                    <h2 class="text-h2 font-weight-bold mb-5">
+                        {{ $page.texts.edges[0].node.projects.title }}
+                    </h2>
                 </v-col>
             </v-row>
             <v-row class="justify-space-around mb-8 mt-10">
@@ -19,16 +23,16 @@
                         :options="{
                             threshold: 1
                         }"
-                        min-height="200"
                         transition="fade-transition"
-                        class="mb-15"
-                        max-width="40%"
+                        class="col-11 col-md-5"
                     >
-                        <v-card>
+                        <v-card class="mb-15">
                             <v-img
-                                height="300px"
+                                height="400px"
                                 :src="
-                                    require(`@/assets/images/${project.image}.png`)
+                                    require(`@/assets/images/${
+                                        project.image
+                                    }.png`)
                                 "
                                 position="top center"
                             >
@@ -45,19 +49,28 @@
                             </v-card-text>
 
                             <v-card-actions>
-                                <v-btn
-                                    color="accent"
-                                    text
-                                    :href="project.url"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    Explore
-                                </v-btn>
+                                <div v-if="project.url">
+                                    <v-btn
+                                        color="accent"
+                                        text
+                                        :href="project.url"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        Explore
+                                    </v-btn>
+                                </div>
 
-                                <v-btn text>
-                                    <v-icon large>mdi-github</v-icon>
-                                </v-btn>
+                                <div v-if="project.git">
+                                    <v-btn
+                                        text
+                                        :href="project.git"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        <v-icon large>mdi-github</v-icon>
+                                    </v-btn>
+                                </div>
                             </v-card-actions>
                         </v-card>
                     </v-lazy>

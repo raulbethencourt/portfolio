@@ -29,48 +29,54 @@
         ]
     },
     "projects": {
-        "title": "projects",
+        "title": "proyectos",
         "works": [
             {
                 "title": "Plataforme",
-                "url": "https://github.com/raulbethencourt/plataform",
+                "url": "",
+                "git": "https://github.com/raulbethencourt/plataform",
                 "description": "A pedagogique platafomr, handcraft made for Contact et propotion.",
                 "image": "plateforme"
             },
             {
                 "title": "Dynamo-Location",
                 "url": "https://dynamo-location.fr/fr/",
+                "git": "",
                 "description": "In this project I actuallised the front side.",
                 "image": "dynamo"
             },
             {
                 "title": "Agence inmobilier",
-                "url": "https://github.com/raulbethencourt/inmogence",
+                "url": "",
+                "git": "https://github.com/raulbethencourt/inmogence",
                 "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
                 "image": "inmoagence"
             },
             {
                 "title": "todo-list",
                 "url": "https://raulbethencourt.github.io/todo_list/",
+                "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "This is a vanilla Javascript project, to creates a ToDo App.",
                 "image": "todo"
             },
             {
                 "title": "morpion",
                 "url": "https://raulbethencourt.github.io/morpion/",
+                "git": "https://github.com/raulbethencourt/morpion",
                 "description": "This is a JQuery project to do a Morpion Game",
                 "image": "morpion"
             },
             {
                 "title": "cauldron-overflow",
-                "url": "https://github.com/raulbethencourt/cauldron_overflow",
+                "url": "",
+                "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Here I have another Symfony project",
                 "image": "cauldron"
             }
         ]
     },
     "experience": {
-        "title": "education",
+        "title": "experiencia",
         "jobs": [
             {
                 "title": "Développeur web front-end",

@@ -65,6 +65,7 @@ query sidebar($locale: String) {
                     works {
                         title
                         url
+                        git
                         description
                         image
                     }
