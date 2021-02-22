@@ -27,25 +27,38 @@
                             <template v-slot:opposite>
                                 <span
                                     class="
-                                        `headline font-weight-bold secondary--text`
+                                        `headline text-h5 font-weight-bold secondary--text`
                                     "
                                     v-text="job.year"
                                 ></span>
                             </template>
                             <v-card>
                                 <v-card-title class="secondary lighten-2">
-                                    <h2
-                                        class="display-1 font-weight-light"
+                                    <h4
+                                        class="display-1 font-weight-bold text-h4"
                                     >
                                         {{ job.title }}
-                                    </h2>
+                                    </h4>
                                 </v-card-title>
                                 <v-container>
                                     <v-row>
                                         <v-col cols="12">
-                                            <h6 class="text-h6">
+                                            <h5 class="text-h5">
                                                 {{ job.company }}
+                                            </h5>
+                                            <h6 class="text-h6">
+                                                {{ job.city }}
                                             </h6>
+                                        </v-col>
+                                    </v-row>
+                                    <v-row>
+                                        <v-col>
+                                            <p
+                                                v-for="(text, i) in job.description"
+                                                :key="i"
+                                            >
+                                                {{ text }}
+                                            </p>
                                         </v-col>
                                     </v-row>
                                 </v-container>

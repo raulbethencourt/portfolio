@@ -81,39 +81,41 @@
             {
                 "title": "Développeur web front-end",
                 "company": "Agence My Client is Rich",
-                "city": "strasbourg",
+                "city": "Strasbourg, Grand Est",
                 "description": [
                     "Dans le cadre de cette poste,  j'ai été amené à réaliser les missions suivantes:",
                     "Développement de sites sur Wordpress",
                     "Maintenance de sites internet",
                     "Intégration HTML/CSS"
                 ],
-                "year": "2020",
-                "color": "purple"
+                "year": "2020"
             },
             {
                 "title": "Assistant charpentier",
-                "company": "constructions renovations immobiliers cri gasser fils",
-                "city": "strasbourg",
-                "description": "Fabrication et pose de charpentes. Pose de bardages.",
-                "year": "2017",
-                "color": "purple"
+                "company": "Charpente Cri Gasser Fils",
+                "city": "Strasbourg, Grand Est",
+                "description": [
+                    "Fabrication et pose de charpentes. Pose de bardages."
+                ],
+                "year": "2017 à 2019"
             },
             {
                 "title": "Menuisier",
                 "company": "\"Arguion\", \"La Moderna\" et \"Ehalt\"",
-                "city": "Tenerife, Espagne et Strasbourg, Françe",
-                "description": "Plusieurs postes comme menuisier (atelier et pose) dans différentes entreprises.",
-                "year": "2017",
-                "color": "purple"
+                "city": "Tenerife, Espagne et Strasbourg, Grand Est",
+                "description": [
+                    "Plusieurs postes comme menuisier (atelier et pose) dans différentes entreprises."
+                ],
+                "year": "2012 à 2017"
             },
             {
                 "title": "Encadreur qualité",
-                "company": "artedrago sl",
+                "company": "Artedrago sl",
                 "city": "La Orotava, Canaries, Espagne",
-                "description": "Participation à toutes les étapes du processus de fabrication dans l'élaboration des cadres.",
-                "year": "2012",
-                "color": "purple"
+                "description": [
+                    "Participation à toutes les étapes du processus de fabrication dans l'élaboration des cadres."
+                ],
+                "year": "2010 à 2012"
             }
         ]
     },
