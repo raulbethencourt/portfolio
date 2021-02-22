@@ -127,33 +127,37 @@
                 "title": "Titre professionnel Développeur Web et Web mobile",
                 "school": "Elan formation",
                 "city": "strasbourg",
-                "description": "Le développeur web et web mobile développe ou fait évoluer des applications orientées web, ou web mobile ou les deux à la fois, en respectant les normes et standards reconnus par la profession et en suivant l'état de l'art de la sécurité informatique à toutes les étapes. Ces applications sont destinées à des internautes ou des salariés d'entreprise.",
-                "year": "2020",
-                "color": "purple"
+                "description": [
+                    "Le développeur web et web mobile développe ou fait évoluer des applications orientées web, ou web mobile ou les deux à la fois, en respectant les normes et standards reconnus par la profession et en suivant l'état de l'art de la sécurité informatique à toutes les étapes. Ces applications sont destinées à des internautes ou des salariés d'entreprise."
+                ],
+                "year": "2020"
             },
             {
                 "title": "CAP charpentier bois",
                 "school": "Les Compagnons du Devoir",
                 "city": "nancy",
-                "description": "Le titulaire de ce diplôme travaille au sein d'entreprises des secteurs de la charpente et de la construction bois. Il intervient en construction, réhabilitation, rénovation ou restauration de bâtiments et de locaux. Selon les chantiers, il travaille de façon autonome ou en équipe.",
-                "year": "2019",
-                "color": "cyan"
+                "description": [
+                    "Le titulaire de ce diplôme travaille au sein d'entreprises des secteurs de la charpente et de la construction bois. Il intervient en construction, réhabilitation, rénovation ou restauration de bâtiments et de locaux. Selon les chantiers, il travaille de façon autonome ou en équipe."
+                ],
+                "year": "2019"
             },
             {
                 "title": "Bac pro Technicien menuisier-agenceur",
                 "school": "Instituto Geneto",
                 "city": "la laguna - Spain",
-                "description": "Le titulaire de ce bac pro intervient en atelier et sur chantier pour fabriquer et mettre en oeuvre différents ouvrages de menuiserie extérieure et intérieure ainsi que des aménagements de pièces, bureaux, cuisines, salles de bains, magasins, salles d'exposition, lieux de réunion...",
-                "year": "2012",
-                "color": "purple"
+                "description": [
+                    "Le titulaire de ce bac pro intervient en atelier et sur chantier pour fabriquer et mettre en oeuvre différents ouvrages de menuiserie extérieure et intérieure ainsi que des aménagements de pièces, bureaux, cuisines, salles de bains, magasins, salles d'exposition, lieux de réunion..."
+                ],
+                "year": "2012"
             },
             {
                 "title": "Maîtrise Beaux-arts / arts plastiques",
                 "school": "Universidad de La Laguna",
                 "city": "la laguna - Spain",
-                "description": "El Grado en Bellas Artes por la Universidad de La Laguna tiene como objetivo formar artistas y profesionales de las artes visuales con competencias en los procesos de creación y/o experimentación interdisciplinar en todos los ámbitos laborales que abarcan las artes visuales en el siglo XXI.",
-                "year": "2007",
-                "color": "purple"
+                "description": [
+                    "El Grado en Bellas Artes por la Universidad de La Laguna tiene como objetivo formar artistas y profesionales de las artes visuales con competencias en los procesos de creación y/o experimentación interdisciplinar en todos los ámbitos laborales que abarcan las artes visuales en el siglo XXI."
+                ],
+                "year": "2007"
             }
         ]
     },

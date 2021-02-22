@@ -5,78 +5,40 @@
             `${$page.texts.edges[0].node.sidebar.items[3].title.toLowerCase()}`
         "
     >
-        <h2 class="text-h2 font-weight-bold mb-5">
-            {{ $page.texts.edges[0].node.education.title }}
-        </h2>
-        <v-stepper v-model="e1">
-            <v-stepper-header>
-                <v-stepper-step :complete="e1 > 1" step="1">
-                    Name of step 1
-                </v-stepper-step>
+        <v-container>
+            <v-row>
+                <v-col cols="10" offset="1">
+                    <h2 class="text-h2 font-weight-bold mb-5">
+                        {{ $page.texts.edges[0].node.education.title }}
+                    </h2>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col cols="10" offset="1">
+                    <v-carousel v-model="model" hide-delimiter-background dark>
+                        <v-carousel-item
+                            v-for="(diplome, i) in $page.texts.edges[0].node
+                                .education.diplomes"
+                            :key="i"
+                        >
+                            <v-card height="100%">
+                                <v-card-title>
+                                    {{ diplome.title }}
+                                </v-card-title>
 
-                <v-divider></v-divider>
+                                <v-card-subtitle>
+                                    {{ diplome.school }} | {{ diplome.city }}
+                                </v-card-subtitle>
 
-                <v-stepper-step :complete="e1 > 2" step="2">
-                    Name of step 2
-                </v-stepper-step>
-
-                <v-divider></v-divider>
-
-                <v-stepper-step step="3">
-                    Name of step 3
-                </v-stepper-step>
-            </v-stepper-header>
-
-            <v-stepper-items>
-                <v-stepper-content step="1">
-                    <v-card
-                        class="mb-12"
-                        color="grey lighten-1"
-                        height="200px"
-                    ></v-card>
-
-                    <v-btn color="primary" @click="e1 = 2">
-                        Continue
-                    </v-btn>
-
-                    <v-btn text>
-                        Cancel
-                    </v-btn>
-                </v-stepper-content>
-
-                <v-stepper-content step="2">
-                    <v-card
-                        class="mb-12"
-                        color="grey lighten-1"
-                        height="200px"
-                    ></v-card>
-
-                    <v-btn color="primary" @click="e1 = 3">
-                        Continue
-                    </v-btn>
-
-                    <v-btn text>
-                        Cancel
-                    </v-btn>
-                </v-stepper-content>
-
-                <v-stepper-content step="3">
-                    <v-card
-                        class="mb-12"
-                        color="grey lighten-1"
-                        height="200px"
-                    ></v-card>
-
-                    <v-btn color="primary" @click="e1 = 1">
-                        Continue
-                    </v-btn>
-
-                    <v-btn text>
-                        Cancel
-                    </v-btn>
-                </v-stepper-content>
-            </v-stepper-items>
-        </v-stepper>
+                                <v-card-text>
+                                    {{ diplome.description }}
+                                </v-card-text>
+                            </v-card>
+                        </v-carousel-item>
+                    </v-carousel>
+                </v-col>
+            </v-row>
+        </v-container>
     </section>
 </template>
 
@@ -84,7 +46,8 @@
 export default {
     data() {
         return {
-            e1: 1
+            e1: 1,
+            model: 0
         }
     }
 }
