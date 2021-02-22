@@ -24,7 +24,7 @@
                             threshold: 1
                         }"
                         transition="fade-transition"
-                        class="col-12 col-md-5"
+                        class="col-11 col-md-5"
                     >
                         <v-card class="mb-15">
                             <v-img

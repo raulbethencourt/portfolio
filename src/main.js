@@ -33,7 +33,7 @@ export default function(Vue, { appOptions, head }) {
             themes: {
                 dark: {
                     primary: '#458588',
-                    secondary: '#a89984',
+                    secondary: '#7c6f64',
                     accent: '#b16286',
                     error: '#cc241d',
                     info: '#689d6a',
@@ -43,7 +43,7 @@ export default function(Vue, { appOptions, head }) {
                 },
                 light: {
                     primary: '#458588',
-                    secondary: '#7c6f64',
+                    secondary: '#a89984',
                     accent: '#b16286',
                     error: '#cc241d',
                     info: '#689d6a',
