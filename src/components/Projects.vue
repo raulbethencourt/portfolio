@@ -23,14 +23,12 @@
                         :options="{
                             threshold: 1
                         }"
-                        min-height="200"
                         transition="fade-transition"
-                        class="mb-15"
-                        max-width="40%"
+                        class="col-12 col-md-5"
                     >
-                        <v-card>
+                        <v-card class="mb-15">
                             <v-img
-                                height="300px"
+                                height="400px"
                                 :src="
                                     require(`@/assets/images/${
                                         project.image
@@ -51,19 +49,28 @@
                             </v-card-text>
 
                             <v-card-actions>
-                                <v-btn
-                                    color="accent"
-                                    text
-                                    :href="project.url"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    Explore
-                                </v-btn>
+                                <div v-if="project.url">
+                                    <v-btn
+                                        color="accent"
+                                        text
+                                        :href="project.url"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        Explore
+                                    </v-btn>
+                                </div>
 
-                                <v-btn text>
-                                    <v-icon large>mdi-github</v-icon>
-                                </v-btn>
+                                <div v-if="project.git">
+                                    <v-btn
+                                        text
+                                        :href="project.git"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        <v-icon large>mdi-github</v-icon>
+                                    </v-btn>
+                                </div>
                             </v-card-actions>
                         </v-card>
                     </v-lazy>

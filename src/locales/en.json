@@ -47,7 +47,6 @@
                 "image": "dynamo"
             },
             {
-                // TODO rellenar git y url
                 "title": "Agence inmobilier",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/inmogence",
@@ -57,19 +56,21 @@
             {
                 "title": "todo-list",
                 "url": "https://raulbethencourt.github.io/todo_list/",
-                "git": "",
+                "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "This is a vanilla Javascript project, to creates a ToDo App.",
                 "image": "todo"
             },
             {
                 "title": "morpion",
                 "url": "https://raulbethencourt.github.io/morpion/",
+                "git": "https://github.com/raulbethencourt/morpion",
                 "description": "This is a JQuery project to do a Morpion Game",
                 "image": "morpion"
             },
             {
                 "title": "cauldron-overflow",
-                "url": "https://github.com/raulbethencourt/cauldron_overflow",
+                "url": "",
+                "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Here I have another Symfony project",
                 "image": "cauldron"
             }
