@@ -88,7 +88,6 @@ query sidebar($locale: String) {
                         city
                         description
                         year
-                        color
                     }
                 }
             }

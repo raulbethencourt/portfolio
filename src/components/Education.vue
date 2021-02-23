@@ -27,11 +27,15 @@
                                 </v-card-title>
 
                                 <v-card-subtitle>
-                                    {{ diplome.school }} | {{ diplome.city }}
+                                    {{ diplome.school }} | {{ diplome.city }} | {{diplome.year}}
                                 </v-card-subtitle>
 
-                                <v-card-text>
-                                    {{ diplome.description }}
+                                <v-card-text
+                                    v-for="(description,
+                                    i) in diplome.description"
+                                    :key="i"
+                                >
+                                    {{ description }}
                                 </v-card-text>
                             </v-card>
                         </v-carousel-item>
