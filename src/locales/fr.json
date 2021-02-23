@@ -159,5 +159,9 @@
                 "year": "2007"
             }
         ]
+    },
+    "skills": {
+        "title": "Compétences",
+        "logos": [{ "icon": "vue" }, { "icon": "gridsome" }]
     }
 }

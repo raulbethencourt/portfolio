@@ -90,6 +90,13 @@ query sidebar($locale: String) {
                         year
                     }
                 }
+                skills {
+                    title
+                    logos {
+                        icon
+                        url
+                    }
+                }
             }
         }
     }

@@ -3,7 +3,7 @@
         class="education-section"
         :id="
             `${$page.texts.edges[0].node.sidebar.items[3].title.toLowerCase()}`
-        "
+            "
     >
         <v-container>
             <v-row>
