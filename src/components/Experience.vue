@@ -7,7 +7,7 @@
     >
         <v-container>
             <v-row>
-                <v-col>
+                <v-col cols="10" offset="1">
                     <h2 class="text-h2 font-weight-bold mb-5">
                         {{ $page.texts.edges[0].node.experience.title }}
                     </h2>

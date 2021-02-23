@@ -161,5 +161,11 @@
             }
         ]
     },
-    "skills": {}
+    "skills": {
+        "title": "Skills",
+        "logos": [
+            { "icon": "vue", "url": "https://vuejs.org" },
+            { "icon": "gridsome", "url": "https://gridsome.org" }
+        ]
+    }
 }

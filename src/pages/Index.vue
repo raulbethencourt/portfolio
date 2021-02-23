@@ -88,7 +88,13 @@ query sidebar($locale: String) {
                         city
                         description
                         year
-                        color
+                    }
+                }
+                skills {
+                    title
+                    logos {
+                        icon
+                        url
                     }
                 }
             }

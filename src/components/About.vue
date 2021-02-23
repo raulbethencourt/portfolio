@@ -20,7 +20,7 @@
                     class="d-flex justify-center justify-md-end"
                 >
                     <g-image
-                        alt="Example image"
+                        alt="profile image"
                         :src="
                             $vuetify.theme.dark
                                 ? require(`@/assets/images/profile-dark.png`)
