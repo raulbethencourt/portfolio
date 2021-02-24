@@ -165,8 +165,30 @@
         "title": "Skills",
         "logos": [
             { "icon": "vue", "url": "https://vuejs.org" },
+            { "icon": "js", "url": "http://devilbox.org" },
             { "icon": "gridsome", "url": "https://gridsome.org" },
-            { "icon": "devilbox", "url": "http://devilbox.org" }
+            { "icon": "nuxt", "url": "http://devilbox.org" },
+            { "icon": "php", "url": "http://devilbox.org" },
+            { "icon": "symfony", "url": "http://devilbox.org" },
+            { "icon": "linux", "url": "http://devilbox.org" },
+            { "icon": "mysql", "url": "http://devilbox.org" },
+            { "icon": "css", "url": "http://devilbox.org" },
+            { "icon": "html", "url": "http://devilbox.org" },
+            { "icon": "docker", "url": "http://devilbox.org" },
+            { "icon": "git", "url": "http://devilbox.org" },
+            { "icon": "sass", "url": "http://devilbox.org" },
+            { "icon": "vsc", "url": "http://devilbox.org" },
+            { "icon": "bootstrap", "url": "http://devilbox.org" },
+            { "icon": "devilbox", "url": "http://devilbox.org" },
+            { "icon": "doctrine", "url": "http://devilbox.org" },
+            { "icon": "jquery", "url": "http://devilbox.org" },
+            { "icon": "gitkraken", "url": "http://devilbox.org" },
+            { "icon": "node", "url": "http://devilbox.org" },
+            { "icon": "wordpress", "url": "http://devilbox.org" },
+            { "icon": "twig", "url": "http://devilbox.org" },
+            { "icon": "webpack", "url": "http://devilbox.org" },
+            { "icon": "python", "url": "http://devilbox.org" },
+            { "icon": "phpstorm", "url": "http://devilbox.org" }
         ]
     }
 }

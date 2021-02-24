@@ -15,10 +15,10 @@
             </v-row>
 
             <v-row>
-                <v-col cols="10" offset="1">
+                <v-col cols="8" offset="2">
                     <v-row>
                         <v-col
-                            cols="1"
+                            cols="2"
                             v-for="(logo, i) in $page.texts.edges[0].node.skills
                                 .logos"
                             :key="i"
