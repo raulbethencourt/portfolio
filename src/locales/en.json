@@ -165,7 +165,8 @@
         "title": "Skills",
         "logos": [
             { "icon": "vue", "url": "https://vuejs.org" },
-            { "icon": "gridsome", "url": "https://gridsome.org" }
+            { "icon": "gridsome", "url": "https://gridsome.org" },
+            { "icon": "devilbox", "url": "http://devilbox.org" }
         ]
     }
 }
