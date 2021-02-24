@@ -188,7 +188,12 @@
             { "icon": "twig", "url": "http://devilbox.org" },
             { "icon": "webpack", "url": "http://devilbox.org" },
             { "icon": "python", "url": "http://devilbox.org" },
-            { "icon": "phpstorm", "url": "http://devilbox.org" }
+            { "icon": "phpstorm", "url": "http://devilbox.org" },
+            { "icon": "npm", "url": "http://devilbox.org" },
+            { "icon": "graphql", "url": "http://devilbox.org" },
+            { "icon": "ajax", "url": "http://devilbox.org" },
+            { "icon": "composer", "url": "http://devilbox.org" },
+            { "icon": "apache", "url": "http://devilbox.org" }
         ]
     }
 }
