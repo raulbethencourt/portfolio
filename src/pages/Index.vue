@@ -97,6 +97,14 @@ query sidebar($locale: String) {
                         url
                     }
                 }
+                testimonials {
+                    title
+                    items {
+                        author
+                        company
+                        texts
+                    }
+                }
             }
         }
     }

@@ -161,38 +161,63 @@
         ]
     },
     "skills": {
-        "title": "Compétences",
+        "title": "Skills",
         "logos": [
             { "icon": "vue", "url": "https://vuejs.org" },
-            { "icon": "js", "url": "http://devilbox.org" },
+            { "icon": "js", "url": "https://www.javascript.com" },
             { "icon": "gridsome", "url": "https://gridsome.org" },
-            { "icon": "nuxt", "url": "http://devilbox.org" },
-            { "icon": "php", "url": "http://devilbox.org" },
-            { "icon": "symfony", "url": "http://devilbox.org" },
-            { "icon": "linux", "url": "http://devilbox.org" },
-            { "icon": "mysql", "url": "http://devilbox.org" },
-            { "icon": "css", "url": "http://devilbox.org" },
-            { "icon": "html", "url": "http://devilbox.org" },
-            { "icon": "docker", "url": "http://devilbox.org" },
-            { "icon": "git", "url": "http://devilbox.org" },
-            { "icon": "sass", "url": "http://devilbox.org" },
-            { "icon": "vsc", "url": "http://devilbox.org" },
-            { "icon": "bootstrap", "url": "http://devilbox.org" },
+            { "icon": "nuxt", "url": "https://nuxtjs.org" },
+            { "icon": "php", "url": "https://www.php.net" },
+            { "icon": "symfony", "url": "https://symfony.com" },
+            { "icon": "linux", "url": "https://www.linux.org" },
+            { "icon": "mysql", "url": "https://www.mysql.com" },
+            { "icon": "css", "url": "https://www.w3.org/Style/CSS" },
+            { "icon": "html", "url": "https://html.com" },
+            { "icon": "docker", "url": "https://www.docker.com" },
+            { "icon": "git", "url": "https://git-scm.com" },
+            { "icon": "sass", "url": "https://sass-lang.com/" },
+            { "icon": "vsc", "url": "https://code.visualstudio.com" },
+            { "icon": "bootstrap", "url": "https://getbootstrap.com" },
             { "icon": "devilbox", "url": "http://devilbox.org" },
-            { "icon": "doctrine", "url": "http://devilbox.org" },
-            { "icon": "jquery", "url": "http://devilbox.org" },
-            { "icon": "gitkraken", "url": "http://devilbox.org" },
-            { "icon": "node", "url": "http://devilbox.org" },
-            { "icon": "wordpress", "url": "http://devilbox.org" },
-            { "icon": "twig", "url": "http://devilbox.org" },
-            { "icon": "webpack", "url": "http://devilbox.org" },
-            { "icon": "python", "url": "http://devilbox.org" },
-            { "icon": "phpstorm", "url": "http://devilbox.org" },
-            { "icon": "npm", "url": "http://devilbox.org" },
-            { "icon": "graphql", "url": "http://devilbox.org" },
-            { "icon": "ajax", "url": "http://devilbox.org" },
-            { "icon": "composer", "url": "http://devilbox.org" },
-            { "icon": "apache", "url": "http://devilbox.org" }
+            { "icon": "doctrine", "url": "https://www.doctrine-project.org" },
+            { "icon": "jquery", "url": "https://jquery.com" },
+            { "icon": "gitkraken", "url": "https://www.gitkraken.com" },
+            { "icon": "node", "url": "https://nodejs.org/en" },
+            { "icon": "wordpress", "url": "http://https://wordpress.com" },
+            { "icon": "twig", "url": "https://twig.symfony.com" },
+            { "icon": "webpack", "url": "https://webpack.js.org" },
+            { "icon": "python", "url": "https://www.python.org" },
+            { "icon": "phpstorm", "url": "https://www.jetbrains.com/phpstorm" },
+            { "icon": "npm", "url": "https://www.npmjs.com" },
+            { "icon": "graphql", "url": "https://www.graphql.com" },
+            {
+                "icon": "ajax",
+                "url": "https://developer.mozilla.org/fr/docs/Web/Guide/AJAX"
+            },
+            { "icon": "composer", "url": "https://getcomposer.org" },
+            { "icon": "apache", "url": "https://apache.org" }
+        ]
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "items": [
+            {
+                "author": "Vincent Adhenet",
+                "company": "Freelance",
+                "texts": [
+                    "Raul a fait un petit stage avec moi pour découvrir le métier. Il montre un grand intérêt et apprends très vite. Raul a eu l'occasion de participer avec moi à l'intégration web sur le site d'un de mes clients, basé sur le travail d'une graphiste freelance. Il s'est montré autonome et très proactif sur le projet, permettant d'identifier les problèmes et d'y apporter des solutions."
+                ]
+            },
+            {
+                "author": "Nicolas Schuster",
+                "company": "My Client is Rich",
+                "texts": [
+                    "Raul Bethencourt a réalisé un stage dans notre agence en tant que développeur Web. Dans le cadre de cette fonction, Raul a été amené à réaliser les missions suivantes :",
+                    "Développement de sites sur Wordpress",
+                    "Maintenance de sites Internet",
+                    "Pendant tout le temps qu’il a passé chez nous, Raul a su faire preuve de rigueur, de sérieux et de motivation. Par ailleurs, Raul est une personne réellement investie, agréable et c’était un plaisir de l’avoir dans notre équipe."
+                ]
+            }
         ]
     }
 }

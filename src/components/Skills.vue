@@ -18,10 +18,11 @@
                 <v-col cols="8" offset="2">
                     <v-row>
                         <v-col
-                            cols="2"
                             v-for="(logo, i) in $page.texts.edges[0].node.skills
                                 .logos"
                             :key="i"
+                            cols="2"
+                            class="d-flex justify-center"
                         >
                             <v-hover v-slot="{ hover }" open-delay="100">
                                 <v-btn
