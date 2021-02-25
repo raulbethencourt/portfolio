@@ -191,9 +191,34 @@
             { "icon": "phpstorm", "url": "https://www.jetbrains.com/phpstorm" },
             { "icon": "npm", "url": "https://www.npmjs.com" },
             { "icon": "graphql", "url": "https://www.graphql.com" },
-            { "icon": "ajax", "url": "https://developer.mozilla.org/fr/docs/Web/Guide/AJAX" },
+            {
+                "icon": "ajax",
+                "url": "https://developer.mozilla.org/fr/docs/Web/Guide/AJAX"
+            },
             { "icon": "composer", "url": "https://getcomposer.org" },
             { "icon": "apache", "url": "https://apache.org" }
+        ]
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "items": [
+            {
+                "author": "Vincent Adhenet",
+                "company": "Freelance",
+                "texts": [
+                    "Raul a fait un petit stage avec moi pour découvrir le métier. Il montre un grand intérêt et apprends très vite. Raul a eu l'occasion de participer avec moi à l'intégration web sur le site d'un de mes clients, basé sur le travail d'une graphiste freelance. Il s'est montré autonome et très proactif sur le projet, permettant d'identifier les problèmes et d'y apporter des solutions."
+                ]
+            },
+            {
+                "author": "Nicolas Schuster",
+                "company": "My Client is Rich",
+                "texts": [
+                    "Raul Bethencourt a réalisé un stage dans notre agence en tant que développeur Web. Dans le cadre de cette fonction, Raul a été amené à réaliser les missions suivantes :",
+                    "Développement de sites sur Wordpress",
+                    "Maintenance de sites Internet",
+                    "Pendant tout le temps qu’il a passé chez nous, Raul a su faire preuve de rigueur, de sérieux et de motivation. Par ailleurs, Raul est une personne réellement investie, agréable et c’était un plaisir de l’avoir dans notre équipe."
+                ]
+            }
         ]
     }
 }
