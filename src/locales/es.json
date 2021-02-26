@@ -16,7 +16,8 @@
         "append": [
             { "title": "Currículo", "icon": "mdi-pdf-box" },
             { "title": "", "icon": "mdi-map" },
-            { "title": "", "icon": "mdi-invert-colors" }
+            { "title": "", "icon": "mdi-invert-colors" },
+            { "title": "Github", "icon": "mdi-github" }
         ]
     },
     "about": {
