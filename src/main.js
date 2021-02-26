@@ -8,7 +8,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 // custom scss
 import '~/assets/sass/styles.scss'
 
-export default function(Vue, { appOptions, head }) {
+export default function (Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
         href:
@@ -53,8 +53,8 @@ export default function(Vue, { appOptions, head }) {
                 }
             }
         }
-    } 
-    
+    }
+
     // locals hot reload
     appOptions.i18n.setLocaleMessage('es', require('@/locales/es.json'))
     appOptions.i18n.setLocaleMessage('fr', require('@/locales/fr.json'))
