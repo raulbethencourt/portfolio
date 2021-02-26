@@ -28,12 +28,17 @@
                     <div v-for="x in 10" :key="x" class="square"></div>
                 </v-col>
             </v-row>
+            <v-row>
+                <v-col cols="8" offset="4" class="d-flex flex-wrap tetris-col">
+                    <div v-for="x in 10" :key="x" class="square taken d-none"></div>
+                </v-col>
+            </v-row>
         </v-container>
     </section>
 </template>
 
 <script>
-import '~/assets/js/tetris.js'
+import '~/assets/js/tetris.js';
 
-export default {}
+export default {};
 </script>
