@@ -59,7 +59,7 @@
 
             <template v-slot:append>
                 <v-list dense>
-                    <v-list-item class="list-pdf">
+                    <v-list-item class="list-link">
                         <v-list-item-icon>
                             <v-icon>{{
                                 $page.texts.edges[0].node.sidebar.append[0].icon
@@ -80,6 +80,28 @@
                         </v-list-item-content>
                     </v-list-item>
 
+                    <v-list-item class="list-link">
+                        <v-list-item-icon>
+                            <v-icon>{{
+                                $page.texts.edges[0].node.sidebar.append[3].icon
+                            }}</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <a
+                                href="https://github.com/raulbethencourt/portfolio"
+                                target="_blank"
+                                download="download"
+                                :class="$vuetify.theme.dark ? 'light' : 'dark'"
+                            >
+                                <v-list-item-title>{{
+                                    $page.texts.edges[0].node.sidebar.append[3]
+                                        .title
+                                }}</v-list-item-title>
+                            </a>
+                        </v-list-item-content>
+                    </v-list-item>
+                    
                     <v-list-item class="list-locale">
                         <v-list-item-icon>
                             <v-icon>{{
@@ -117,7 +139,7 @@
 </template>
 
 <script>
-import LocaleSwitcher from '~/components/LocaleSwitcher.vue'
+import LocaleSwitcher from '~/components/LocaleSwitcher.vue';
 
 export default {
     data() {
@@ -126,7 +148,7 @@ export default {
             pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf'),
             drawer: true,
             mini: true
-        }
+        };
     },
     components: {
         LocaleSwitcher
@@ -139,8 +161,8 @@ export default {
     },
     computed: {
         theme() {
-            return this.$vuetify.theme.dark ? 'dark' : 'light'
+            return this.$vuetify.theme.dark ? 'dark' : 'light';
         }
     }
-}
+};
 </script>

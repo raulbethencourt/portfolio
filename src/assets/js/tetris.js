@@ -79,8 +79,28 @@ const initApp = () => {
 
     //make the tetromino move down every second
     function timerId() {
-        setInterval(moveDown, 1000);
+        setInterval(moveDown, 700);
     }
+
+    //assign funtions to keyCodes
+    function control(evt) {
+        evt.preventDefault();
+        switch (evt.keyCode) {
+            case 37:
+                moveLeft();
+                break;
+            case 39:
+                moveRight();
+                break;
+            // case 38:
+            //     rotate+();
+            //     break;
+            case 40:
+                moveDown();
+                break;
+        }
+    }
+    document.addEventListener('keydown', control);
 
     function moveDown() {
         undraw();
@@ -91,20 +111,65 @@ const initApp = () => {
 
     //freeze function
     function freeze() {
-        if (current.some((i) => squares[currentPosition + i + width].classList.contains('taken')
-        )) {
-            current.forEach((i) => squares[currentPosition + i].classList.add('taken')
+        if (
+            current.some((i) =>
+                squares[currentPosition + i + width].classList.contains('taken')
+            )
+        ) {
+            current.forEach((i) =>
+                squares[currentPosition + i].classList.add('taken')
             );
             //start a new tetromino falling
             random = Math.floor(Math.random() * theTetrominoes.length);
             current = theTetrominoes[random][currentRotation];
-            currentPosition = 4;
+            currentPosition = Math.floor(Math.random() * 8);
             draw();
         }
     }
 
-    console.log(squares);
-    //TODO 51mnts
+    //move the tetromino left, unless is at the edge or there is a blockage
+    function moveLeft() {
+        undraw();
+        const isAtLeftEdge = current.some(
+            (i) => (currentPosition + i) % width === 0
+        );
+
+        if (!isAtLeftEdge) currentPosition -= 1;
+
+        if (
+            current.some((i) =>
+                squares[currentPosition + i].classList.contains('taken')
+            )
+        ) {
+            currentPosition += 1;
+        }
+        draw();
+    }
+
+    //move the tetromino right, unless is at the edge or ther is a blockage
+    function moveRight() {
+        undraw();
+        const isAtRightEdge = current.some(
+            (i) => (currentPosition + i) % width === width - 1
+        );
+
+        if (!isAtRightEdge) currentPosition += 1;
+
+        if (
+            current.some((i) =>
+                squares[currentPosition + i].classList.contains('taken')
+            )
+        ) {
+            currentPosition -= 1;
+        }
+        draw();
+    }
+
+    //rotate the tetromino
+    function rotate() {
+        
+    }
+    //TODO 1h02
 
     timerId();
 };
