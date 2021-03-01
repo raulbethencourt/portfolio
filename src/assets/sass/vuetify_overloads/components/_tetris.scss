@@ -1,5 +1,5 @@
 .tetris-section {
-    .tetris-col {
+    .tetris__col {
         padding: 0;
 
         .square {
@@ -11,5 +11,17 @@
 
     .tetromino {
         background-color: greenyellow;
+    }
+
+    .mini-tetris__col {
+        width: 120px;
+        height: 30px;
+        padding: 0;
+
+        .square {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+        }
     }
 }

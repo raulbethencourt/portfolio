@@ -92,6 +92,7 @@
                                 href="https://github.com/raulbethencourt/portfolio"
                                 target="_blank"
                                 download="download"
+                                rel="noreferrer noopener"
                                 :class="$vuetify.theme.dark ? 'light' : 'dark'"
                             >
                                 <v-list-item-title>{{
