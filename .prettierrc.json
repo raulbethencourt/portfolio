@@ -2,7 +2,7 @@
     "singleQuote": true,
     "semi": true,
     "trailingComma": "none",
-    "printWidth": 80,
+    "printWidth": 90,
     "tabWidth": 4,
     "gridsome/format-query-block": [
         "warn",

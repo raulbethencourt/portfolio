@@ -1,10 +1,12 @@
 .tetris-section {
-    .tetris__col {
-        padding: 0;
+    .tetris__grid {
+        max-width: 330px;
+        min-width: 330px;
 
         .square {
             width: 30px;
             height: 30px;
+
             border: 1px solid black;
         }
     }
@@ -13,14 +15,14 @@
         background-color: greenyellow;
     }
 
-    .mini-tetris__col {
-        width: 120px;
-        height: 30px;
-        padding: 0;
+    .mini-tetris__grid {
+        max-width: 150px;
+        min-width: 150px;
 
         .square {
             width: 30px;
             height: 30px;
+
             border: 1px solid black;
         }
     }
