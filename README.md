@@ -44,7 +44,7 @@ This is the project you get when you run `gridsome create new-project`.
 ## Fix babel bug
 
 ```
-rm -rf dist node_modules package-lock.json
+rm -rf dist node_modules 
 export VUE_CLI_BABEL_TRANSPILE_MODULES=true
 npm install
 gridsome build

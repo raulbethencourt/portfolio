@@ -22,15 +22,27 @@
             </v-row>
         </v-container>
 
-        <v-container id="grid">
-            <v-row v-for="i in 20" :key="i">
-                <v-col cols="8" offset="4" class="d-flex flex-wrap tetris-col">
-                    <div v-for="x in 10" :key="x" class="square"></div>
-                </v-col>
-            </v-row>
+        <v-container>
             <v-row>
-                <v-col cols="8" offset="4" class="d-flex flex-wrap tetris-col">
-                    <div v-for="x in 10" :key="x" class="square taken d-none"></div>
+                <v-col
+                    cols="5"
+                    offset="1"
+                    id="grid"
+                    class="d-flex flex-wrap tetris__grid"
+                >
+                    <div v-for="i in 200" v-bind:key="i" class="square"></div>
+
+                    <div v-for="i in 10" class="square taken d-none"></div>
+                </v-col>
+
+                <v-col cols="5" offset="1">
+                    <v-container id="mini-grid">
+                        <v-row>
+                            <v-col cols="12" class="d-flex flex-wrap mini-tetris__grid">
+                                <div v-for="i in 16" v-bind:key="i" class="square"></div>
+                            </v-col>
+                        </v-row>
+                    </v-container>
                 </v-col>
             </v-row>
         </v-container>
