@@ -30,9 +30,9 @@
                     id="grid"
                     class="d-flex flex-wrap tetris__grid"
                 >
-                    <div v-for="i in 200" v-bind:key="i" class="square"></div>
+                    <div v-for="i in 200" :key="i" class="square"></div>
 
-                    <div v-for="i in 10" class="square taken d-none"></div>
+                    <div v-for="j in taken" :key="j" class="square taken d-none"></div>
                 </v-col>
 
                 <v-col cols="5" offset="1">
@@ -52,5 +52,9 @@
 <script>
 import '~/assets/js/tetris.js';
 
-export default {};
+export default {
+    data() {
+        return { taken: ['a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k'] };
+    }
+};
 </script>
