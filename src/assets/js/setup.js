@@ -6,7 +6,7 @@ const green = 'url(' + require(`@/assets/images/tetrisBlocks/green_block.png`) +
 const yellow = 'url(' + require(`@/assets/images/tetrisBlocks/yellow_block.png`) + ')';
 const colors = [blue, purple, peach, green, yellow];
 
-//constaintes
+//constants
 const width = 10;
 const displayWidth = 4;
 const displayIndex = 0;

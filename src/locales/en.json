@@ -96,9 +96,7 @@
                 "title": "Assistant charpentier",
                 "company": "Charpente Cri Gasser Fils",
                 "city": "Strasbourg, Grand Est",
-                "description": [
-                    "Fabrication et pose de charpentes. Pose de bardages."
-                ],
+                "description": ["Fabrication et pose de charpentes. Pose de bardages."],
                 "year": "2017"
             },
             {
@@ -221,5 +219,10 @@
                 ]
             }
         ]
+    },
+    "tetris": {
+        "title": "Tetris",
+        "data": ["score:", "lines:", "0"],
+        "btn": "Start/Pause"
     }
 }
