@@ -1,12 +1,16 @@
-// vuetify
+//vuetify
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 
-// Default Layout
+//default Layout
 import DefaultLayout from '~/layouts/Default.vue';
 
-// custom scss
+//custom scss
 import '~/assets/sass/styles.scss';
+
+//tetris js
+import '~/assets/js/tetris.js';
+
 
 export default function (Vue, { appOptions, head }) {
     head.link.push({
