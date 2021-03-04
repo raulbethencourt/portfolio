@@ -14,9 +14,17 @@
 
             <v-row>
                 <v-col cols="10" offset="1">
-                    <h3>{{ $page.texts.edges[0].node.tetris.data[0] }} <span id="score">{{ $page.texts.edges[0].node.tetris.data[2] }}</span></h3>
-                    <h2>{{ $page.texts.edges[0].node.tetris.data[1] }} <span id="lines">{{ $page.texts.edges[0].node.tetris.data[2] }}</span></h2>
-                    <v-btn id="startBtn" outlined margincolor="success" dark>{{ $page.texts.edges[0].node.tetris.btn }}</v-btn>
+                    <h3>
+                        {{ $page.texts.edges[0].node.tetris.data[0] }}
+                        <span id="score">{{ $page.texts.edges[0].node.tetris.data[2] }}</span>
+                    </h3>
+                    <h2>
+                        {{ $page.texts.edges[0].node.tetris.data[1] }}
+                        <span id="lines">{{ $page.texts.edges[0].node.tetris.data[2] }}</span>
+                    </h2>
+                    <v-btn id="startBtn" outlined margincolor="success" dark>{{
+                        $page.texts.edges[0].node.tetris.btn
+                    }}</v-btn>
                 </v-col>
             </v-row>
         </v-container>
@@ -44,7 +52,12 @@
 </template>
 
 <script>
+import tetris from '~/assets/js/tetris.js';
+
 export default {
+    mounted() {
+        tetris
+    },
     data() {
         return { taken: ['a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k'] };
     }
