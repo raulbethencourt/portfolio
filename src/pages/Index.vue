@@ -12,14 +12,14 @@
 </template>
 
 <script>
-import About from '@/components/About.vue'
-import Contact from '@/components/Contact.vue'
-import Education from '@/components/Education.vue'
-import Projects from '@/components/Projects.vue'
-import Experience from '@/components/Experience.vue'
-import Skills from '@/components/Skills.vue'
-import Tetris from '@/components/Tetris.vue'
-import Testimonials from '@/components/Testimonials.vue'
+import About from '@/components/About.vue';
+import Contact from '@/components/Contact.vue';
+import Education from '@/components/Education.vue';
+import Projects from '@/components/Projects.vue';
+import Experience from '@/components/Experience.vue';
+import Skills from '@/components/Skills.vue';
+import Tetris from '@/components/Tetris.vue';
+import Testimonials from '@/components/Testimonials.vue';
 
 export default {
     metaInfo: {
@@ -35,7 +35,7 @@ export default {
         Tetris,
         Testimonials
     }
-}
+};
 </script>
 
 <page-query>
@@ -104,6 +104,11 @@ query sidebar($locale: String) {
                         company
                         texts
                     }
+                }
+                tetris {
+                    title
+                    data
+                    btn
                 }
             }
         }

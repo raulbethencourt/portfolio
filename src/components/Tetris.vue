@@ -7,16 +7,16 @@
             <v-row>
                 <v-col cols="10" offset="1">
                     <h2 class="text-h2 font-weight-bold mb-5">
-                        {{ $page.texts.edges[0].node.testimonials.title }}
+                        {{ $page.texts.edges[0].node.tetris.title }}
                     </h2>
                 </v-col>
             </v-row>
 
             <v-row>
                 <v-col cols="10" offset="1">
-                    <h3>Score: <span id="score">0</span></h3>
-                    <h2>Lines: <span id="lines">0</span></h2>
-                    <v-btn id="startBtn" outlined margincolor="success" dark>Start/Pause</v-btn>
+                    <h3>{{ $page.texts.edges[0].node.tetris.data[0] }} <span id="score">{{ $page.texts.edges[0].node.tetris.data[2] }}</span></h3>
+                    <h2>{{ $page.texts.edges[0].node.tetris.data[1] }} <span id="lines">{{ $page.texts.edges[0].node.tetris.data[2] }}</span></h2>
+                    <v-btn id="startBtn" outlined margincolor="success" dark>{{ $page.texts.edges[0].node.tetris.btn }}</v-btn>
                 </v-col>
             </v-row>
         </v-container>
