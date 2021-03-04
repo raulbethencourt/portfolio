@@ -14,22 +14,16 @@
 
             <v-row>
                 <v-col cols="10" offset="1">
-                    <h3>Score:<span id="score">0</span></h3>
-                    <v-btn id="startBtn" outlined margincolor="success" dark
-                        >Start/Pause</v-btn
-                    >
+                    <h3>Score: <span id="score">0</span></h3>
+                    <h2>Lines: <span id="lines">0</span></h2>
+                    <v-btn id="startBtn" outlined margincolor="success" dark>Start/Pause</v-btn>
                 </v-col>
             </v-row>
         </v-container>
 
         <v-container>
             <v-row>
-                <v-col
-                    cols="5"
-                    offset="1"
-                    id="grid"
-                    class="d-flex flex-wrap tetris__grid"
-                >
+                <v-col cols="5" offset="1" id="grid" class="d-flex flex-wrap tetris__grid">
                     <div v-for="i in 200" :key="i" class="square"></div>
 
                     <div v-for="j in taken" :key="j" class="square taken d-none"></div>

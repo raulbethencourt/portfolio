@@ -6,15 +6,22 @@ document.addEventListener('readystatechange', evt => {
 });
 
 const initApp = () => {
+    const blue = 'url(' + require(`@/assets/images/tetrisBlocks/blue_block.png`) + ')';
+    const purple = 'url(' + require(`@/assets/images/tetrisBlocks/purple_block.png`) + ')';
+    const peach = 'url(' + require(`@/assets/images/tetrisBlocks/peach_block.png`) + ')';
+    const green = 'url(' + require(`@/assets/images/tetrisBlocks/green_block.png`) + ')';
+    const yellow = 'url(' + require(`@/assets/images/tetrisBlocks/yellow_block.png`) + ')';
     const grid = document.getElementById('grid');
     let squares = Array.from(document.querySelectorAll('#grid .square'));
     const scoreDisplay = document.getElementById('score');
+    const linesDisplay = document.getElementById('lines');
     const startBtn = document.getElementById('startBtn');
     const width = 10;
     let nextRandom = 0;
     let timer;
     let score = 0;
-    const colors = ['orange', 'red', 'purple', 'green', 'blue'];
+    let lines = 0;
+    const colors = [blue, purple, peach, green, yellow];
     let speed = 1000;
     let points = 30;
 
@@ -67,7 +74,8 @@ const initApp = () => {
     function draw() {
         current.forEach(i => {
             squares[currentPosition + i].classList.add('tetromino');
-            squares[currentPosition + i].style.backgroundColor = colors[random];
+            squares[currentPosition + i].style.backgroundImage = colors[random];
+            squares[currentPosition + i].style.backgroundSize = '100%';
         });
     }
 
@@ -75,7 +83,7 @@ const initApp = () => {
     function undraw() {
         current.forEach(i => {
             squares[currentPosition + i].classList.remove('tetromino');
-            squares[currentPosition + i].style.backgroundColor = '';
+            squares[currentPosition + i].style.backgroundImage = '';
         });
     }
 
@@ -108,11 +116,7 @@ const initApp = () => {
 
     //freeze function
     function freeze() {
-        if (
-            current.some(i =>
-                squares[currentPosition + i + width].classList.contains('taken')
-            )
-        ) {
+        if (current.some(i => squares[currentPosition + i + width].classList.contains('taken'))) {
             current.forEach(i => squares[currentPosition + i].classList.add('taken'));
             //start a new tetromino falling
             random = nextRandom;
@@ -142,9 +146,7 @@ const initApp = () => {
     //move the tetromino right, unless is at the edge or ther is a blockage
     function moveRight() {
         undraw();
-        const isAtRightEdge = current.some(
-            i => (currentPosition + i) % width === width - 1
-        );
+        const isAtRightEdge = current.some(i => (currentPosition + i) % width === width - 1);
 
         if (!isAtRightEdge) currentPosition += 1;
 
@@ -214,13 +216,14 @@ const initApp = () => {
         //remove any trace of a tetromino form the entire grid
         displaySquares.forEach(square => {
             square.classList.remove('tetromino');
-            square.style.backgroundColor = '';
+            square.style.backgroundImage = '';
         });
 
         //display new tetromino
         upNextTetrominoes[nextRandom].forEach(i => {
             displaySquares[displayIndex + i].classList.add('tetromino');
-            displaySquares[displayIndex + i].style.backgroundColor = colors[nextRandom];
+            displaySquares[displayIndex + i].style.backgroundImage = colors[nextRandom];
+            displaySquares[displayIndex + i].style.backgroundSize = '100%';
         });
     }
 
@@ -240,35 +243,25 @@ const initApp = () => {
     //add score
     function addScore() {
         for (let i = 0; i < 199; i += width) {
-            const row = [
-                i,
-                i + 1,
-                i + 2,
-                i + 3,
-                i + 4,
-                i + 5,
-                i + 6,
-                i + 7,
-                i + 8,
-                i + 9
-            ];
+            const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9];
 
             if (row.every(i => squares[i].classList.contains('taken'))) {
                 score += 10;
+                lines += 1;
                 scoreDisplay.innerHTML = score;
+                linesDisplay.innerHTML = lines;
+
                 //with this on speed up the application
                 if (points === score) {
                     clearInterval(timer);
                     timer = setInterval(moveDown, speed);
-                    speed = speed - 20;
-                    points = points + 30;
-                    console.log(timer);
-                    console.log(speed);
+                    speed -= 20;
+                    points += 30;
                 }
                 row.forEach(i => {
                     squares[i].classList.remove('taken');
                     squares[i].classList.remove('tetromino');
-                    squares[i].style.backgroundColor = '';
+                    squares[i].style.backgroundImage = '';
                 });
                 const squaresRemoved = squares.splice(i, width);
                 squares = squaresRemoved.concat(squares);
@@ -280,7 +273,8 @@ const initApp = () => {
     //game over
     function gameOver() {
         if (current.some(i => squares[currentPosition + i].classList.contains('taken'))) {
-            scoreDisplay.innerHTML = 'end';
+            scoreDisplay.innerHTML = 'Your total score is ' + score;
+            linesDisplay.innerHTML = 'your number of lines is' + lines;
             clearInterval(timer);
         }
     }
