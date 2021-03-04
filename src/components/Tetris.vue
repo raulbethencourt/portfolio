@@ -52,12 +52,7 @@
 </template>
 
 <script>
-import tetris from '~/assets/js/tetris.js';
-
 export default {
-    mounted() {
-        tetris
-    },
     data() {
         return { taken: ['a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k'] };
     }
