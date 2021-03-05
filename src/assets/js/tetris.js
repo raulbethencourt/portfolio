@@ -16,14 +16,14 @@ import {
     upNextTetrominoes
 } from '~/assets/js/setup.js';
 
-// Launch app
-document.addEventListener('readystatechange', evt => {
-    if (evt.target.readyState === 'complete') {
-        initApp();
-    }
-});
+// // Launch app
+// document.addEventListener('readystatechange', evt => {
+//     if (evt.target.readyState === 'complete') {
+//         initApp();
+//     }
+// });
 
-const initApp = () => {
+export function initApp() {
     //DOM objects
     const grid = document.getElementById('grid');
     const scoreDisplay = document.getElementById('score');
