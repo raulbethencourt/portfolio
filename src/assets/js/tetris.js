@@ -16,13 +16,6 @@ import {
     upNextTetrominoes
 } from '~/assets/js/setup.js';
 
-// // Launch app
-// document.addEventListener('readystatechange', evt => {
-//     if (evt.target.readyState === 'complete') {
-//         initApp();
-//     }
-// });
-
 export function initApp() {
     //DOM objects
     const grid = document.getElementById('grid');
@@ -81,18 +74,21 @@ export function initApp() {
 
     //assign funtions to keyCodes
     function control(evt) {
-        evt.preventDefault();
         switch (evt.keyCode) {
             case 37:
+                evt.preventDefault();
                 moveLeft();
                 break;
             case 39:
+                evt.preventDefault();
                 moveRight();
                 break;
             case 38:
+                evt.preventDefault();
                 rotate();
                 break;
             case 40:
+                evt.preventDefault();
                 moveDown();
                 break;
         }
