@@ -9,7 +9,7 @@ import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/sass/styles.scss';
 
 //tetris js
-require(`@/assets/js/tetris.js`);
+import '~/assets/js/tetris.js';
 
 export default function(Vue, { appOptions, head }) {
     head.link.push({
