@@ -53,6 +53,7 @@
 
 <script>
 import { initApp } from '~/assets/js/tetris.js';
+
 export default {
     data() {
         return { taken: ['a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k'] };

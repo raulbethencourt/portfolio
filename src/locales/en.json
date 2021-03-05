@@ -161,7 +161,7 @@
         ]
     },
     "skills": {
-        "title": "Skills",
+        "title": "skills",
         "logos": [
             { "icon": "vue", "url": "https://vuejs.org" },
             { "icon": "js", "url": "https://www.javascript.com" },
@@ -199,7 +199,7 @@
         ]
     },
     "testimonials": {
-        "title": "Testimonials",
+        "title": "testimonials",
         "items": [
             {
                 "author": "Vincent Adhenet",
@@ -221,8 +221,12 @@
         ]
     },
     "tetris": {
-        "title": "Tetris",
+        "title": "tetris",
         "data": ["score:", "lines:", "0"],
         "btn": "Start/Pause"
+    },
+    "contact": {
+        "title": "contact",
+        "items": ["name", "email", "message", "submit", "reset reCaptcha"]
     }
 }

@@ -110,6 +110,10 @@ query sidebar($locale: String) {
                     data
                     btn
                 }
+                contact {
+                    title
+                    items
+                }
             }
         }
     }

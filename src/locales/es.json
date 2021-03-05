@@ -30,7 +30,7 @@
         ]
     },
     "projects": {
-        "title": "proyectos",
+        "title": "Proyectos",
         "works": [
             {
                 "title": "Plataforme",
@@ -77,7 +77,7 @@
         ]
     },
     "experience": {
-        "title": "experiencia",
+        "title": "Experiencia",
         "jobs": [
             {
                 "title": "Développeur web front-end",
@@ -95,9 +95,7 @@
                 "title": "Assistant charpentier",
                 "company": "Charpente Cri Gasser Fils",
                 "city": "Strasbourg, Grand Est",
-                "description": [
-                    "Fabrication et pose de charpentes. Pose de bardages."
-                ],
+                "description": ["Fabrication et pose de charpentes. Pose de bardages."],
                 "year": "2017"
             },
             {
@@ -225,6 +223,9 @@
         "title": "Tetris",
         "data": ["marcador:", "lineas:", "0"],
         "btn": "Iniciar/Pausa"
+    },
+    "contact": {
+        "title": "contact",
+        "items": ["name", "email", "message", "submit", "reset reCaptcha"]
     }
-
 }
