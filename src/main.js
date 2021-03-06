@@ -8,9 +8,6 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
-//tetris js
-import '~/assets/js/tetris.js';
-
 export default function(Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',

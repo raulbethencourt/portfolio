@@ -17,7 +17,7 @@
                                 v-model="firstname"
                                 :rules="nameRules"
                                 :counter="20"
-                                label="Name"
+                                :label="$page.texts.edges[0].node.contact.items[0]"
                                 required
                                 type="text"
                                 name="from_name"

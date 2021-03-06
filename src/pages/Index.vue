@@ -114,6 +114,13 @@ query sidebar($locale: String) {
                     title
                     items
                 }
+                footer {
+                    icons {
+                        name
+                        url
+                    }
+                    author
+                }
             }
         }
     }

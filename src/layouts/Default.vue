@@ -1,5 +1,9 @@
 <template>
     <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
+        <v-app-bar fixed flat class="d-md-none">
+            <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+        </v-app-bar>
+
         <v-navigation-drawer
             width="180px"
             class="nav-bar"
@@ -13,14 +17,10 @@
                     <v-img
                         :src="
                             $vuetify.theme.dark
-                                ? require(`@/assets/images/profile-light.png`)
-                                : require(`@/assets/images/profile-dark.png`)
+                                ? require(`@/assets/images/icon-sidebar-light.png`)
+                                : require(`@/assets/images/icon-sidebar-light.png`)
                         "
-                        :class="
-                            $vuetify.theme.dark
-                                ? 'dark-profile'
-                                : 'light-profile'
-                        "
+                        :class="$vuetify.theme.dark ? 'dark-profile' : 'light-profile'"
                     ></v-img>
                 </v-list-item-avatar>
 
@@ -61,9 +61,7 @@
                 <v-list dense>
                     <v-list-item class="list-link">
                         <v-list-item-icon>
-                            <v-icon>{{
-                                $page.texts.edges[0].node.sidebar.append[0].icon
-                            }}</v-icon>
+                            <v-icon>{{ $page.texts.edges[0].node.sidebar.append[0].icon }}</v-icon>
                         </v-list-item-icon>
 
                         <v-list-item-content>
@@ -73,8 +71,7 @@
                                 :class="$vuetify.theme.dark ? 'light' : 'dark'"
                             >
                                 <v-list-item-title>{{
-                                    $page.texts.edges[0].node.sidebar.append[0]
-                                        .title
+                                    $page.texts.edges[0].node.sidebar.append[0].title
                                 }}</v-list-item-title>
                             </a>
                         </v-list-item-content>
@@ -82,9 +79,7 @@
 
                     <v-list-item class="list-link">
                         <v-list-item-icon>
-                            <v-icon>{{
-                                $page.texts.edges[0].node.sidebar.append[3].icon
-                            }}</v-icon>
+                            <v-icon>{{ $page.texts.edges[0].node.sidebar.append[3].icon }}</v-icon>
                         </v-list-item-icon>
 
                         <v-list-item-content>
@@ -96,18 +91,15 @@
                                 :class="$vuetify.theme.dark ? 'light' : 'dark'"
                             >
                                 <v-list-item-title>{{
-                                    $page.texts.edges[0].node.sidebar.append[3]
-                                        .title
+                                    $page.texts.edges[0].node.sidebar.append[3].title
                                 }}</v-list-item-title>
                             </a>
                         </v-list-item-content>
                     </v-list-item>
-                    
+
                     <v-list-item class="list-locale">
                         <v-list-item-icon>
-                            <v-icon>{{
-                                $page.texts.edges[0].node.sidebar.append[1].icon
-                            }}</v-icon>
+                            <v-icon>{{ $page.texts.edges[0].node.sidebar.append[1].icon }}</v-icon>
                         </v-list-item-icon>
 
                         <v-list-item-content>
@@ -117,9 +109,7 @@
 
                     <v-list-item class="list-color">
                         <v-list-item-icon>
-                            <v-icon>{{
-                                $page.texts.edges[0].node.sidebar.append[2].icon
-                            }}</v-icon>
+                            <v-icon>{{ $page.texts.edges[0].node.sidebar.append[2].icon }}</v-icon>
                         </v-list-item-icon>
 
                         <v-list-item-content>
@@ -135,6 +125,39 @@
         </v-navigation-drawer>
         <v-main>
             <slot />
+            <v-footer v-bind="localAttrs" :padless="padless">
+                <v-card
+                    height="230px"
+                    dark
+                    flat
+                    tile
+                    width="100%"
+                    class="text-center d-flex flex-column justify-center"
+                >
+                    <v-card-text>
+                        <div v-for="(icon, i) in $page.texts.edges[0].node.footer.icons" :key="i">
+                            <v-btn
+                                class="mx-4"
+                                icon
+                                :href="icon.url"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                <v-icon size="30px">
+                                    {{ icon.name }}
+                                </v-icon>
+                            </v-btn>
+                        </div>
+                    </v-card-text>
+
+                    <v-divider></v-divider>
+
+                    <v-card-text class="white--text">
+                        {{ new Date().getFullYear() }} —
+                        <strong>{{ $page.texts.edges[0].node.footer.author }}</strong>
+                    </v-card-text>
+                </v-card>
+            </v-footer>
         </v-main>
     </v-app>
 </template>
@@ -147,8 +170,11 @@ export default {
         return {
             right: null,
             pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf'),
-            drawer: true,
-            mini: true
+            drawer: false,
+            group: null,
+            mini: true,
+            padless: true,
+            variant: 'default'
         };
     },
     components: {
@@ -163,6 +189,17 @@ export default {
     computed: {
         theme() {
             return this.$vuetify.theme.dark ? 'dark' : 'light';
+        },
+        localAttrs() {
+            const attrs = {};
+
+            if (this.variant === 'default') {
+                attrs.absolute = false;
+                attrs.fixed = false;
+            } else {
+                attrs[this.variant] = true;
+            }
+            return attrs;
         }
     }
 };

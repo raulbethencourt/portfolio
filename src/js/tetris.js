@@ -14,9 +14,9 @@ import {
     displayWidth,
     displayIndex,
     upNextTetrominoes
-} from '~/assets/js/setup.js';
+} from '~/js/tetris.setup.js';
 
-export function initApp() {
+export function tetris() {
     //DOM objects
     const grid = document.getElementById('grid');
     const scoreDisplay = document.getElementById('score');

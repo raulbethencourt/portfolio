@@ -227,6 +227,22 @@
     "contact": {
         "title": "contact",
         "items": ["name", "email", "message", "submit", "reset reCaptcha"]
+    },
+    "footer": {
+        "icons": [
+            {
+                "name": "mdi-github",
+                "url": "https://github.com/raulbethencourt"
+            },
+            {
+                "name": "mdi-linkedin",
+                "url": "https://www.linkedin.com/in/raulbethencourt"
+            },
+            {
+                "name": "mdi-stack-overflow",
+                "url": "https://stackoverflow.com/users/13805497/raulbethencourt"
+            }
+        ],
+        "author": "Raul Bethencourt Gonzalez"
     }
-
 }
