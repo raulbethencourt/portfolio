@@ -9,7 +9,7 @@
   "dependencies": {
     "@playlyfe/gql": "^2.6.2",
     "emailjs-com": "^2.6.4",
-    "gitmoji-cli": "^3.2.18",
+    "gitmoji-cli": "^3.3.0",
     "gridsome": "^0.7.0",
     "gridsome-helper-json": "^1.0.3",
     "gridsome-plugin-i18n": "^1.6.0",
