@@ -97,7 +97,7 @@
                         </v-list-item-content>
                     </v-list-item>
 
-                    <v-list-item class="list-locale">
+                    <v-list-item class="list-locale d-none">
                         <v-list-item-icon>
                             <v-icon>{{ $page.texts.edges[0].node.sidebar.append[1].icon }}</v-icon>
                         </v-list-item-icon>
