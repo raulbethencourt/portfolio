@@ -36,7 +36,10 @@
                 "title": "Plataforme",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/plataform",
-                "description": "Une plateforme pédagogique, spécialement conçue pour l'association Contact et propotion.",
+                "description": "Dans ce projet j'ai réalisé une plateforme pédagogique, spécialement conçue pour l'association Contact et promotion.",
+                "icons": [
+                    ""
+                ]
                 "image": "plateforme"
             },
             {

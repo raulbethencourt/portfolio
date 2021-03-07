@@ -14,12 +14,12 @@
 
         .list-link {
             .dark {
-                color: black;
+                color: $dark_hard;
                 text-decoration: none;
             }
             
             .light {
-                color: white;
+                color: $light_hard;
                 text-decoration: none;
             }
         }
@@ -57,9 +57,9 @@
     }
 }
 .theme--light.v-navigation-drawer {
-    background-color: #fbf1c7;
+    background-color: $light;
 }
 
 .theme--dark.v-navigation-drawer {
-    background-color: #282828;
+    background-color: $dark;
 }
