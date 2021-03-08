@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@playlyfe/gql": "^2.6.2",
+    "aos": "^2.3.4",
     "emailjs-com": "^2.6.4",
     "gitmoji-cli": "^3.3.0",
     "gridsome": "^0.7.0",
