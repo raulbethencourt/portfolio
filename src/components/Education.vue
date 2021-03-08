@@ -13,10 +13,10 @@
             </v-row>
             <v-row>
                 <v-col cols="10" offset="1">
-                    <v-carousel v-model="model" hide-delimiter-background dark>
+                    <v-carousel v-model="model" hide-delimiters dark>
                         <v-carousel-item
-                            v-for="diplome in $page.texts.edges[0].node.education.diplomes"
-                            :key="diplome.title"
+                            v-for="(diplome, i) in $page.texts.edges[0].node.education.diplomes"
+                            :key="i"
                         >
                             <v-card height="100%">
                                 <v-card-title>

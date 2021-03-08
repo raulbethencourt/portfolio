@@ -17,7 +17,7 @@
                     <v-img
                         :src="
                             $vuetify.theme.dark
-                                ? require(`@/assets/images/icon-sidebar-light.png`)
+                                ? require(`@/assets/images/icon-sidebar-dark.png`)
                                 : require(`@/assets/images/icon-sidebar-light.png`)
                         "
                         :class="$vuetify.theme.dark ? 'dark-profile' : 'light-profile'"
