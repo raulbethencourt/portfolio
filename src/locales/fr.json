@@ -30,10 +30,10 @@
         ]
     },
     "projects": {
-        "title": "projets",
+        "title": "Projets",
         "works": [
             {
-                "title": "Plataforme",
+                "title": "Plataforme C&P",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/plataform",
                 "description": "Dans ce projet je réalise une plateforme pédagogique, spécialement conçue pour l'association Contact et promotion.",
@@ -71,7 +71,7 @@
                 "btn": false
             },
             {
-                "title": "todo-list",
+                "title": "Todo-list",
                 "url": "https://raulbethencourt.github.io/todo_list/",
                 "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "Dans ce tutoriel, j'ai créée une application de liste de tâches avec HTML, SASS / CSS et Vanilla Javascript. L'application ToDo sera réactive en pensant d'abord au mobile. L'application ToDo sera également conçue avec l'accessibilité (A11y) à l'esprit pour la navigation au clavier et les lecteurs d'écran. Nous utiliserons également l'API de stockage Web pour créer un magasin de données persistant afin que nos éléments de liste réapparaissent à chaque fois que nous visitons l'application Web.",
@@ -80,7 +80,7 @@
                 "btn": false
             },
             {
-                "title": "morpion",
+                "title": "Morpion",
                 "url": "https://raulbethencourt.github.io/morpion/",
                 "git": "https://github.com/raulbethencourt/morpion",
                 "description": "Ceci est un projet JQuery pour faire un jeu Morpion.",
@@ -90,7 +90,7 @@
                 "btn": false
             },
             {
-                "title": "cauldron-overflow",
+                "title": "Cauldron-overflow",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Ici, j'ai un autre projet Symfony.",
@@ -107,7 +107,7 @@
         ]
     },
     "experience": {
-        "title": "expérience",
+        "title": "Expérience",
         "jobs": [
             {
                 "title": "Développeur web front-end",
@@ -149,7 +149,7 @@
         ]
     },
     "education": {
-        "title": "etudes",
+        "title": "Etudes",
         "diplomes": [
             {
                 "title": "Titre professionnel Développeur Web et Web mobile",
@@ -190,7 +190,7 @@
         ]
     },
     "skills": {
-        "title": "compétences",
+        "title": "Compétences",
         "logos": [
             { "icon": "vue", "url": "https://vuejs.org" },
             { "icon": "js", "url": "https://www.javascript.com" },
@@ -228,7 +228,7 @@
         ]
     },
     "testimonials": {
-        "title": "testimonials",
+        "title": "Testimonials",
         "items": [
             {
                 "author": "Vincent Adhenet",
@@ -251,12 +251,12 @@
     },
     "tetris": {
         "title": "Tetris",
-        "data": ["score:", "lignes:", "0"],
+        "data": ["Score:", "Lignes:", "0"],
         "btn": "Commencer/Pause"
     },
     "contact": {
-        "title": "contact",
-        "items": ["name", "email", "message", "submit", "reset reCaptcha"]
+        "title": "Contact",
+        "items": ["Votre nom...", "Votre e-mail...", "Votre message...", "Envoyer", "reset reCaptcha"]
     },
     "footer": {
         "icons": [

@@ -29,16 +29,22 @@
                                 outlined
                                 v-model="email"
                                 :rules="emailRules"
-                                label="E-mail"
+                                :label="$page.texts.edges[0].node.contact.items[1]"
                                 required
                                 type="email"
                                 name="reply_to"
                             ></v-text-field
                         ></v-input>
 
-                        <v-textarea name="message" outlined label="Your message"></v-textarea>
+                        <v-textarea
+                            name="message"
+                            outlined
+                            :label="$page.texts.edges[0].node.contact.items[2]"
+                        ></v-textarea>
 
-                        <v-btn type="submit" value="Send">Submit</v-btn>
+                        <v-btn type="submit" value="Send">{{
+                            $page.texts.edges[0].node.contact.items[3]
+                        }}</v-btn>
 
                         <div id="root">
                             <vue-recaptcha
@@ -48,7 +54,7 @@
                                 :sitekey="sitekey"
                             >
                             </vue-recaptcha>
-                            <button @click="resetRecaptcha">Reset ReCAPTCHA</button>
+                            <button @click="resetRecaptcha" class="d-none">Reset ReCAPTCHA</button>
                         </div>
                     </v-form>
                 </v-col>
@@ -63,7 +69,7 @@ import VueRecaptcha from 'vue-recaptcha';
 
 export default {
     methods: {
-        sendEmail: e => {
+        sendEmail: (e) => {
             emailjs
                 .sendForm(
                     'service_2rabu7t',
@@ -72,21 +78,21 @@ export default {
                     'user_PQrWgGpKRxHy54mH99sbR'
                 )
                 .then(
-                    result => {
+                    (result) => {
                         console.log('SUCCESS!', result.status, result.text);
                     },
-                    error => {
+                    (error) => {
                         console.log('FAILED...', error);
                     }
                 );
         },
-        onSubmit: function() {
+        onSubmit: function () {
             this.$refs.invisibleRecaptcha.execute();
         },
-        onVerify: function(response) {
+        onVerify: function (response) {
             console.log('Verify: ' + response);
         },
-        onExpired: function() {
+        onExpired: function () {
             console.log('Expired');
         },
         resetRecaptcha() {
@@ -100,13 +106,13 @@ export default {
             firstname: '',
             lastname: '',
             nameRules: [
-                v => !!v || 'Name is required',
-                v => v.length <= 20 || 'Name must be less than 20 characters'
+                (v) => !!v || 'Name is required',
+                (v) => v.length <= 20 || 'Name must be less than 20 characters'
             ],
             email: '',
             emailRules: [
-                v => !!v || 'E-mail is required',
-                v => /.+@.+/.test(v) || 'E-mail must be valid'
+                (v) => !!v || 'E-mail is required',
+                (v) => /.+@.+/.test(v) || 'E-mail must be valid'
             ]
         };
     },
