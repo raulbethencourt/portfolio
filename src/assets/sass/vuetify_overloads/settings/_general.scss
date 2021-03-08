@@ -1,3 +1,11 @@
 html {
     scroll-behavior: smooth;
 }
+
+.theme--dark.v-application {
+    color: $light_hard;
+}
+
+.theme--light.v-application {
+    color: $dark_hard;
+}

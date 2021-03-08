@@ -13,6 +13,10 @@
             }
         }
 
+        .v-parallax__content {
+            color: inherit;
+        }
+
         .portrait {
             margin-top: 50px;
             width: 250px;
@@ -27,14 +31,6 @@
         .light-profile {
             transform: scaleX(-1);
             box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        }
-
-        .dark-text {
-            color: whitesmoke;
-        }
-
-        .light-text {
-            color: $dark_hard;
         }
 
         .parallax__title {

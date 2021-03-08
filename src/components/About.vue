@@ -6,18 +6,17 @@
         "
     >
         <v-parallax
-            dark
             :src="
                 $vuetify.theme.dark
                     ? require(`@/assets/images/dark-bg.png`)
                     : require(`@/assets/images/light-bg.png`)
             "
         >
-            <v-row class="d-flex justify-md-space-around justify-center align-center">
+            <v-row class="d-flex justify-md-space-center justify-center align-center">
                 <v-col
                     cols="12"
                     md="5"
-                    class="d-flex justify-center justify-md-end"
+                    class="d-flex justify-center"
                 >
                     <g-image
                         alt="profile image"
@@ -36,7 +35,7 @@
 
                 <v-col
                     cols="9"
-                    md="5"
+                    md="4"
                     :class="$vuetify.theme.dark ? 'dark-text' : 'light-text'"
                 >
                     <h1 class="parallax__title font-weight-bold mb-5">

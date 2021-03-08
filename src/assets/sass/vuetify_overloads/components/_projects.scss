@@ -1,3 +1,18 @@
 .projects-section {
     padding: 75px 0;
+
+    .project-card {
+        width:48%;
+
+        .theme--light.v-card {
+            background-color: $light_soft;
+            color: $dark_hard;
+        }
+
+        .theme--dark.v-card {
+            background-color: $dark_soft;
+            color: $light_hard;
+        }
+    }
+
 }
