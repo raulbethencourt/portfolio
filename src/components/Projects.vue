@@ -40,10 +40,6 @@
                                     {{ project.title }}
                                 </v-card-title>
 
-                                <v-card-text class="text--primary">
-                                    {{ truncate(project.description) }}
-                                </v-card-text>
-
                                 <v-row justify="center">
                                     <v-icon v-for="(icon, i) in project.icons" :key="i" large>{{
                                         icon
@@ -73,7 +69,23 @@
                                             <v-icon large>mdi-github</v-icon>
                                         </v-btn>
                                     </div>
+                                    <v-spacer></v-spacer>
+
+                                    <v-btn icon @click="project.btn = !project.btn">
+                                        <v-icon>{{
+                                            project.btn ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                                        }}</v-icon>
+                                    </v-btn>
                                 </v-card-actions>
+                                <v-expand-transition>
+                                    <div v-show="project.btn">
+                                        <v-divider></v-divider>
+
+                                        <v-card-text class="text--primary">
+                                            {{ project.description }}
+                                        </v-card-text>
+                                    </div>
+                                </v-expand-transition>
                             </v-card>
                         </v-lazy>
                     </v-col>
@@ -88,14 +100,6 @@ export default {
     data: () => ({
         show: false,
         isActive: false
-    }),
-    methods: {
-        truncate(str) {
-            if (str.length > 80) {
-                return str.slice(0, 79) + '...';
-            }
-            return str;
-        }
-    }
+    })
 };
 </script>

@@ -69,6 +69,7 @@ query sidebar($locale: String) {
                         description
                         icons
                         image
+                        btn
                     }
                 }
                 experience {

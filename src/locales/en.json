@@ -45,7 +45,8 @@
                     "mdi-sass",
                     "mdi-language-javascript"
                 ],
-                "image": "plateforme"
+                "image": "plateforme",
+                "btn": false
             },
             {
                 "title": "Dynamo-Location",
@@ -53,7 +54,8 @@
                 "git": "",
                 "description": "In this project I actuallised the front side.",
                 "icons": ["mdi-nuxt", "mdi-vuejs", "mdi-bootstrap", "mdi-sass"],
-                "image": "dynamo"
+                "image": "dynamo",
+                "btn": false
             },
             {
                 "title": "Agence inmobilier",
@@ -66,7 +68,8 @@
                     "mdi-bootstrap",
                     "mdi-language-javascript"
                 ],
-                "image": "inmoagence"
+                "image": "inmoagence",
+                "btn": false
             },
             {
                 "title": "todo-list",
@@ -74,7 +77,8 @@
                 "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "This is a vanilla Javascript project, to creates a ToDo App.",
                 "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-sass"],
-                "image": "todo"
+                "image": "todo",
+                "btn": false
             },
             {
                 "title": "morpion",
@@ -83,7 +87,8 @@
                 "description": "This is a JQuery project to do a Morpion Game",
                 "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-language-css3"],
 
-                "image": "morpion"
+                "image": "morpion",
+                "btn": false
             },
             {
                 "title": "cauldron-overflow",
@@ -97,7 +102,8 @@
                     "mdi-language-javascript"
                 ],
 
-                "image": "cauldron"
+                "image": "cauldron",
+                "btn": false
             }
         ]
     },

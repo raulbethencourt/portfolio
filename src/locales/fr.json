@@ -36,7 +36,7 @@
                 "title": "Plataforme",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/plataform",
-                "description": "Dans ce projet j'ai réalisé une plateforme pédagogique, spécialement conçue pour l'association Contact et promotion.",
+                "description": "Dans ce projet je réalise une plateforme pédagogique, spécialement conçue pour l'association Contact et promotion.",
                 "icons": [
                     "mdi-symfony",
                     "mdi-language-php",
@@ -44,51 +44,56 @@
                     "mdi-sass",
                     "mdi-language-javascript"
                 ],
-                "image": "plateforme"
+                "image": "plateforme",
+                "btn": false
             },
             {
                 "title": "Dynamo-Location",
                 "url": "https://dynamo-location.fr/fr/",
                 "git": "",
-                "description": "In this project I actuallised the front side.",
+                "description": "Pour le projet dynamo, j'ai travaillé avec un collègue pour mettre à jour le site de dynamo-location. Mon travail principal a été l'intégration d'une maquette donné par un graphiste et l'ajout de quelques fonctionnalités mineures.",
                 "icons": ["mdi-nuxt", "mdi-vuejs", "mdi-bootstrap", "mdi-sass"],
-                "image": "dynamo"
+                "image": "dynamo",
+                "btn": false
             },
             {
                 "title": "Agence inmobilier",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/inmogence",
-                "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
+                "description": "Dans ce projet j'ai suivi un tutoriel grafikart, pour apprendre la conception d'un site pur une agence immobilière. ",
                 "icons": [
                     "mdi-symfony",
                     "mdi-language-php",
                     "mdi-bootstrap",
                     "mdi-language-javascript"
                 ],
-                "image": "inmoagence"
+                "image": "inmoagence",
+                "btn": false
             },
             {
                 "title": "todo-list",
                 "url": "https://raulbethencourt.github.io/todo_list/",
                 "git": "https://github.com/raulbethencourt/todo_list",
-                "description": "This is a vanilla Javascript project, to creates a ToDo App.",
+                "description": "Dans ce tutoriel, j'ai créée une application de liste de tâches avec HTML, SASS / CSS et Vanilla Javascript. L'application ToDo sera réactive en pensant d'abord au mobile. L'application ToDo sera également conçue avec l'accessibilité (A11y) à l'esprit pour la navigation au clavier et les lecteurs d'écran. Nous utiliserons également l'API de stockage Web pour créer un magasin de données persistant afin que nos éléments de liste réapparaissent à chaque fois que nous visitons l'application Web.",
                 "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-sass"],
-                "image": "todo"
+                "image": "todo",
+                "btn": false
             },
             {
                 "title": "morpion",
                 "url": "https://raulbethencourt.github.io/morpion/",
                 "git": "https://github.com/raulbethencourt/morpion",
-                "description": "This is a JQuery project to do a Morpion Game",
+                "description": "Ceci est un projet JQuery pour faire un jeu Morpion.",
                 "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-language-css3"],
 
-                "image": "morpion"
+                "image": "morpion",
+                "btn": false
             },
             {
                 "title": "cauldron-overflow",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
-                "description": "Here I have another Symfony project",
+                "description": "Ici, j'ai un autre projet Symfony.",
                 "icons": [
                     "mdi-symfony",
                     "mdi-language-php",
@@ -96,7 +101,8 @@
                     "mdi-language-javascript"
                 ],
 
-                "image": "cauldron"
+                "image": "cauldron",
+                "btn": false
             }
         ]
     },
