@@ -8,7 +8,10 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
-export default function(Vue, { appOptions, head }) {
+//aos css
+import 'aos/dist/aos.css';
+
+export default function (Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
@@ -17,6 +20,12 @@ export default function(Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
+    });
+
+    head.link.push({
+        rel: 'stylesheet',
+        href:
+            'https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Tomorrow:wght@800&display=swap'
     });
 
     head.script.push({

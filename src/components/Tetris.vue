@@ -6,7 +6,7 @@
         <v-container>
             <v-row>
                 <v-col cols="10" offset="1">
-                    <h2 class="text-h2 font-weight-bold mb-5">
+                    <h2 class="font-weight-bold mb-5 tetris-title">
                         {{ $page.texts.edges[0].node.tetris.title }}
                     </h2>
                 </v-col>
