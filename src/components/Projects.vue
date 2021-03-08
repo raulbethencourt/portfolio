@@ -1,9 +1,7 @@
 <template>
     <section
         class="projects-section"
-        :id="
-            `${$page.texts.edges[0].node.sidebar.items[1].title.toLowerCase()}`
-        "
+        :id="`${$page.texts.edges[0].node.sidebar.items[1].title.toLowerCase()}`"
     >
         <v-container>
             <v-row>
@@ -17,8 +15,7 @@
             <v-row class="mb-8 mt-10">
                 <template>
                     <v-col
-                        v-for="project in $page.texts.edges[0].node.projects
-                            .works"
+                        v-for="project in $page.texts.edges[0].node.projects.works"
                         :key="project.image"
                         cols="11"
                         md="5"
@@ -34,24 +31,24 @@
                             <v-card class="mb-15">
                                 <v-img
                                     height="400px"
-                                    :src="
-                                        require(`@/assets/images/projects/${
-                                            project.image
-                                        }.png`)
-                                    "
+                                    :src="require(`@/assets/images/projects/${project.image}.png`)"
                                     position="top center"
                                 >
                                 </v-img>
 
-                                <v-card-title
-                                    class="text-uppercase font-weight-bold text-h4"
-                                >
+                                <v-card-title class="text-uppercase font-weight-bold text-h4">
                                     {{ project.title }}
                                 </v-card-title>
 
                                 <v-card-text class="text--primary">
                                     {{ truncate(project.description) }}
                                 </v-card-text>
+
+                                <v-row justify="center">
+                                    <v-icon v-for="(icon, i) in project.icons" :key="i" large>{{
+                                        icon
+                                    }}</v-icon>
+                                </v-row>
 
                                 <v-card-actions>
                                     <div v-if="project.url">
@@ -95,10 +92,10 @@ export default {
     methods: {
         truncate(str) {
             if (str.length > 80) {
-                return str.slice(0, 79) + '...'
+                return str.slice(0, 79) + '...';
             }
-            return str
+            return str;
         }
     }
-}
+};
 </script>

@@ -67,6 +67,7 @@ query sidebar($locale: String) {
                         url
                         git
                         description
+                        icons
                         image
                     }
                 }
