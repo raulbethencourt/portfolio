@@ -1,5 +1,8 @@
 <template>
-    <section :id="`${$page.texts.edges[0].node.sidebar.items[7].title.toLowerCase()}`">
+    <section
+        class="contact-section"
+        :id="`${$page.texts.edges[0].node.sidebar.items[7].title.toLowerCase()}`"
+    >
         <v-container>
             <v-row>
                 <v-col cols="10" offset="1">
@@ -69,7 +72,7 @@ import VueRecaptcha from 'vue-recaptcha';
 
 export default {
     methods: {
-        sendEmail: (e) => {
+        sendEmail: e => {
             emailjs
                 .sendForm(
                     'service_2rabu7t',
@@ -78,21 +81,21 @@ export default {
                     'user_PQrWgGpKRxHy54mH99sbR'
                 )
                 .then(
-                    (result) => {
+                    result => {
                         console.log('SUCCESS!', result.status, result.text);
                     },
-                    (error) => {
+                    error => {
                         console.log('FAILED...', error);
                     }
                 );
         },
-        onSubmit: function () {
+        onSubmit: function() {
             this.$refs.invisibleRecaptcha.execute();
         },
-        onVerify: function (response) {
+        onVerify: function(response) {
             console.log('Verify: ' + response);
         },
-        onExpired: function () {
+        onExpired: function() {
             console.log('Expired');
         },
         resetRecaptcha() {
@@ -106,13 +109,13 @@ export default {
             firstname: '',
             lastname: '',
             nameRules: [
-                (v) => !!v || 'Name is required',
-                (v) => v.length <= 20 || 'Name must be less than 20 characters'
+                v => !!v || 'Name is required',
+                v => v.length <= 20 || 'Name must be less than 20 characters'
             ],
             email: '',
             emailRules: [
-                (v) => !!v || 'E-mail is required',
-                (v) => /.+@.+/.test(v) || 'E-mail must be valid'
+                v => !!v || 'E-mail is required',
+                v => /.+@.+/.test(v) || 'E-mail must be valid'
             ]
         };
     },

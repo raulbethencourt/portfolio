@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { tetris } from '~/js/tetris.js';
+import { tetris } from '~/js/tetris/tetris.js';
 
 export default {
     data() {

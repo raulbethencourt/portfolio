@@ -14,7 +14,7 @@ import {
     displayWidth,
     displayIndex,
     upNextTetrominoes
-} from '~/js/tetris.setup.js';
+} from '~/js/tetris/tetris.setup.js';
 
 export function tetris() {
     //DOM objects

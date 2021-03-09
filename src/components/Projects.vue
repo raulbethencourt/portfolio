@@ -6,7 +6,7 @@
         <v-container>
             <v-row>
                 <v-col cols="10" offset="1">
-                    <h2 class="section-title font-weight-bold mb-5">
+                    <h2 class="section-title">
                         {{ $page.texts.edges[0].node.projects.title }}
                     </h2>
                 </v-col>
