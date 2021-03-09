@@ -38,7 +38,7 @@
                     md="4"
                     :class="$vuetify.theme.dark ? 'dark-text' : 'light-text'"
                 >
-                    <h1 class="parallax__title section-title font-weight-bold mb-5">
+                    <h1 class="parallax__title font-weight-bold mb-5">
                         {{ $page.texts.edges[0].node.about.title }}
                     </h1>
                     <h6

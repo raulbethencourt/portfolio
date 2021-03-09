@@ -26,7 +26,7 @@
                         data-aos="fade-up"
                     >
                         <v-img
-                            height="400px"
+                            height="350px"
                             :src="require(`@/assets/images/projects/${project.image}.png`)"
                             position="top center"
                         >
@@ -37,7 +37,7 @@
                         </v-card-title>
 
                         <v-row justify="center">
-                            <v-icon v-for="(icon, i) in project.icons" :key="i" large>{{
+                            <v-icon v-for="(icon, i) in project.icons" :key="i" large class="card-icon">{{
                                 icon
                             }}</v-icon>
                         </v-row>
