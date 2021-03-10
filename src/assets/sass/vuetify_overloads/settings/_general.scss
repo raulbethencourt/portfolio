@@ -16,12 +16,12 @@ html {
 }
 
 .theme--light.v-card {
-    background-color: $light_soft;
+    background-color: $bg_light3;
     color: $dark_hard;
 }
 
 .theme--dark.v-card {
-    background-color: $dark_soft;
+    background-color: $bg_dark3;
     color: $light_hard;
 }
 
@@ -39,4 +39,8 @@ html {
 
 .theme--light.v-btn {
     color: $dark_hard;
+}
+
+.v-timeline-item__body>.v-card:not(.v-card--flat):after, .v-timeline-item__body>.v-card:not(.v-card--flat):before {
+    border-right: 10px solid $bg_light3;
 }

@@ -1,25 +1,24 @@
 <template>
     <section
-        class="experience-section"
-        :id="
-            `${$page.texts.edges[0].node.sidebar.items[2].title.toLowerCase()}`
-        "
+        :class="$vuetify.theme.dark ? `experience-section dark-bg` : `experience-section light-bg`"
+        :id="`${$page.texts.edges[0].node.sidebar.items[2].title.toLowerCase()}`"
     >
-        <v-container>
+        <v-container class="mb-0">
             <v-row>
-                <v-col cols="10" offset="1">
-                    <h2 class="section-title">
-                        {{ $page.texts.edges[0].node.experience.title }}
-                    </h2>
+                <v-col cols="10" offset="1" class="d-flex justify-center">
+                    <div class="ballon">
+                        <h2 class="section-title">
+                            {{ $page.texts.edges[0].node.experience.title }}
+                        </h2>
+                    </div>
                 </v-col>
             </v-row>
 
-            <v-row>
-                <v-col class="col-10 offset-1">
-                    <v-timeline reverse>
+            <v-row class="mt-0">
+                <v-col class="col-10 offset-1 pt-0 pb-0">
+                    <v-timeline reverse class="timeline">
                         <v-timeline-item
-                            v-for="(job, i) in $page.texts.edges[0].node
-                                .experience.jobs"
+                            v-for="(job, i) in $page.texts.edges[0].node.experience.jobs"
                             :key="i"
                             color="secondary"
                             small
@@ -34,29 +33,25 @@
                             </template>
                             <v-card>
                                 <v-card-title class="secondary lighten-2">
-                                    <h4
-                                        class="display-1 font-weight-bold text-h4"
-                                    >
+                                    <h4 class="display-1 font-weight-bold text-h4">
                                         {{ job.title }}
                                     </h4>
                                 </v-card-title>
-                                <v-container>
-                                    <v-row>
+                                <v-container class="pl-0 pr-0">
+                                    <v-row class="ml-2 mr-2">
                                         <v-col cols="12">
                                             <h5 class="text-h5">
                                                 {{ job.company }}
                                             </h5>
-                                            <h6 class="text-h6">
+                                            <h6 class="text-h6 subtitle mb-1">
                                                 {{ job.city }}
                                             </h6>
                                         </v-col>
                                     </v-row>
-                                    <v-row>
+                                    <v-divider class="divider"></v-divider>
+                                    <v-row class="ml-2 mr-2 mt-1">
                                         <v-col>
-                                            <p
-                                                v-for="(text, i) in job.description"
-                                                :key="i"
-                                            >
+                                            <p v-for="(text, i) in job.description" :key="i">
                                                 {{ text }}
                                             </p>
                                         </v-col>
@@ -76,5 +71,5 @@ export default {
     data: () => ({
         show: false
     })
-}
+};
 </script>
