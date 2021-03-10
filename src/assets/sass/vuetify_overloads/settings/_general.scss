@@ -14,3 +14,29 @@ html {
 .theme--light.v-application {
     color: $dark_hard;
 }
+
+.theme--light.v-card {
+    background-color: $light_soft;
+    color: $dark_hard;
+}
+
+.theme--dark.v-card {
+    background-color: $dark_soft;
+    color: $light_hard;
+}
+
+.theme--dark.v-icon {
+    color: $light_hard;
+}
+
+.theme--light.v-icon {
+    color: $dark_hard;
+}
+
+.theme--dark.v-btn {
+    color: $light_hard;
+}
+
+.theme--light.v-btn {
+    color: $dark_hard;
+}

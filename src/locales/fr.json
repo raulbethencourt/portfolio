@@ -38,11 +38,11 @@
                 "git": "https://github.com/raulbethencourt/plataform",
                 "description": "Dans ce projet je réalise une plateforme pédagogique, spécialement conçue pour l'association Contact et promotion.",
                 "icons": [
-                    "mdi-symfony",
-                    "mdi-language-php",
-                    "mdi-bootstrap",
-                    "mdi-sass",
-                    "mdi-language-javascript"
+                    { "name": "mdi-symfony", "color": "#fb4934" },
+                    { "name": "mdi-language-php", "color": "#b8bb26" },
+                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
+                    { "name": "mdi-sass", "color": "#83a598" },
+                    { "name": "mdi-language-javascript", "color": "#d3869b" }
                 ],
                 "image": "plateforme",
                 "btn": false
@@ -52,7 +52,12 @@
                 "url": "https://dynamo-location.fr/fr/",
                 "git": "",
                 "description": "Pour le projet dynamo, j'ai travaillé avec un collègue pour mettre à jour le site de dynamo-location. Mon travail principal a été l'intégration d'une maquette donné par un graphiste et l'ajout de quelques fonctionnalités mineures.",
-                "icons": ["mdi-nuxt", "mdi-vuejs", "mdi-bootstrap", "mdi-sass"],
+                "icons": [
+                    { "name": "mdi-nuxt", "color": "#b8bb26" },
+                    { "name": "mdi-vuejs", "color": "#fb4934" },
+                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
+                    { "name": "mdi-sass", "color": "#83a598" }
+                ],
                 "image": "dynamo",
                 "btn": false
             },
@@ -62,10 +67,10 @@
                 "git": "https://github.com/raulbethencourt/inmogence",
                 "description": "Dans ce projet j'ai suivi un tutoriel grafikart, pour apprendre la conception d'un site pur une agence immobilière. ",
                 "icons": [
-                    "mdi-symfony",
-                    "mdi-language-php",
-                    "mdi-bootstrap",
-                    "mdi-language-javascript"
+                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
+                    { "name": "mdi-language-php", "color": "#b8bb26" },
+                    { "name": "mdi-symfony", "color": "#fb4934" },
+                    { "name": "mdi-language-javascript", "color": "#d3869b" }
                 ],
                 "image": "inmoagence",
                 "btn": false
@@ -75,7 +80,11 @@
                 "url": "https://raulbethencourt.github.io/todo_list/",
                 "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "Dans ce tutoriel, j'ai créée une application de liste de tâches avec HTML, SASS / CSS et Vanilla Javascript. L'application ToDo sera réactive en pensant d'abord au mobile. L'application ToDo sera également conçue avec l'accessibilité (A11y) à l'esprit pour la navigation au clavier et les lecteurs d'écran. Nous utiliserons également l'API de stockage Web pour créer un magasin de données persistant afin que nos éléments de liste réapparaissent à chaque fois que nous visitons l'application Web.",
-                "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-sass"],
+                "icons": [
+                    { "name": "mdi-language-javascript", "color": "#d3869b" },
+                    { "name": "mdi-sass", "color": "#fabd2f" },
+                    { "name": "mdi-language-html5", "color": "#83a598" }
+                ],
                 "image": "todo",
                 "btn": false
             },
@@ -84,8 +93,11 @@
                 "url": "https://raulbethencourt.github.io/morpion/",
                 "git": "https://github.com/raulbethencourt/morpion",
                 "description": "Ceci est un projet JQuery pour faire un jeu Morpion.",
-                "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-language-css3"],
-
+                "icons": [
+                    { "name": "mdi-language-javascript", "color": "#83a598" },
+                    { "name": "mdi-language-html5", "color": "#b8bb26" },
+                    { "name": "mdi-language-css3", "color": "#fabd2f" }
+                ],
                 "image": "morpion",
                 "btn": false
             },
@@ -95,16 +107,17 @@
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Ici, j'ai un autre projet Symfony.",
                 "icons": [
-                    "mdi-symfony",
-                    "mdi-language-php",
-                    "mdi-language-css3",
-                    "mdi-language-javascript"
+                    { "name": "mdi-symfony", "color": "#fb4934" },
+                    { "name": "mdi-language-php", "color": "#b8bb26" },
+                    { "name": "mdi-language-javascript", "color": "#d3869b" },
+                    { "name": "mdi-language-css3", "color": "#fabd2f" }
                 ],
 
                 "image": "cauldron",
                 "btn": false
             }
-        ]
+        ],
+        "btns": ["explorer", "description", "sortir"]
     },
     "experience": {
         "title": "Expérience",
@@ -256,7 +269,13 @@
     },
     "contact": {
         "title": "Contact",
-        "items": ["Votre nom...", "Votre e-mail...", "Votre message...", "Envoyer", "reset reCaptcha"]
+        "items": [
+            "Votre nom...",
+            "Votre e-mail...",
+            "Votre message...",
+            "Envoyer",
+            "reset reCaptcha"
+        ]
     },
     "footer": {
         "icons": [

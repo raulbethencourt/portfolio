@@ -67,10 +67,14 @@ query sidebar($locale: String) {
                         url
                         git
                         description
-                        icons
+                        icons {
+                            name
+                            color
+                        }
                         image
                         btn
                     }
+                    btns
                 }
                 experience {
                     title

@@ -21,14 +21,13 @@
                 >
                     <v-card
                         v-for="project in $page.texts.edges[0].node.projects.works"
-                        :key="project.image"
+                        :key="project.title"
                         class="mb-15 project-card"
                         data-aos="fade-up"
                     >
                         <v-img
-                            height="350px"
+                            aspect-ratio="2"
                             :src="require(`@/assets/images/projects/${project.image}.png`)"
-                            position="top center"
                         >
                         </v-img>
 
@@ -36,22 +35,26 @@
                             {{ project.title }}
                         </v-card-title>
 
-                        <v-row justify="center">
-                            <v-icon v-for="(icon, i) in project.icons" :key="i" large class="card-icon">{{
-                                icon
-                            }}</v-icon>
+                        <v-row class="d-flex justify-center mb-1 mt-1">
+                            <v-icon
+                                v-for="(icon, i) in project.icons"
+                                :key="i"
+                                large
+                                :color="icon.color"
+                                class="mr-1 ml-1"
+                                >{{ icon.name }}</v-icon
+                            >
                         </v-row>
 
-                        <v-card-actions>
+                        <v-card-actions class="mb-3">
                             <div v-if="project.url">
                                 <v-btn
-                                    color="accent"
                                     text
                                     :href="project.url"
                                     target="_blank"
                                     rel="noreferrer noopener"
                                 >
-                                    Explore
+                                    {{ $page.texts.edges[0].node.projects.btns[0] }}
                                 </v-btn>
                             </div>
 
@@ -67,21 +70,24 @@
                             </div>
                             <v-spacer></v-spacer>
 
-                            <v-btn icon @click="project.btn = !project.btn">
-                                <v-icon>{{
-                                    project.btn ? 'mdi-chevron-up' : 'mdi-chevron-down'
-                                }}</v-icon>
+                            <v-btn text @click="project.btn = !project.btn">
+                                {{ $page.texts.edges[0].node.projects.btns[1] }}
                             </v-btn>
                         </v-card-actions>
-                        <v-expand-transition>
-                            <div v-show="project.btn">
-                                <v-divider></v-divider>
-
-                                <v-card-text class="text--primary">
+                        <v-overlay :absolute="absolute" opacity="0.9" :value="project.btn">
+                            <div class="d-flex flex-column align-center">
+                                <v-card-text class="overlay-text">
                                     {{ project.description }}
                                 </v-card-text>
+                                <v-btn
+                                    outlined
+                                    @click="project.btn = false"
+                                    class="overlay-btn--exit"
+                                >
+                                    {{ $page.texts.edges[0].node.projects.btns[2] }}
+                                </v-btn>
                             </div>
-                        </v-expand-transition>
+                        </v-overlay>
                     </v-card>
                 </v-col>
             </v-row>
@@ -95,7 +101,8 @@ import AOS from 'aos';
 export default {
     data: () => ({
         show: false,
-        isActive: false
+        isActive: false,
+        absolut: false
     }),
     mounted() {
         AOS.init({ duration: 1200 });

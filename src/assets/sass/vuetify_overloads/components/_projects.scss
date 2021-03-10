@@ -8,14 +8,25 @@
     .project-card {
         width: 48%;
 
-        .theme--light.v-card {
-            background-color: $light_soft;
+        .theme--dark.v-icon {
+            color: $light_hard;
+        }
+        
+        .theme--light.v-icon {
             color: $dark_hard;
         }
 
-        .theme--dark.v-card {
-            background-color: $dark_soft;
+        .overlay-text {
+            width: 85%;
+
+            font-size: 1rem;
             color: $light_hard;
+            text-align: center;
+        }
+
+        .overlay-btn--exit {
+            color: $bright_yellow;
         }
     }
 }
+

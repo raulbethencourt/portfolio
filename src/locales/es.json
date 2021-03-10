@@ -38,11 +38,11 @@
                 "git": "https://github.com/raulbethencourt/plataform",
                 "description": "A pedagogique platafomr, handcraft made for Contact et propotion.",
                 "icons": [
-                    "mdi-symfony",
-                    "mdi-language-php",
-                    "mdi-bootstrap",
-                    "mdi-sass",
-                    "mdi-language-javascript"
+                    { "name": "mdi-symfony", "color": "#fb4934" },
+                    { "name": "mdi-language-php", "color": "#b8bb26" },
+                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
+                    { "name": "mdi-sass", "color": "#83a598" },
+                    { "name": "mdi-language-javascript", "color": "#d3869b" }
                 ],
 
                 "image": "plateforme",
@@ -53,7 +53,12 @@
                 "url": "https://dynamo-location.fr/fr/",
                 "git": "",
                 "description": "In this project I actuallised the front side.",
-                "icons": ["mdi-nuxt", "mdi-vuejs", "mdi-bootstrap", "mdi-sass"],
+                "icons": [
+                    { "name": "mdi-nuxt", "color": "#b8bb26" },
+                    { "name": "mdi-vuejs", "color": "#fb4934" },
+                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
+                    { "name": "mdi-sass", "color": "#83a598" }
+                ],
 
                 "image": "dynamo",
                 "btn": false
@@ -64,10 +69,10 @@
                 "git": "https://github.com/raulbethencourt/inmogence",
                 "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
                 "icons": [
-                    "mdi-symfony",
-                    "mdi-language-php",
-                    "mdi-bootstrap",
-                    "mdi-language-javascript"
+                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
+                    { "name": "mdi-language-php", "color": "#b8bb26" },
+                    { "name": "mdi-symfony", "color": "#fb4934" },
+                    { "name": "mdi-language-javascript", "color": "#d3869b" }
                 ],
 
                 "image": "inmoagence",
@@ -78,7 +83,11 @@
                 "url": "https://raulbethencourt.github.io/todo_list/",
                 "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "This is a vanilla Javascript project, to creates a ToDo App.",
-                "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-sass"],
+                "icons": [
+                    { "name": "mdi-language-javascript", "color": "#d3869b" },
+                    { "name": "mdi-sass", "color": "#fabd2f" },
+                    { "name": "mdi-language-html5", "color": "#83a598" }
+                ],
 
                 "image": "todo",
                 "btn": false
@@ -88,7 +97,11 @@
                 "url": "https://raulbethencourt.github.io/morpion/",
                 "git": "https://github.com/raulbethencourt/morpion",
                 "description": "This is a JQuery project to do a Morpion Game",
-                "icons": ["mdi-language-javascript", "mdi-language-html5", "mdi-language-css3"],
+                "icons": [
+                    { "name": "mdi-language-javascript", "color": "#83a598" },
+                    { "name": "mdi-language-html5", "color": "#b8bb26" },
+                    { "name": "mdi-language-css3", "color": "#fabd2f" }
+                ],
 
                 "image": "morpion",
                 "btn": false
@@ -99,16 +112,17 @@
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Here I have another Symfony project",
                 "icons": [
-                    "mdi-symfony",
-                    "mdi-language-php",
-                    "mdi-language-css3",
-                    "mdi-language-javascript"
+                    { "name": "mdi-symfony", "color": "#fb4934" },
+                    { "name": "mdi-language-php", "color": "#b8bb26" },
+                    { "name": "mdi-language-javascript", "color": "#d3869b" },
+                    { "name": "mdi-language-css3", "color": "#fabd2f" }
                 ],
 
                 "image": "cauldron",
                 "btn": false
             }
-        ]
+        ],
+        "btns": ["explorer", "description"]
     },
     "experience": {
         "title": "Experiencia",
