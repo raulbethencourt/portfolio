@@ -1,0 +1,26 @@
+.education-section {
+    min-height: 100vh;
+    margin-top: 75px;
+
+    .window-card {
+        padding: 5% 5%;
+
+        .card-decoration {
+            border: 2px solid $light_soft;
+
+            .v-card__title {
+                padding: 1% 15%;
+                margin-top: 10%;
+                font-size: 1.5rem;
+            }
+
+            .v-card__subtitle {
+                padding: 1%15%;
+            }
+            .v-card__text {
+                padding: 1% 15%;
+                margin-bottom: 10%;
+            }
+        }
+    }
+}
