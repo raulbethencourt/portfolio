@@ -8,10 +8,6 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
-//aos plugin
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 export default function(Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
@@ -29,11 +25,17 @@ export default function(Vue, { appOptions, head }) {
             'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&display=swap'
     });
 
+    head.link.push({
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/aos@next/dist/aos.css'
+    });
+
     head.script.push({
         src: 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit',
         async: true,
         defer: true
     });
+    
 
     const opts = {
         theme: {
@@ -70,9 +72,6 @@ export default function(Vue, { appOptions, head }) {
     //opts includes, vuetify themes, icons, etc.
     Vue.use(Vuetify);
     appOptions.vuetify = new Vuetify(opts);
-
-    //aos scroll
-    appOptions.AOS = new AOS.init({ disable: 'phone', duration: 1200 });
 
     // Set default layout as a global component
     Vue.component('Layout', DefaultLayout);

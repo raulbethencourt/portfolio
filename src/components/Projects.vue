@@ -96,11 +96,17 @@
 </template>
 
 <script>
+//aos plugin
+import AOS from '../../node_modules/aos/dist/aos';
+
 export default {
     data: () => ({
         show: false,
         isActive: false,
         btn: false
-    })
+    }),
+    mounted() {
+        AOS.init({ disable: 'phone', duration: 1200 });
+    }
 };
 </script>
