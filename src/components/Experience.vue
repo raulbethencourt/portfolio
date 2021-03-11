@@ -32,7 +32,7 @@
                                 ></span>
                             </template>
                             <v-card>
-                                <v-card-title class="secondary lighten-2">
+                                <v-card-title class="secondary">
                                     <h4 class="display-1 font-weight-bold text-h4">
                                         {{ job.title }}
                                     </h4>

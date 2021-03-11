@@ -1,3 +1,4 @@
+//TODO look to fix style
 .education-section {
     min-height: 100vh;
     margin-top: 75px;
@@ -11,15 +12,26 @@
             .v-card__title {
                 padding: 1% 15%;
                 margin-top: 10%;
-                font-size: 1.5rem;
+                font-size: 1.75rem;
+                font-style: oblique;
             }
 
             .v-card__subtitle {
-                padding: 1%15%;
-            }
-            .v-card__text {
                 padding: 1% 15%;
                 margin-bottom: 10%;
+            }
+
+            .v-card__text {
+                padding: 0% 15%;
+            }
+
+            .img-container {
+                width: 40%;
+
+                .diplome-img {
+                    width: 120px;
+                    height: 120px;
+                }
             }
         }
     }

@@ -25,15 +25,27 @@
                                     <v-card-title>
                                         <strong>{{ diplome.title }}</strong>
                                     </v-card-title>
-                                    <v-card-subtitle>
-                                        {{ diplome.school }} | {{ diplome.city }} |
-                                        {{ diplome.year }}
-                                    </v-card-subtitle>
+
                                     <v-card-text>
                                         <p v-for="(description, i) in diplome.description" :key="i">
                                             {{ description }}
                                         </p>
                                     </v-card-text>
+
+                                    <div class="d-flex justify-space-between">
+                                        <v-card-subtitle>
+                                            {{ diplome.school }} | {{ diplome.city }} |
+                                            {{ diplome.year }}
+                                        </v-card-subtitle>
+
+                                        <div class="d-flex justify-center img-container">
+                                            <g-image
+                                                alt="certified"
+                                                :src="require(`@/assets/images/certified.png`)"
+                                                class="diplome-img mr-10"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </v-card>
                         </v-window-item>
