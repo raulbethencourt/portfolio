@@ -25,11 +25,6 @@ export default function(Vue, { appOptions, head }) {
             'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&display=swap'
     });
 
-    head.link.push({
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/aos@next/dist/aos.css'
-    });
-
     head.script.push({
         src: 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit',
         async: true,
