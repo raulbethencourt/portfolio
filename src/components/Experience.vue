@@ -1,6 +1,10 @@
 <template>
     <section
-        :class="$vuetify.theme.dark ? `experience-section dark-bg` : `experience-section light-bg`"
+        :class="
+            $vuetify.theme.dark
+                ? `experience-section experience-dark-bg`
+                : `experience-section experience-light-bg`
+        "
         :id="`${$page.texts.edges[0].node.sidebar.items[2].title.toLowerCase()}`"
     >
         <v-container class="mb-0">
