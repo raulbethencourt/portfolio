@@ -5,20 +5,23 @@
 
     .window-card {
         padding: 5% 5%;
+        color: $dark_hard;
 
         .card-decoration {
-            border: 2px solid $light_soft;
-
             .v-card__title {
                 padding: 1% 15%;
-                margin-top: 10%;
+                margin-top: 13%;
                 font-size: 1.75rem;
-                font-style: oblique;
+                word-break: keep-all;
+                font-style: italic;
             }
 
             .v-card__subtitle {
-                padding: 1% 15%;
-                margin-bottom: 10%;
+                padding: 1% 0 1% 15%;
+                margin-bottom: 13%;
+                color: $bg_dark2;
+                white-space: nowrap;
+                text-transform: capitalize;
             }
 
             .v-card__text {
@@ -26,11 +29,11 @@
             }
 
             .img-container {
-                width: 40%;
+                width: 400px;
 
                 .diplome-img {
-                    width: 120px;
-                    height: 120px;
+                    width: 130px;
+                    height: 130px;
                 }
             }
         }

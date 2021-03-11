@@ -20,7 +20,7 @@
                             :key="i"
                             class="window-item"
                         >
-                            <v-card class="window-card" flat>
+                            <v-card class="window-card diplome" flat>
                                 <div class="card-decoration">
                                     <v-card-title>
                                         <strong>{{ diplome.title }}</strong>
@@ -42,7 +42,7 @@
                                             <g-image
                                                 alt="certified"
                                                 :src="require(`@/assets/images/certified.png`)"
-                                                class="diplome-img mr-10"
+                                                class="diplome-img mr-10 mb-5"
                                             />
                                         </div>
                                     </div>
@@ -80,3 +80,10 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" scoped>
+.diplome {
+    background-image: url('../assets/images/diplome.png');
+    background-size: 100% 100%;
+}
+</style>
