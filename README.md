@@ -73,10 +73,9 @@ Thanks to the [Morhetz Gruvbox](https://github.com/morhetz/gruvbox) theme.
 
 ## Fix babel bug
 
-```zsh
-rm -rf dist node_modules 
-export VUE_CLI_BABEL_TRANSPILE_MODULES=true
-npm install
-gridsome build
+I've creates an .env.production file at root level and added this varialble.
+
+```.env
+VUE_CLI_BABEL_TRANSPILE_MODULES=true
 # ... works
 ```

@@ -98,7 +98,6 @@
 <script>
 //aos plugin
 import AOS from '../../node_modules/aos/dist/aos';
-import 'aos/dist/aos.css';
 
 export default {
     data: () => ({
