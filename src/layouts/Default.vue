@@ -5,7 +5,7 @@
         </v-app-bar>
 
         <v-navigation-drawer
-            width="180px"
+            width="190px"
             class="nav-bar"
             v-model="drawer"
             :mini-variant.sync="mini"

@@ -74,7 +74,7 @@
                                 {{ $page.texts.edges[0].node.projects.btns[1] }}
                             </v-btn>
                         </v-card-actions>
-                        <v-overlay :absolute="btn" opacity="0.9" :value="project.btn">
+                        <v-overlay :absolute="absolute" opacity="0.9" :value="project.btn">
                             <div class="d-flex flex-column align-center">
                                 <v-card-text class="overlay-text">
                                     {{ project.description }}
@@ -103,11 +103,11 @@ export default {
     data: () => ({
         show: false,
         isActive: false,
-        btn: false
+        btn: false,
+        absolute: true
     }),
     mounted() {
         AOS.init({ disable: 'phone', duration: 1200 });
     }
 };
 </script>
-
