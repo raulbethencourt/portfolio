@@ -22,7 +22,7 @@ export default function(Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
         href:
-            'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&display=swap'
+            'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&family=DotGothic16&display=swap'
     });
 
     head.link.push({
