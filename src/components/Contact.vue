@@ -5,44 +5,51 @@
     >
         <v-container>
             <v-row>
-                <v-col cols="10" offset="1">
+                <v-col cols="6" offset="3">
                     <h2 class="text-h2 font-weight-bold mb-5">
                         {{ $page.texts.edges[0].node.contact.title }}
                     </h2>
                 </v-col>
             </v-row>
             <v-row>
-                <v-col cols="10" offset="1">
+                <v-col cols="6" offset="3">
                     <v-form class="contact-form" @submit.prevent="sendEmail">
                         <v-input>
                             <v-text-field
-                                outlined
                                 v-model="firstname"
-                                :rules="nameRules"
-                                :counter="20"
-                                :label="$page.texts.edges[0].node.contact.items[0]"
-                                required
                                 type="text"
                                 name="from_name"
+                                :label="$page.texts.edges[0].node.contact.items[0]"
+                                :rules="nameRules"
+                                :counter="20"
+                                outlined
+                                filled
+                                clearable
+                                required
                             ></v-text-field
                         ></v-input>
 
                         <v-input>
                             <v-text-field
-                                outlined
                                 v-model="email"
-                                :rules="emailRules"
-                                :label="$page.texts.edges[0].node.contact.items[1]"
-                                required
                                 type="email"
                                 name="reply_to"
+                                :rules="emailRules"
+                                :label="$page.texts.edges[0].node.contact.items[1]"
+                                outlined
+                                filled
+                                clearable
+                                required
                             ></v-text-field
                         ></v-input>
 
                         <v-textarea
                             name="message"
-                            outlined
                             :label="$page.texts.edges[0].node.contact.items[2]"
+                            filled
+                            clearable
+                            outlined
+                            required
                         ></v-textarea>
 
                         <v-btn type="submit" value="Send">{{
