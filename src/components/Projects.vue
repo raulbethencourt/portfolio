@@ -5,7 +5,10 @@
     >
         <v-container>
             <v-row>
-                <v-col cols="10" offset="1">
+                <v-col
+                    cols="10"
+                    offset="1"
+                >
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.projects.title }}
                     </h2>
@@ -70,11 +73,18 @@
                             </div>
                             <v-spacer></v-spacer>
 
-                            <v-btn text @click="project.btn = !project.btn">
+                            <v-btn
+                                text
+                                @click="project.btn = !project.btn"
+                            >
                                 {{ $page.texts.edges[0].node.projects.btns[1] }}
                             </v-btn>
                         </v-card-actions>
-                        <v-overlay :absolute="absolute" opacity="0.9" :value="project.btn">
+                        <v-overlay
+                            :absolute="absolute"
+                            opacity="0.9"
+                            :value="project.btn"
+                        >
                             <div class="d-flex flex-column align-center">
                                 <v-card-text class="overlay-text">
                                     {{ project.description }}

@@ -26,14 +26,29 @@
                                 : `d-flex flex-wrap tetris__grid grid-light-bg`
                         "
                     >
-                        <div v-for="i in 200" :key="i" class="square"></div>
+                        <div
+                            v-for="i in 200"
+                            :key="i"
+                            class="square"
+                        ></div>
 
-                        <div v-for="j in taken" :key="j" class="square taken d-none"></div>
+                        <div
+                            v-for="j in taken"
+                            :key="j"
+                            class="square taken d-none"
+                        ></div>
                     </div>
                 </v-col>
 
                 <v-col cols="3" offset="1">
-                    <v-card class="d-flex flex-column align-center" elevation="14">
+                    <v-sheet
+                        :class="
+                            $vuetify.theme.dark
+                                ? `d-flex flex-column align-center sheet-dark-bg`
+                                : `d-flex flex-column align-center sheet-light-bg`
+                        "
+                        elevation="14"
+                    >
                         <div
                             id="mini-grid"
                             :class="
@@ -46,24 +61,40 @@
                         </div>
 
                         <div class="d-flex flex-column mt-5 mb-5 score">
-                            <v-chip color="info">
-                                <h3>
+                            <v-chip
+                                color="info"
+                                class="d-flex justify-center mt-7 chip"
+                            >
+                                <h2>
                                     {{ $page.texts.edges[0].node.tetris.data[0] }}
-                                    <span id="score">{{ $page.texts.edges[0].node.tetris.data[2] }}</span>
-                                </h3>
+                                    <span id="score">{{
+                                        $page.texts.edges[0].node.tetris.data[2]
+                                    }}</span>
+                                </h2>
                             </v-chip>
 
-                            <v-chip color="info">
-                                <h3>
+                            <v-chip
+                                color="success"
+                                class="mt-3 mb-5 chip"
+                            >
+                                <h2>
                                     {{ $page.texts.edges[0].node.tetris.data[1] }}
-                                    <span id="lines">{{ $page.texts.edges[0].node.tetris.data[2] }}</span>
-                                </h3>
+                                    <span id="lines">{{
+                                        $page.texts.edges[0].node.tetris.data[2]
+                                    }}</span>
+                                </h2>
                             </v-chip>
                         </div>
 
-                        <v-btn id="startBtn" @click="sound(start), (start = !start)" class="mb-10" rounded>{{
-                            $page.texts.edges[0].node.tetris.btn
-                        }}</v-btn>
+                        <v-btn
+                            id="startBtn"
+                            @click="sound(start), (start = !start)"
+                            class="mb-10"
+                            rounded
+                            elevation="14"
+                            color="accent"
+                            >{{ $page.texts.edges[0].node.tetris.btn }}</v-btn
+                        >
 
                         <audio
                             id="audio"
@@ -71,7 +102,7 @@
                             type="audio/mpeg"
                             loop
                         ></audio>
-                    </v-card>
+                    </v-sheet>
                 </v-col>
             </v-row>
         </v-container>

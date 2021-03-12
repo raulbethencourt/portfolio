@@ -1,6 +1,10 @@
 <template>
     <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
-        <v-app-bar fixed flat class="d-md-none">
+        <v-app-bar
+            fixed
+            flat
+            class="d-md-none"
+        >
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         </v-app-bar>
 
@@ -33,7 +37,10 @@
                     </v-list-item-subtitle>
                 </v-list-item-content>
 
-                <v-btn icon @click.stop="mini = !mini">
+                <v-btn
+                    icon
+                    @click.stop="mini = !mini"
+                >
                     <v-icon>mdi-chevron-left</v-icon>
                 </v-btn>
             </v-list-item>
@@ -125,7 +132,10 @@
         </v-navigation-drawer>
         <v-main>
             <slot />
-            <v-footer v-bind="localAttrs" :padless="padless">
+            <v-footer
+                v-bind="localAttrs"
+                :padless="padless"
+            >
                 <v-card
                     height="230px"
                     dark

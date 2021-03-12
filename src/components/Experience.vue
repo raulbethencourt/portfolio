@@ -9,7 +9,11 @@
     >
         <v-container class="mb-0">
             <v-row>
-                <v-col cols="10" offset="1" class="d-flex justify-center">
+                <v-col
+                    cols="10"
+                    offset="1"
+                    class="d-flex justify-center"
+                >
                     <div class="ballon">
                         <h2 class="section-title">
                             {{ $page.texts.edges[0].node.experience.title }}
@@ -20,7 +24,10 @@
 
             <v-row class="mt-0">
                 <v-col class="col-10 offset-1 pt-0 pb-0">
-                    <v-timeline reverse class="timeline">
+                    <v-timeline
+                        reverse
+                        class="timeline"
+                    >
                         <v-timeline-item
                             v-for="(job, i) in $page.texts.edges[0].node.experience.jobs"
                             :key="i"
@@ -55,7 +62,10 @@
                                     <v-divider class="divider"></v-divider>
                                     <v-row class="ml-2 mr-2 mt-1">
                                         <v-col>
-                                            <p v-for="(text, i) in job.description" :key="i">
+                                            <p
+                                                v-for="(text, i) in job.description"
+                                                :key="i"
+                                            >
                                                 {{ text }}
                                             </p>
                                         </v-col>

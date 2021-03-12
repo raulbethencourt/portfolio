@@ -5,7 +5,10 @@
     >
         <v-container class="d-flex flex-column justify-center">
             <v-row>
-                <v-col cols="10" offset="1">
+                <v-col
+                    cols="10"
+                    offset="1"
+                >
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.education.title }}
                     </h2>
@@ -13,14 +16,25 @@
             </v-row>
 
             <v-row>
-                <v-col cols="10" offset="1" class="d-flex align-center">
-                    <v-window v-model="window" class="elevation-1" vertical>
+                <v-col
+                    cols="10"
+                    offset="1"
+                    class="d-flex align-center"
+                >
+                    <v-window
+                        v-model="window"
+                        class="elevation-1"
+                        vertical
+                    >
                         <v-window-item
                             v-for="(diplome, i) in $page.texts.edges[0].node.education.diplomes"
                             :key="i"
                             class="window-item"
                         >
-                            <v-card class="window-card diplome" flat>
+                            <v-card
+                                class="window-card diplome"
+                                flat
+                            >
                                 <div class="card-decoration">
                                     <v-card-title>
                                         <strong>{{ diplome.title }}</strong>
@@ -51,7 +65,12 @@
                         </v-window-item>
                     </v-window>
 
-                    <v-item-group v-model="window" class="shrink mr-6 ml-3" mandatory tag="v-flex">
+                    <v-item-group
+                        v-model="window"
+                        class="shrink mr-6 ml-3"
+                        mandatory
+                        tag="v-flex"
+                    >
                         <v-item
                             v-for="(n, i) in $page.texts.edges[0].node.education.diplomes"
                             :key="i"

@@ -237,4 +237,4 @@ export function tetris() {
             clearInterval(timer);
         }
     }
-};
+}

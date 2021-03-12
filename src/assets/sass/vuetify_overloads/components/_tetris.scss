@@ -29,19 +29,41 @@
             }
         }
 
-        .mini-tetris__grid {
-            max-width: 120px;
-            min-width: 120px;
+        .v-sheet {
+            .mini-tetris__grid {
+                max-width: 120px;
+                min-width: 120px;
 
-            .square {
-                width: 30px;
-                height: 30px;
+                .square {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .score {
+                font-family: 'DotGothic16', sans-serif;
+                letter-spacing: 2px;
+
+                .chip {
+                    padding: 5px 15px;
+                }
+
+            }
+
+            .v-btn__content {
+                font-family: 'DotGothic16', sans-serif;
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: 2px;
             }
         }
 
-        .score {
-            font-family: 'DotGothic16', sans-serif;
-            letter-spacing: 2px;
+        .sheet-dark-bg {
+            background-color: $bg_dark1;
+        }
+
+        .sheet-light-bg {
+            background-color: $bg_light1;
         }
 
         .grid-dark-bg {
@@ -49,7 +71,7 @@
         }
 
         .grid-light-bg {
-            background-color: $light_soft;
+            background-color: $light;
         }
     }
 }

@@ -5,7 +5,10 @@
     >
         <v-container>
             <v-row>
-                <v-col cols="10" offset="1">
+                <v-col
+                    cols="10"
+                    offset="1"
+                >
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.testimonials.title }}
                     </h2>
