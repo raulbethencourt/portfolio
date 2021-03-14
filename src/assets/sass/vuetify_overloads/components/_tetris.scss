@@ -47,10 +47,26 @@
                 .chip {
                     padding: 5px 15px;
                 }
-
             }
 
             .v-btn__content {
+                font-family: 'DotGothic16', sans-serif;
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+        }
+
+        .gameover {           
+            .gameover-text {
+                font-size: 6rem;
+                font-family: 'DotGothic16', sans-serif;
+                font-weight: bold;
+                letter-spacing: 2px;
+                white-space: nowrap;
+            }
+
+            .gameover-btn {
                 font-family: 'DotGothic16', sans-serif;
                 font-size: 1rem;
                 font-weight: bold;

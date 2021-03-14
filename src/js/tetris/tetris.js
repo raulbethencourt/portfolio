@@ -22,8 +22,15 @@ export function tetris() {
     const scoreDisplay = document.getElementById('score');
     const linesDisplay = document.getElementById('lines');
     const startBtn = document.getElementById('startBtn');
+    const restartBtn = document.getElementById('restartBtn');
     //show up-next tetromino in mini-grid display
+    const displayGridSquares = document.querySelectorAll('#grid .square');
     const displaySquares = document.querySelectorAll('#mini-grid .square');
+    const scoreBlock = document.getElementById('scoreblock');
+    //game over objects
+    const gameOverBlock = document.getElementById('gameover');
+    const gScore = document.getElementById('gScore');
+    const gLines = document.getElementById('gLines');
     let squares = Array.from(document.querySelectorAll('#grid .square'));
 
     //variables
@@ -40,20 +47,60 @@ export function tetris() {
     let random = Math.floor(Math.random() * theTetrominoes.length);
     let current = theTetrominoes[random][currentRotation];
 
-    //addEventListeners
-    document.addEventListener('keydown', control);
     //add functionality to the button
     startBtn.addEventListener('click', () => {
         if (timer) {
             clearInterval(timer);
             timer = null;
+
+            //stop control
+            document.removeEventListener('keydown', control);
+            //stop music
+            document.getElementById('audio').pause();
         } else {
-            draw();
-            timer = setInterval(moveDown, speed);
-            nextRandom = Math.floor(Math.random() * theTetrominoes.length);
-            displayShape();
+            play();
         }
     });
+
+    //restart btn
+    restartBtn.addEventListener('click', () => {
+        //remove any trace of a tetromino form the entire grid
+        displayGridSquares.forEach(square => {
+            square.classList.remove('tetromino');
+            square.classList.remove('taken');
+            square.style.backgroundImage = '';
+        });
+
+        //show gameOver
+        gameOverBlock.classList.add('d-none');
+        gameOverBlock.classList.remove('d-flex');
+
+        //add game score
+        scoreBlock.classList.add('d-flex');
+        scoreBlock.classList.remove('d-none');
+
+        //reset score
+        score = 0;
+        lines = 0;
+        scoreDisplay.innerHTML = score;
+        linesDisplay.innerHTML = lines;
+
+        play();
+    });
+
+    //play game
+    function play() {
+        //add control to tetris
+        document.addEventListener('keydown', control);
+        //start music
+        document.getElementById('audio').play();
+
+        //start to play
+        draw();
+        timer = setInterval(moveDown, speed);
+        nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+        displayShape();
+    }
 
     //the first rotation in a random tetromino
     function draw() {
@@ -169,7 +216,12 @@ export function tetris() {
 
     //freeze function
     function freeze() {
-        if (current.some(i => squares[currentPosition + i + width].classList.contains('taken'))) {
+        if (
+            current.some(i =>
+                squares[currentPosition + i + width].classList.contains('takenBottom')
+            ) ||
+            current.some(i => squares[currentPosition + i + width].classList.contains('taken'))
+        ) {
             current.forEach(i => squares[currentPosition + i].classList.add('taken'));
             //start a new tetromino falling
             random = nextRandom;
@@ -232,9 +284,24 @@ export function tetris() {
     //game over
     function gameOver() {
         if (current.some(i => squares[currentPosition + i].classList.contains('taken'))) {
-            scoreDisplay.innerHTML = 'Your total score is ' + score;
-            linesDisplay.innerHTML = 'your number of lines is ' + lines;
+            //show gameOver score
+            gameOverBlock.classList.remove('d-none');
+            gameOverBlock.classList.add('d-flex');
+
+            //remove game score
+            scoreBlock.classList.remove('d-flex');
+            scoreBlock.classList.add('d-none');
+
+            //add total score
+            gScore.innerHTML = score;
+            gLines.innerHTML = lines;
+
             clearInterval(timer);
+
+            //remove control to tetris
+            document.removeEventListener('keydown', control);
+            //sotp music
+            document.getElementById('audio').pause();
         }
     }
 }

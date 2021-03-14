@@ -267,7 +267,7 @@
     "tetris": {
         "title": "Tetris",
         "data": ["Score:", "Lignes:", "0"],
-        "btn": "Commencer/Pause"
+        "btn": ["Commencer/Pause", "Recommencer"]
     },
     "contact": {
         "title": "Contact",

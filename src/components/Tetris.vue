@@ -26,45 +26,29 @@
                                 : `d-flex flex-wrap tetris__grid grid-light-bg`
                         "
                     >
-                        <div
-                            v-for="i in 200"
-                            :key="i"
-                            class="square"
-                        ></div>
+                        <div v-for="i in 200" :key="i" class="square"></div>
 
-                        <div
-                            v-for="j in taken"
-                            :key="j"
-                            class="square taken d-none"
-                        ></div>
+                        <div v-for="j in taken" :key="j" class="square takenBottom d-none"></div>
                     </div>
                 </v-col>
 
                 <v-col cols="3" offset="1">
                     <v-sheet
-                        :class="
-                            $vuetify.theme.dark
-                                ? `d-flex flex-column align-center sheet-dark-bg`
-                                : `d-flex flex-column align-center sheet-light-bg`
-                        "
+                        id="scoreblock"
+                        :class="$vuetify.theme.dark ? `sheet-dark-bg` : `sheet-light-bg`"
+                        class="d-flex flex-column align-center"
                         elevation="14"
                     >
                         <div
                             id="mini-grid"
-                            :class="
-                                $vuetify.theme.dark
-                                    ? `d-flex flex-wrap mini-tetris__grid grid-dark-bg mt-10`
-                                    : `d-flex flex-wrap mini-tetris__grid grid-light-bg mt-10`
-                            "
+                            :class="$vuetify.theme.dark ? `grid-dark-bg` : `grid-light-bg`"
+                            class="d-flex flex-wrap mini-tetris__grid mt-10"
                         >
                             <div v-for="i in 16" v-bind:key="i" class="square"></div>
                         </div>
 
                         <div class="d-flex flex-column mt-5 mb-5 score">
-                            <v-chip
-                                color="info"
-                                class="d-flex justify-center mt-7 chip"
-                            >
+                            <v-chip color="info" class="d-flex justify-center mt-7 chip">
                                 <h2>
                                     {{ $page.texts.edges[0].node.tetris.data[0] }}
                                     <span id="score">{{
@@ -73,10 +57,7 @@
                                 </h2>
                             </v-chip>
 
-                            <v-chip
-                                color="success"
-                                class="mt-3 mb-5 chip"
-                            >
+                            <v-chip color="success" class="mt-3 mb-5 chip">
                                 <h2>
                                     {{ $page.texts.edges[0].node.tetris.data[1] }}
                                     <span id="lines">{{
@@ -88,12 +69,12 @@
 
                         <v-btn
                             id="startBtn"
-                            @click="sound(start), (start = !start)"
+                            @click="start = !start"
                             class="mb-10"
                             rounded
-                            elevation="14"
+                            elevation="0"
                             color="accent"
-                            >{{ $page.texts.edges[0].node.tetris.btn }}</v-btn
+                            >{{ $page.texts.edges[0].node.tetris.btn[0] }}</v-btn
                         >
 
                         <audio
@@ -103,6 +84,43 @@
                             loop
                         ></audio>
                     </v-sheet>
+
+                    <div
+                        id="gameover"
+                        class="d-none flex-column align-center gameover ml-5"
+                    >
+                        <h3 class="gameover-text">GAME OVER</h3>
+
+                        <div class="d-flex flex-column mt-5 mb-5 score">
+                            <v-chip color="info" class="d-flex justify-center mt-7 chip">
+                                <h2>
+                                    Total {{ $page.texts.edges[0].node.tetris.data[0] }}
+                                    <span id="gScore">{{
+                                        $page.texts.edges[0].node.tetris.data[2]
+                                    }}</span>
+                                </h2>
+                            </v-chip>
+
+                            <v-chip color="success" class="mt-3 mb-5 chip">
+                                <h2>
+                                    Total {{ $page.texts.edges[0].node.tetris.data[1] }}
+                                    <span id="gLines">{{
+                                        $page.texts.edges[0].node.tetris.data[2]
+                                    }}</span>
+                                </h2>
+                            </v-chip>
+                        </div>
+
+                        <v-btn
+                            id="restartBtn"
+                            @click="start = !start"
+                            class="mb-10 gameover-btn"
+                            rounded
+                            elevation="0"
+                            color="accent"
+                            >{{ $page.texts.edges[0].node.tetris.btn[1] }}</v-btn
+                        >
+                    </div>
                 </v-col>
             </v-row>
         </v-container>
@@ -118,15 +136,6 @@ export default {
     },
     mounted() {
         tetris();
-    },
-    methods: {
-        sound: function(start) {
-            if (start) {
-                document.getElementById('audio').play();
-            } else {
-                document.getElementById('audio').pause();
-            }
-        }
     }
 };
 </script>
