@@ -51,18 +51,14 @@
                             <v-chip color="info" class="d-flex justify-center mt-7 chip">
                                 <h2>
                                     {{ $page.texts.edges[0].node.tetris.data[0] }}
-                                    <span id="score">{{
-                                        $page.texts.edges[0].node.tetris.data[2]
-                                    }}</span>
+                                    <span id="score">{{ 0 }}</span>
                                 </h2>
                             </v-chip>
 
                             <v-chip color="success" class="mt-3 mb-5 chip">
                                 <h2>
                                     {{ $page.texts.edges[0].node.tetris.data[1] }}
-                                    <span id="lines">{{
-                                        $page.texts.edges[0].node.tetris.data[2]
-                                    }}</span>
+                                    <span id="lines">{{ 0 }}</span>
                                 </h2>
                             </v-chip>
                         </div>
@@ -85,35 +81,27 @@
                         ></audio>
                     </v-sheet>
 
-                    <div
-                        id="gameover"
-                        class="d-none flex-column align-center gameover ml-5"
-                    >
+                    <div id="gameover" class="d-none flex-column align-center gameover ml-5">
                         <h3 class="gameover-text">GAME OVER</h3>
 
                         <div class="d-flex flex-column mt-5 mb-5 score">
                             <v-chip color="info" class="d-flex justify-center mt-7 chip">
                                 <h2>
-                                    Total {{ $page.texts.edges[0].node.tetris.data[0] }}
-                                    <span id="gScore">{{
-                                        $page.texts.edges[0].node.tetris.data[2]
-                                    }}</span>
+                                    {{ $page.texts.edges[0].node.tetris.data[2] }}
+                                    <span id="gScore">{{ 0 }}</span>
                                 </h2>
                             </v-chip>
 
                             <v-chip color="success" class="mt-3 mb-5 chip">
                                 <h2>
-                                    Total {{ $page.texts.edges[0].node.tetris.data[1] }}
-                                    <span id="gLines">{{
-                                        $page.texts.edges[0].node.tetris.data[2]
-                                    }}</span>
+                                    {{ $page.texts.edges[0].node.tetris.data[3] }}
+                                    <span id="gLines">{{ 0 }}</span>
                                 </h2>
                             </v-chip>
                         </div>
 
                         <v-btn
                             id="restartBtn"
-                            @click="start = !start"
                             class="mb-10 gameover-btn"
                             rounded
                             elevation="0"
