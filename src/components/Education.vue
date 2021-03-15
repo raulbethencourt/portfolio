@@ -20,7 +20,8 @@
                     cols="10"
                     offset="1"
                     class="d-flex align-center"
-                >
+                > 
+                <!-- TODO back to silider -->
                     <v-window
                         v-model="window"
                         class="elevation-1"

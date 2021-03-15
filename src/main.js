@@ -8,6 +8,9 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
+//mapbox
+import 'mapbox-gl/dist/mapbox-gl.css'
+
 export default function(Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
@@ -35,7 +38,6 @@ export default function(Vue, { appOptions, head }) {
         async: true,
         defer: true
     });
-    
 
     const opts = {
         theme: {

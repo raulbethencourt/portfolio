@@ -12,7 +12,7 @@
                 </v-col>
             </v-row>
             <v-row>
-                <v-col cols="6" offset="3">
+                <v-col cols="6" offset="3" class="mb-15">
                     <v-form class="contact-form" @submit.prevent="sendEmail">
                         <v-input>
                             <v-text-field
@@ -56,7 +56,7 @@
                             $page.texts.edges[0].node.contact.items[3]
                         }}</v-btn>
 
-                        <div id="root">
+                        <div id="root" class="mt-10 mb-5">
                             <vue-recaptcha
                                 ref="recaptcha"
                                 @verify="onVerify"
@@ -70,12 +70,21 @@
                 </v-col>
             </v-row>
         </v-container>
+        <div class="map-content">
+            <MglMap
+                :mapboxGl="mapbox"
+                :accessToken="accessToken"
+                :mapStyle.sync="mapStyle"
+            />
+        </div>
     </section>
 </template>
 
 <script>
 import emailjs from 'emailjs-com';
 import VueRecaptcha from 'vue-recaptcha';
+import Mapbox from 'mapbox-gl';
+import { MglMap } from 'vue-mapbox';
 
 export default {
     methods: {
@@ -109,9 +118,10 @@ export default {
             this.$refs.recaptcha.reset(); // Direct call reset method
         }
     },
+    components: { VueRecaptcha, MglMap },
     data() {
         return {
-            sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+            sitekey: '6LcaaoAaAAAAAKq9q9K0vNBRxC-c31UlNkSIZ5GVgit ',
             valid: false,
             firstname: '',
             lastname: '',
@@ -123,9 +133,15 @@ export default {
             emailRules: [
                 v => !!v || 'E-mail is required',
                 v => /.+@.+/.test(v) || 'E-mail must be valid'
-            ]
+            ],
+            accessToken:
+                'pk.eyJ1IjoicmF1bGJldGhlbmNvdXJ0IiwiYSI6ImNrbWFkOTA5cDFxaGEyeGtuczVlZ2JqNDUifQ.dCD0kSV0jWA7P-cZ_Z6KQg',
+            mapStyle: 'mapbox://styles/raulbethencourt/ckmapv3jl3nxd17qinxjcll9a'
         };
     },
-    components: { VueRecaptcha }
+    created() {
+        // We need to set mapbox-gl library here in order to use it in template
+        this.mapbox = Mapbox;
+    }
 };
 </script>

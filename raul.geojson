@@ -1,0 +1,11 @@
+{
+    "type": "Feature",
+    "properties": {
+        "title": "Home",
+        "description": "My home"
+    },
+    "geometry": {
+        "coordinates": [48.59622408989658, 7.724444619295151],
+        "type": "Point"
+    }
+}
