@@ -52,7 +52,7 @@
                             required
                         ></v-textarea>
 
-                        <v-btn type="submit" value="Send">{{
+                        <v-btn type="submit" value="Send" rounded large>{{
                             $page.texts.edges[0].node.contact.items[3]
                         }}</v-btn>
 
@@ -62,6 +62,8 @@
                                 @verify="onVerify"
                                 @expired="onExpired"
                                 :sitekey="sitekey"
+                                style="transform:scale(0.8);transform-origin:0 0;"
+                                theme="dark"
                             >
                             </vue-recaptcha>
                             <button @click="resetRecaptcha" class="d-none">Reset ReCAPTCHA</button>
@@ -71,11 +73,7 @@
             </v-row>
         </v-container>
         <div class="map-content">
-            <MglMap
-                :mapboxGl="mapbox"
-                :accessToken="accessToken"
-                :mapStyle.sync="mapStyle"
-            />
+            <MglMap :mapboxGl="mapbox" :accessToken="accessToken" :mapStyle.sync="mapStyle" />
         </div>
     </section>
 </template>
@@ -121,7 +119,7 @@ export default {
     components: { VueRecaptcha, MglMap },
     data() {
         return {
-            sitekey: '6LcaaoAaAAAAAKq9q9K0vNBRxC-c31UlNkSIZ5GVgit ',
+            sitekey: '6LcaaoAaAAAAAKq9q9K0vNBRxC-c31UlNkSIZ5GV',
             valid: false,
             firstname: '',
             lastname: '',

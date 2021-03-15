@@ -41,6 +41,7 @@ export default function(Vue, { appOptions, head }) {
 
     const opts = {
         theme: {
+            dark: true,
             themes: {
                 dark: {
                     primary: '#458588',
