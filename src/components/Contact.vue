@@ -6,17 +6,23 @@
         <v-container>
             <v-row>
                 <v-col cols="6" offset="3">
-                    <h2 class="text-h2 font-weight-bold mb-5">
+                    <h2 class="section-title">
                         {{ $page.texts.edges[0].node.contact.title }}
                     </h2>
                 </v-col>
             </v-row>
             <v-row>
                 <v-col cols="6" offset="3" class="mb-15">
-                    <v-form class="contact-form" @submit.prevent="sendEmail">
+                    <v-form
+                        ref="form"
+                        v-model="valid"
+                        lazy-validation
+                        class="contact-form"
+                        @submit.prevent="sendEmail"
+                    >
                         <v-input>
                             <v-text-field
-                                v-model="firstname"
+                                v-model="firstName"
                                 type="text"
                                 name="from_name"
                                 :label="$page.texts.edges[0].node.contact.items[0]"
@@ -52,11 +58,7 @@
                             required
                         ></v-textarea>
 
-                        <v-btn type="submit" value="Send" rounded large>{{
-                            $page.texts.edges[0].node.contact.items[3]
-                        }}</v-btn>
-
-                        <div id="root" class="mt-10 mb-5">
+                        <div id="root">
                             <vue-recaptcha
                                 ref="recaptcha"
                                 @verify="onVerify"
@@ -66,8 +68,37 @@
                                 theme="dark"
                             >
                             </vue-recaptcha>
-                            <button @click="resetRecaptcha" class="d-none">Reset ReCAPTCHA</button>
+                            <v-btn
+                                id="resetCaptcha"
+                                @click="resetRecaptcha"
+                                class="d-none mb-4"
+                                rounded
+                                color="error"
+                            >
+                                Reset
+                            </v-btn>
                         </div>
+
+                        <v-alert dense text type="success" id="emailSuccess" class="d-none"
+                            >Email Success</v-alert
+                        >
+                        <v-alert dense text type="error" id="emailError" class="d-none"
+                            >Email Error</v-alert
+                        >
+                        <v-alert dense text type="error" id="clickCaptcha" class="d-none"
+                            >click captacha</v-alert
+                        >
+
+                        <v-btn
+                            type="submit"
+                            value="Send"
+                            class="mb-10"
+                            rounded
+                            large
+                            :disabled="!valid"
+                            @click="validate"
+                            >{{ $page.texts.edges[0].node.contact.items[3] }}</v-btn
+                        >
                     </v-form>
                 </v-col>
             </v-row>
@@ -85,44 +116,11 @@ import Mapbox from 'mapbox-gl';
 import { MglMap } from 'vue-mapbox';
 
 export default {
-    methods: {
-        sendEmail: e => {
-            emailjs
-                .sendForm(
-                    'service_2rabu7t',
-                    'template_8121t2p',
-                    e.target,
-                    'user_PQrWgGpKRxHy54mH99sbR'
-                )
-                .then(
-                    result => {
-                        console.log('SUCCESS!', result.status, result.text);
-                    },
-                    error => {
-                        console.log('FAILED...', error);
-                    }
-                );
-        },
-        onSubmit: function() {
-            this.$refs.invisibleRecaptcha.execute();
-        },
-        onVerify: function(response) {
-            console.log('Verify: ' + response);
-        },
-        onExpired: function() {
-            console.log('Expired');
-        },
-        resetRecaptcha() {
-            this.$refs.recaptcha.reset(); // Direct call reset method
-        }
-    },
-    components: { VueRecaptcha, MglMap },
     data() {
         return {
             sitekey: '6LcaaoAaAAAAAKq9q9K0vNBRxC-c31UlNkSIZ5GV',
-            valid: false,
-            firstname: '',
-            lastname: '',
+            valid: true,
+            firstName: '',
             nameRules: [
                 v => !!v || 'Name is required',
                 v => v.length <= 20 || 'Name must be less than 20 characters'
@@ -137,9 +135,70 @@ export default {
             mapStyle: 'mapbox://styles/raulbethencourt/ckmapv3jl3nxd17qinxjcll9a'
         };
     },
+    methods: {
+        validate() {
+            this.$refs.form.validate();
+        },
+        sendEmail: evt => {
+            const error = document.getElementById('emailError');
+            const success = document.getElementById('emailSuccess');
+            if (evt.target[9].classList.contains('verified')) {
+                emailjs
+                    .sendForm(
+                        'service_2rabu7t',
+                        'template_8121t2p',
+                        evt.target,
+                        'user_PQrWgGpKRxHy54mH99sbR'
+                    )
+                    .then(
+                        result => {
+                            console.log('SUCCESS!', result.status, result.text);
+                            success.classList.remove('d-none');
+                            success.classList.add('d-flex');
+                            if (error.classList.contains('d-flex')) {
+                                error.classList.remove('d-flex');
+                                error.classList.add('d-none');
+                            }
+                        },
+                        error => {
+                            console.log('FAILED...', error);
+                            error.classList.remove('d-none');
+                            error.classList.add('d-flex');
+                        }
+                    );
+            } else {
+                const clickCaptcha = document.getElementById('clickCaptcha');
+                clickCaptcha.classList.remove('d-none');
+                clickCaptcha.classList.add('d-flex');
+            }
+        },
+        onVerify(response) {
+            const clickCaptcha = document.getElementById('clickCaptcha');
+            if (response) {
+                const captchaResponse = document.getElementById('g-recaptcha-response');
+                captchaResponse.classList.add('verified');
+                if (clickCaptcha.classList.contains('d-flex')) {
+                    clickCaptcha.classList.remove('d-flex');
+                    clickCaptcha.classList.add('d-none');
+                }
+            }
+        },
+        onExpired() {
+            const reset = document.getElementById('resetCaptcha');
+            reset.classList.remove('d-none');
+            reset.classList.add('d-flex');
+        },
+        resetRecaptcha() {
+            const reset = document.getElementById('resetCaptcha');
+            this.$refs.recaptcha.reset();
+            reset.classList.remove('d-flex');
+            reset.classList.add('d-none');
+        }
+    },
     created() {
         // We need to set mapbox-gl library here in order to use it in template
         this.mapbox = Mapbox;
-    }
+    },
+    components: { VueRecaptcha, MglMap }
 };
 </script>
