@@ -144,7 +144,7 @@
                     width="100%"
                     class="text-center d-flex flex-column justify-center"
                 >
-                    <v-card-text>
+                    <v-card-text class="d-flex justify-center">
                         <div v-for="(icon, i) in $page.texts.edges[0].node.footer.icons" :key="i">
                             <v-btn
                                 class="mx-4"
