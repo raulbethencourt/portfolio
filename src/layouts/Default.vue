@@ -13,10 +13,10 @@
             class="nav-bar"
             v-model="drawer"
             :mini-variant.sync="mini"
-            permanent
+            temporary
             fixed
         >
-            <v-list-item class="px-2">
+            <v-list-item class="px-2 d-none d-md-flex">
                 <v-list-item-avatar>
                     <v-img
                         :src="

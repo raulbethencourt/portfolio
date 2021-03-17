@@ -1,10 +1,9 @@
 .full-screen {
-    min-height: 1200px;
-
+    height: fit-content;
     .v-parallax {
+        height: fit-content;
         display: flex;
         align-items: center;
-        min-height: 1200px;
         padding-bottom: 50px;
 
         .v-parallax__image-container {
@@ -86,10 +85,10 @@
 
 @media #{$large-up} {
     .full-screen {
-        min-height: 100vh;
+        height: 100vh;
 
         .v-parallax {
-            min-height: 100vh;
+            height: 100vh;
 
             .v-parallax__content {
                 .portrait {

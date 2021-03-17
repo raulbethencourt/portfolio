@@ -9,6 +9,7 @@
                     ? require(`@/assets/images/dark-bg.png`)
                     : require(`@/assets/images/light-bg.png`)
             "
+            height="auto"
         >
             <v-row class="d-flex justify-md-space-center justify-center align-center">
                 <v-col cols="12" md="5" class="d-flex justify-center">
@@ -21,9 +22,10 @@
                         "
                         :class="
                             $vuetify.theme.dark
-                                ? 'dark-profile rounded-circle portrait'
-                                : 'light-profile rounded-circle portrait'
+                                ? 'dark-profile'
+                                : 'light-profile'
                         "
+                        class="rounded-circle portrait"
                     />
                 </v-col>
 

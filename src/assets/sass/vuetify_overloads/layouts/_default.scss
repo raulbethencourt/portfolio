@@ -11,6 +11,7 @@
                 background-size: contain;
             }
         }
+
         .subtitle-1 {
             text-transform: capitalize;
         }
@@ -33,7 +34,7 @@
         }
 
         .theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
-            color: $light_hard!important;
+            color: $light_hard !important;
         }
 
         .theme--light.v-icon {
@@ -41,9 +42,8 @@
         }
 
         .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
-            color: $dark_hard!important;
+            color: $dark_hard !important;
         }
-
 
         .list-link {
             .dark {
@@ -86,7 +86,7 @@
 
     .v-main {
         flex: 1 0;
-        margin-left: 56px;
+        margin-left: 0px;
     }
 }
 .theme--light.v-navigation-drawer {
@@ -95,4 +95,13 @@
 
 .theme--dark.v-navigation-drawer {
     background-color: $dark;
+}
+
+@media #{$large-up} {
+    .v-application--wrap {
+        .v-main {
+            flex: 1 0;
+            margin-left: 56px;
+        }
+    }
 }
