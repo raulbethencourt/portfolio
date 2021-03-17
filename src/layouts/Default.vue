@@ -1,10 +1,6 @@
 <template>
     <v-app :style="{ background: $vuetify.theme.themes[theme].background }">
-        <v-app-bar
-            fixed
-            flat
-            class="d-md-none"
-        >
+        <v-app-bar fixed flat class="d-md-none">
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
         </v-app-bar>
 
@@ -13,7 +9,8 @@
             class="nav-bar"
             v-model="drawer"
             :mini-variant.sync="mini"
-            temporary
+            :permanent="$vuetify.breakpoint.mdAndUp"
+            :temporary="$vuetify.breakpoint.smAndDown"
             fixed
         >
             <v-list-item class="px-2 d-none d-md-flex">
@@ -37,10 +34,7 @@
                     </v-list-item-subtitle>
                 </v-list-item-content>
 
-                <v-btn
-                    icon
-                    @click.stop="mini = !mini"
-                >
+                <v-btn icon @click.stop="mini = !mini">
                     <v-icon>mdi-chevron-left</v-icon>
                 </v-btn>
             </v-list-item>
@@ -132,10 +126,7 @@
         </v-navigation-drawer>
         <v-main>
             <slot />
-            <v-footer
-                v-bind="localAttrs"
-                :padless="padless"
-            >
+            <v-footer v-bind="localAttrs" :padless="padless">
                 <v-card
                     height="230px"
                     dark
@@ -164,7 +155,8 @@
 
                     <v-card-text class="white--text">
                         {{ new Date().getFullYear() }} —
-                        <strong>{{ $page.texts.edges[0].node.footer.author }}</strong> / {{ $page.texts.edges[0].node.footer.version }}
+                        <strong>{{ $page.texts.edges[0].node.footer.author }}</strong> /
+                        {{ $page.texts.edges[0].node.footer.version }}
                     </v-card-text>
                 </v-card>
             </v-footer>
@@ -182,7 +174,7 @@ export default {
             pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf'),
             drawer: false,
             group: null,
-            mini: true,
+            mini: undefined,
             padless: true,
             variant: 'default'
         };
@@ -210,6 +202,31 @@ export default {
                 attrs[this.variant] = true;
             }
             return attrs;
+        }
+    },
+    mounted() {
+        console.log(this.$vuetify.breakpoint.name);
+        switch (this.$vuetify.breakpoint.name) {
+            case 'xs':
+                this.mini = false;
+                console.log(this.mini);
+                break;
+            case 'sm':
+                this.mini = false;
+                console.log(this.mini);
+                break;
+            case 'md':
+                this.mini = false;
+                console.log(this.mini);
+                break;
+            case 'lg':
+                this.mini = true;
+                console.log(this.mini);
+                break;
+            case 'xl':
+                this.mini = true;
+                console.log(this.mini);
+                break;
         }
     }
 };

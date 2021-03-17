@@ -4,12 +4,8 @@
         height: fit-content;
         display: flex;
         align-items: center;
-        padding-bottom: 50px;
 
         .v-parallax__image-container {
-            .v-parallax__image {
-                top: -500px;
-            }
         }
 
         .v-parallax__content {
