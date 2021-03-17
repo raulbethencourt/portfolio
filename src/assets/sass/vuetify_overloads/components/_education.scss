@@ -1,9 +1,11 @@
 .education-section {
-    min-height: 100vh;
-    margin-top: 75px;
+    padding-top: 75px;
+    padding-bottom: 150px;
 
-    .window-card {
-        padding: 5% 5%;
+    .slide-card {
+        height: 90%;
+        padding: 0 10%;
+        background: none;
         color: $dark_hard;
 
         .card-decoration {
@@ -17,7 +19,6 @@
 
             .v-card__subtitle {
                 padding: 1% 0 1% 15%;
-                margin-bottom: 13%;
                 color: $bg_dark2;
                 white-space: nowrap;
                 text-transform: capitalize;

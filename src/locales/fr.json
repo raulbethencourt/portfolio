@@ -22,12 +22,14 @@
     },
     "about": {
         "title": "Salut, Je suis Raul.",
-        "description": [
-            "Mon objectif aujourd’hui c’est d’asseoir mon expertise de développeur Web pour une agence.Pour cela, j’ai trois piliers qui sont :",
-            "Un pilier technique. J’ai fait ma formation chez Élan et je suis spécialiste du PHP et du framework Symfony.",
-            "Mon deuxième pilier c’est la curiosité pour les nouveautés techniques. C’est qui me porte en ce moment c’est l’utilisation de JavaScript et notamment du framework Vue.js.",
-            "Et pour finir un pilier relationnel. Il me semble être un collègue agréable et j’aime partager mes ressources et aider les autres."
-        ]
+        "description": {
+            "text": "Mon objectif aujourd’hui c’est d’asseoir mon expertise de développeur Web pour une agence. Pour cela, j’ai trois piliers qui sont :",
+            "list":[
+                "Un pilier technique. J’ai fait ma formation chez Élan et je suis spécialiste du PHP et du framework Symfony.",
+                "Mon deuxième pilier c’est la curiosité pour les nouveautés techniques. C’est qui me porte en ce moment c’est l’utilisation de JavaScript et notamment du framework Vue.js.",
+                "Et pour finir un pilier relationnel. Il me semble être un collègue agréable et j’aime partager mes ressources et aider les autres."
+            ]
+    }
     },
     "projects": {
         "title": "Projets",
@@ -294,6 +296,7 @@
                 "url": "https://stackoverflow.com/users/13805497/raulbethencourt"
             }
         ],
-        "author": "Raul Bethencourt Gonzalez"
+        "author": "Raul Bethencourt Gonzalez",
+        "version": "v1.0"
     }
 }

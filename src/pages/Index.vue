@@ -58,7 +58,10 @@ query sidebar($locale: String) {
                 about {
                     path
                     title
-                    description
+                    description {
+                        text
+                        list
+                    }
                 }
                 projects {
                     title
@@ -126,6 +129,7 @@ query sidebar($locale: String) {
                         url
                     }
                     author
+                    version
                 }
             }
         }

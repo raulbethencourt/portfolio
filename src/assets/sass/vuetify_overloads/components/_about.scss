@@ -15,55 +15,58 @@
 
         .v-parallax__content {
             color: inherit;
+            width: 100%;
+
+            .portrait {
+                margin-top: 50px;
+                width: 250px;
+            }
+
+            .dark-profile {
+                filter: grayscale(1);
+                transform: scaleX(-1);
+                box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+            }
+
+            .light-profile {
+                transform: scaleX(-1);
+                box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            }
+
+            .dark-panel {
+                background-color: $dark_soft;
+                color: $light_hard;
+            }
+
+            .light-panel {
+                background-color: $light_soft;
+                color: $dark_hard;
+            }
+
+            .parallax__title {
+                font-size: 3rem;
+                line-height: 4rem;
+                letter-spacing: -0.015625em;
+                text-align: center;
+            }
+
+            .parallax__text {
+                font-size: 1.125rem;
+                font-weight: 500;
+                letter-spacing: 0.0125em;
+                text-align: center;
+            }
         }
-
-        .portrait {
-            margin-top: 50px;
-            width: 250px;
-        }
-
-        .dark-profile {
-            filter: grayscale(1);
-            transform: scaleX(-1);
-            box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
-        }
-
-        .light-profile {
-            transform: scaleX(-1);
-            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        }
-
-        .parallax__title {
-            font-size: 3rem;
-            line-height: 4rem;
-            letter-spacing: -0.015625em;
-            text-align: center;
-        }
-
-        .parallax__text {
-            font-size: 1.125rem;
-            font-weight: 500;
-            letter-spacing: 0.0125em;
-            text-align: center;
-        }
-    }
-}
-
-.v-application {
-    .text-h1 {
-        font-size: 1.5rem;
-    }
-
-    .text-h6 {
-        font-size: 1rem;
     }
 }
 
 @media #{$small-up} {
     .full-screen {
         .v-parallax {
-            .portrait {
-                width: 275px;
+            .v-parallax__content {
+                .portrait {
+                    width: 275px;
+                }
             }
         }
     }
@@ -72,8 +75,10 @@
 @media #{$medium-up} {
     .full-screen {
         .v-parallax {
-            .portrait {
-                width: 300px;
+            .v-parallax__content {
+                .portrait {
+                    width: 300px;
+                }
             }
         }
     }
@@ -86,22 +91,24 @@
         .v-parallax {
             min-height: 100vh;
 
-            .portrait {
-                width: 400px;
-            }
+            .v-parallax__content {
+                .portrait {
+                    width: 400px;
+                }
 
-            .parallax__title {
-                font-family: $space;
-                font-size: 5rem;
-                line-height: 5rem;
-                text-align: left;
-            }
+                .parallax__title {
+                    font-family: $space;
+                    font-size: 5rem;
+                    line-height: 5rem;
+                    text-align: left;
+                }
 
-            .parallax__text {
-                font-size: 1.25rem;
-                font-weight: 500;
-                letter-spacing: 0.0125em;
-                text-align: left;
+                .parallax__text {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    letter-spacing: 0.0125em;
+                    text-align: left;
+                }
             }
         }
     }
@@ -110,8 +117,10 @@
 @media #{$xlarge-up} {
     .full-screen {
         .v-parallax {
-            .portrait {
-                width: 500px;
+            .v-parallax__content {
+                .portrait {
+                    width: 500px;
+                }
             }
         }
     }
