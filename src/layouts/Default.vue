@@ -164,7 +164,7 @@
 
                     <v-card-text class="white--text">
                         {{ new Date().getFullYear() }} —
-                        <strong>{{ $page.texts.edges[0].node.footer.author }}</strong> /{{ $page.texts.edges[0].node.footer.version }}
+                        <strong>{{ $page.texts.edges[0].node.footer.author }}</strong> / {{ $page.texts.edges[0].node.footer.version }}
                     </v-card-text>
                 </v-card>
             </v-footer>
