@@ -103,9 +103,11 @@
                 </v-col>
             </v-row>
         </v-container>
-        <div class="map-content">
-            <MglMap :mapboxGl="mapbox" :accessToken="accessToken" :mapStyle.sync="mapStyle" />
-        </div>
+        <clientOnly>
+            <div class="map-content">
+                <mglMap :mapboxGl="mapbox" :accessToken="accessToken" :mapStyle.sync="mapStyle" />
+            </div>
+        </clientOnly>
     </section>
 </template>
 
@@ -114,6 +116,7 @@ import emailjs from 'emailjs-com';
 import VueRecaptcha from 'vue-recaptcha';
 import Mapbox from 'mapbox-gl';
 import { MglMap } from 'vue-mapbox';
+const mglMap = process.isClient ? MglMap : undefinded
 
 export default {
     data() {
@@ -199,6 +202,6 @@ export default {
         // We need to set mapbox-gl library here in order to use it in template
         this.mapbox = Mapbox;
     },
-    components: { VueRecaptcha, MglMap }
+    components: { VueRecaptcha, mglMap }
 };
 </script>
