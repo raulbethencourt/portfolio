@@ -103,20 +103,22 @@
                 </v-col>
             </v-row>
         </v-container>
-        <clientOnly>
-            <div class="map-content">
-                <mglMap :mapboxGl="mapbox" :accessToken="accessToken" :mapStyle.sync="mapStyle" />
-            </div>
-        </clientOnly>
+        <div class="map-content">
+            <ClientOnly>
+                <MglMap :mapboxGl="mapbox" :accessToken="accessToken" :mapStyle.sync="mapStyle" />
+            </ClientOnly>
+        </div>
     </section>
 </template>
+
+<style>
+@import url('https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css');
+</style>
 
 <script>
 import emailjs from 'emailjs-com';
 import VueRecaptcha from 'vue-recaptcha';
 import Mapbox from 'mapbox-gl';
-import { MglMap } from 'vue-mapbox';
-const mglMap = process.isClient ? MglMap : undefinded
 
 export default {
     data() {
@@ -202,6 +204,12 @@ export default {
         // We need to set mapbox-gl library here in order to use it in template
         this.mapbox = Mapbox;
     },
-    components: { VueRecaptcha, mglMap }
+    components: {
+        VueRecaptcha,
+        MglMap: () =>
+            import('vue-mapbox')
+                .then(m => m.MglMap)
+                .catch()
+    }
 };
 </script>

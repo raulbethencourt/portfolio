@@ -8,9 +8,6 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
-//mapbox
-import 'mapbox-gl/dist/mapbox-gl.css'
-
 export default function(Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
@@ -26,6 +23,11 @@ export default function(Vue, { appOptions, head }) {
         rel: 'stylesheet',
         href:
             'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&family=DotGothic16&display=swap'
+    });
+
+    head.link.push({
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/aos@next/dist/aos.css'
     });
 
     head.link.push({
