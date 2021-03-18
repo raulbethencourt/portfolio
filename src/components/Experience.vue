@@ -10,12 +10,11 @@
         <v-container class="mb-0">
             <v-row>
                 <v-col
-                    cols="10"
-                    offset="1"
+                    cols="12"
                     class="d-flex justify-center"
                 >
                     <div class="ballon">
-                        <h2 class="section-title">
+                        <h2 class="section-title font-size--special">
                             {{ $page.texts.edges[0].node.experience.title }}
                         </h2>
                     </div>
@@ -23,10 +22,11 @@
             </v-row>
 
             <v-row class="mt-0">
-                <v-col class="col-10 offset-1 pt-0 pb-0">
+                <v-col cols="12" md="10" offset-md="1" class="pb-0 pt-0">
                     <v-timeline
                         reverse
                         class="timeline"
+                        :dense="$vuetify.breakpoint.xsOnly"
                     >
                         <v-timeline-item
                             v-for="(job, i) in $page.texts.edges[0].node.experience.jobs"
@@ -44,18 +44,16 @@
                             </template>
                             <v-card>
                                 <v-card-title class="secondary">
-                                    <h4 class="display-1 font-weight-bold text-h4">
                                         {{ job.title }}
-                                    </h4>
                                 </v-card-title>
                                 <v-container class="pl-0 pr-0">
                                     <v-row class="ml-2 mr-2">
                                         <v-col cols="12">
-                                            <h5 class="text-h5">
+                                            <h5 class="v-container__company">
                                                 {{ job.company }}
                                             </h5>
-                                            <h6 class="text-h6 subtitle mb-1">
-                                                {{ job.city }}
+                                            <h6 class="v-container__city mb-1">
+                                                {{ job.city }}<span class="d-sm-none font-weight-bold"> | {{job.year}}</span>
                                             </h6>
                                         </v-col>
                                     </v-row>
@@ -65,6 +63,7 @@
                                             <p
                                                 v-for="(text, i) in job.description"
                                                 :key="i"
+                                                class="mb-2"
                                             >
                                                 {{ text }}
                                             </p>

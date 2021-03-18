@@ -1,15 +1,37 @@
 .experience-section {
-    padding-top: 75px;
+    padding: 20px 5px 0 5px;
 
     .ballon {
-        padding: 5px 25px;
-        border-radius: 100px;
+        width: 120%;
+        border-radius: 10px;
         border: 5px solid $secondary_dark;
+    }
+
+    .font-size--special {
+        font-size: 2rem;
     }
 
     .timeline {
         padding-top: 50px;
         padding-bottom: 85px;
+
+        .v-card__title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .v-container__company {
+            font-size: 1.25rem;
+        }
+
+        .v-container__city {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 0.85rem;
+        }
     }
 
     .v-timeline-item__body > .v-card:not(.v-card--flat):after,
@@ -23,4 +45,49 @@
 
 .experience-dark-bg {
     background-color: $bg_dark2;
+}
+
+@media #{$small-up} {
+    .experience-section {
+        .ballon {
+            width: auto;
+            padding: 13px 25px;
+            border-radius: 100px;
+        }
+
+        .font-size--special {
+            font-size: 3rem;
+        }
+
+        .timeline {
+            .v-card__title {
+                font-size: 2rem;
+                word-break: keep-all;
+            }
+
+            .v-container__company {
+                font-size: 1.25rem;
+                word-break: keep-all;
+            }
+
+            .v-container__city {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
+
+@media #{$medium-up} {
+    .experience-section {
+        padding: 75px 0 0 0;
+
+        .font-size--special {
+            font-size: 5rem;
+        }
+    }
 }
