@@ -1,13 +1,19 @@
 .projects-section {
-    padding: 75px 0;
-
+    padding: 20px 5px;
     .v-sheet.v-card:not(.v-sheet--outlined) {
         box-shadow: rgba(0, 0, 0, 0.56) 0px 15px 30px 4px;
     }
-
+    
     .project-card {
-        width: 48%;
-
+        width: 100%;
+        
+        .v-card__title {
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
         .theme--dark.v-icon {
             color: $light_hard;
         }
@@ -18,7 +24,7 @@
 
         .overlay-text {
             width: 85%;
-
+            
             font-size: 1rem;
             color: $light_hard;
             text-align: center;
@@ -30,3 +36,24 @@
     }
 }
 
+@media #{$medium-up} {
+    .projects-section {
+        padding: 75px 0;
+        .project-card {
+            width: 48%;
+            .v-card__title {
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+@media #{$large-up} {
+    .projects-section {
+        .project-card {
+            .v-card__title {
+                font-size: 2rem;
+            }
+        }
+    }
+}

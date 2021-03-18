@@ -5,10 +5,7 @@
     >
         <v-container>
             <v-row>
-                <v-col
-                    cols="10"
-                    offset="1"
-                >
+                <v-col cols="10" offset="1">
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.projects.title }}
                     </h2>
@@ -18,15 +15,16 @@
             <v-row class="mb-8 mt-10">
                 <v-col
                     cols="12"
-                    md="10"
-                    offset-md="1"
+                    sm="10"
+                    offset-sm="1"
                     class="d-flex justify-space-between flex-wrap"
                 >
                     <v-card
                         v-for="project in $page.texts.edges[0].node.projects.works"
                         :key="project.title"
-                        class="mb-15 project-card"
+                        class="mb-7 mb-md-15 project-card"
                         data-aos="fade-up"
+                        data-aos-duration="1200"
                     >
                         <v-img
                             aspect-ratio="2"
@@ -34,7 +32,7 @@
                         >
                         </v-img>
 
-                        <v-card-title class="text-uppercase font-weight-bold text-h4">
+                        <v-card-title>
                             {{ project.title }}
                         </v-card-title>
 
@@ -73,18 +71,11 @@
                             </div>
                             <v-spacer></v-spacer>
 
-                            <v-btn
-                                text
-                                @click="project.btn = !project.btn"
-                            >
+                            <v-btn text @click="project.btn = !project.btn">
                                 {{ $page.texts.edges[0].node.projects.btns[1] }}
                             </v-btn>
                         </v-card-actions>
-                        <v-overlay
-                            :absolute="absolute"
-                            opacity="0.9"
-                            :value="project.btn"
-                        >
+                        <v-overlay :absolute="absolute" opacity="0.9" :value="project.btn">
                             <div class="d-flex flex-column align-center">
                                 <v-card-text class="overlay-text">
                                     {{ project.description }}
@@ -117,7 +108,7 @@ export default {
         absolute: true
     }),
     mounted() {
-        AOS.init({ disable: 'phone', duration: 1200 });
+        AOS.init({ disable: 'phone' });
     }
 };
 </script>

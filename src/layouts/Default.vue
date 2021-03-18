@@ -209,23 +209,18 @@ export default {
         switch (this.$vuetify.breakpoint.name) {
             case 'xs':
                 this.mini = false;
-                console.log(this.mini);
                 break;
             case 'sm':
                 this.mini = false;
-                console.log(this.mini);
                 break;
             case 'md':
                 this.mini = false;
-                console.log(this.mini);
                 break;
             case 'lg':
                 this.mini = true;
-                console.log(this.mini);
                 break;
             case 'xl':
                 this.mini = true;
-                console.log(this.mini);
                 break;
         }
     }

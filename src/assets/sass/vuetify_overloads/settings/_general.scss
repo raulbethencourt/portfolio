@@ -3,9 +3,11 @@ html {
 }
 
 .section-title {
-    font-family: $space;
-    font-size: 5rem;
+    font-size: 3rem;
+    line-height: 4rem;
+    letter-spacing: -0.015625em;
     text-align: center;
+    font-family: $space;
 }
 
 .theme--dark.v-application {
@@ -42,6 +44,14 @@ html {
     color: $dark_hard;
 }
 
-.v-timeline-item__body>.v-card:not(.v-card--flat):after, .v-timeline-item__body>.v-card:not(.v-card--flat):before {
+.v-timeline-item__body > .v-card:not(.v-card--flat):after,
+.v-timeline-item__body > .v-card:not(.v-card--flat):before {
     border-right: 10px solid $bg_light3;
+}
+
+@media #{$medium-up} {
+    .section-title {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
 }
