@@ -13,22 +13,27 @@
             </v-row>
 
             <v-row>
-                <v-col cols="10" offset="1" class="d-flex align-center">
-                    <v-carousel v-model="model" show-arrows-on-hover height="700">
+                <v-col cols="12" md="10" offset-md="1" class="d-flex align-center">
+                    <v-carousel
+                        v-model="model"
+                        :show-arrows-on-hover="$vuetify.breakpoint.mdAndUp"
+                        height="none"
+                    >
                         <v-carousel-item
                             v-for="(diplome, i) in $page.texts.edges[0].node.education.diplomes"
                             :key="i"
                         >
-                            <v-card class="d-flex align-center slide-card" flat>
+                            <v-card flat>
                                 <div class="card-decoration">
                                     <v-card-title>
                                         <strong>{{ diplome.title }}</strong>
                                     </v-card-title>
 
-                                    <v-card-text>
-                                        <p v-for="(description, i) in diplome.description" :key="i">
-                                            {{ description }}
-                                        </p>
+                                    <v-card-text
+                                        v-for="(description, i) in diplome.description"
+                                        :key="i"
+                                    >
+                                        {{ description }}
                                     </v-card-text>
 
                                     <div class="d-flex justify-space-between">

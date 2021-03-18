@@ -1,39 +1,96 @@
 .education-section {
-    padding-top: 75px;
-    padding-bottom: 150px;
+    padding: 20px 10px;
 
-    .slide-card {
-        height: 90%;
-        padding: 0 10%;
-        background: none;
-        color: $dark_hard;
+    .v-carousel {
+        height: fit-content;
+        .v-responsive {
+            height: 100%;
+            .v-responsive__content {
+                height: 100%;
+                .v-card {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    padding: 30% 15%;
+                    background: none;
+                    color: $dark_hard;
 
-        .card-decoration {
-            .v-card__title {
-                padding: 1% 15%;
-                margin-top: 13%;
-                font-size: 1.75rem;
-                word-break: keep-all;
-                font-style: italic;
+                    .card-decoration {
+                        width: 100%;
+                        .v-card__title {
+                            font-size: 1.4rem;
+                            word-break: keep-all;
+                            font-style: italic;
+                        }
+
+                        .v-card__text {
+                            font-size: 0.9rem;
+                        }
+
+                        .v-card__subtitle {
+                            color: $bg_dark2;
+                            font-size: 0.75rem;
+                            text-transform: capitalize;
+                        }
+
+                        .img-container {
+                            width: 300px;
+
+                            .diplome-img {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                    }
+                }
             }
+        }
+    }
+}
 
-            .v-card__subtitle {
-                padding: 1% 0 1% 15%;
-                color: $bg_dark2;
-                white-space: nowrap;
-                text-transform: capitalize;
+@media #{$small-up} {
+    .education-section {
+        .v-carousel {
+            .v-responsive {
+                .v-responsive__content {
+                    .v-card {
+                        padding: 20% 15%;
+                    }
+                }
             }
+        }
+    }
+}
 
-            .v-card__text {
-                padding: 0% 15%;
-            }
+@media #{$medium-up} {
+    .education-section {
+        padding: 75px 0;
 
-            .img-container {
-                width: 400px;
+        .v-carousel {
+            .v-responsive {
+                .v-responsive__content {
+                    .v-card {
+                        padding: 15% 15%;
+                        .card-decoration {
+                            .v-card__title {
+                                font-size: 1.75rem;
+                            }
 
-                .diplome-img {
-                    width: 130px;
-                    height: 130px;
+                            .v-card__subtitle {
+                                color: $bg_dark2;
+                                text-transform: capitalize;
+                            }
+
+                            .img-container {
+                                width: 400px;
+
+                                .diplome-img {
+                                    width: 130px;
+                                    height: 130px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
