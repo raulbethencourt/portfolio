@@ -1,16 +1,18 @@
 .testimonials-section {
-    padding-top: 75px;
-    padding-bottom: 100px;
+    padding-top: 25px;
+    padding-bottom: 20px;
 
-    .sheet {
-        padding: 40px;
+    .v-sheet {
+        padding: 30px;
+        margin: 15px 10px;
+        height: fit-content;
 
         .testimonial-text {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
 
         .testimonial-author {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-style: italic;
         }
     }
@@ -21,5 +23,26 @@
 
     .sheet-light-bg {
         background-color: $light_256;
+    }
+}
+
+@media #{$medium-up} {
+    .testimonials-section {
+        padding-top: 75px;
+        padding-bottom: 100px;
+
+        .v-sheet {
+            padding: 40px;
+            margin: 0px 0px;
+            width: 45%;
+
+            .testimonial-text {
+                font-size: 1.25rem;
+            }
+
+            .testimonial-author {
+                font-size: 1.5rem;
+            }
+        }
     }
 }

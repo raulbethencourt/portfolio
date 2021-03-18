@@ -5,10 +5,7 @@
     >
         <v-container>
             <v-row>
-                <v-col
-                    cols="10"
-                    offset="1"
-                >
+                <v-col cols="10" offset="1">
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.testimonials.title }}
                     </h2>
@@ -17,21 +14,17 @@
 
             <v-row>
                 <v-col
-                    v-for="(testimony, i) in $page.texts.edges[0].node.testimonials.items"
-                    :key="i"
                     cols="12"
-                    md="4"
+                    md="10"
                     offset-md="1"
-                    class="d-flex flex-column align-items-center text-center"
+                    class="d-flex flex-wrap justify-space-between text-center mt-lg-10"
                 >
                     <v-sheet
+                        v-for="(testimony, i) in $page.texts.edges[0].node.testimonials.items"
+                        :key="i"
                         elevation="24"
                         rounded="xl"
-                        :class="
-                            $vuetify.theme.dark
-                                ? `sheet sheet-dark-bg`
-                                : `sheet sheet-light-bg`
-                        "
+                        :class="$vuetify.theme.dark ? `sheet-dark-bg` : `sheet-light-bg`"
                     >
                         <p
                             v-for="(text, i) in testimony.texts"
