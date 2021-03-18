@@ -5,14 +5,14 @@
     >
         <v-container>
             <v-row>
-                <v-col cols="6" offset="3">
+                <v-col>
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.contact.title }}
                     </h2>
                 </v-col>
             </v-row>
             <v-row>
-                <v-col cols="6" offset="3" class="mb-15">
+                <v-col cols="10" offset="1" md="8" offset-md="2" class="mb-15">
                     <v-form
                         ref="form"
                         v-model="valid"

@@ -5,7 +5,7 @@
     >
         <v-container class="d-flex flex-column justify-center">
             <v-row>
-                <v-col cols="10" offset="1">
+                <v-col>
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.education.title }}
                     </h2>

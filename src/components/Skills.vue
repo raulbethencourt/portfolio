@@ -7,7 +7,7 @@
     >
         <v-container>
             <v-row>
-                <v-col cols="10" offset="1" class="d-flex justify-center">
+                <v-col>
                     <h2 class="section-title">
                         {{ $page.texts.edges[0].node.skills.title }}
                     </h2>
