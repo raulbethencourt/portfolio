@@ -16,12 +16,22 @@
         text-align: center;
     }
 
-    .tetris-container {
-        max-width: 1300px;
+    .tetris__grid {
+        max-width: 300px;
+        min-width: 300px;
 
-        .tetris__grid {
-            max-width: 300px;
-            min-width: 300px;
+        .square {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .v-sheet {
+        width: fit-content;
+        
+        .mini-tetris__grid {
+            max-width: 120px;
+            min-width: 120px;
 
             .square {
                 width: 30px;
@@ -29,66 +39,54 @@
             }
         }
 
-        .v-sheet {
-            .mini-tetris__grid {
-                max-width: 120px;
-                min-width: 120px;
+        .score {
+            font-family: 'DotGothic16', sans-serif;
+            letter-spacing: 2px;
 
-                .square {
-                    width: 30px;
-                    height: 30px;
-                }
-            }
-
-            .score {
-                font-family: 'DotGothic16', sans-serif;
-                letter-spacing: 2px;
-
-                .chip {
-                    padding: 5px 15px;
-                }
-            }
-
-            .v-btn__content {
-                font-family: 'DotGothic16', sans-serif;
-                font-size: 1rem;
-                font-weight: bold;
-                letter-spacing: 2px;
+            .chip {
+                padding: 5px 15px;
             }
         }
 
-        .gameover {           
-            .gameover-text {
-                font-size: 6rem;
-                font-family: 'DotGothic16', sans-serif;
-                font-weight: bold;
-                letter-spacing: 2px;
-                white-space: nowrap;
-            }
+        .v-btn__content {
+            font-family: 'DotGothic16', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    }
 
-            .gameover-btn {
-                font-family: 'DotGothic16', sans-serif;
-                font-size: 1rem;
-                font-weight: bold;
-                letter-spacing: 2px;
-            }
+    .gameover {
+        .gameover-text {
+            font-size: 6rem;
+            font-family: 'DotGothic16', sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            white-space: nowrap;
         }
 
-        .sheet-dark-bg {
-            background-color: $bg_dark1;
+        .gameover-btn {
+            font-family: 'DotGothic16', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
+    }
 
-        .sheet-light-bg {
-            background-color: $bg_light1;
-        }
+    .sheet-dark-bg {
+        background-color: $bg_dark1;
+    }
 
-        .grid-dark-bg {
-            background-color: $dark;
-        }
+    .sheet-light-bg {
+        background-color: $bg_light1;
+    }
 
-        .grid-light-bg {
-            background-color: $light;
-        }
+    .grid-dark-bg {
+        background-color: $dark;
+    }
+
+    .grid-light-bg {
+        background-color: $light;
     }
 }
 

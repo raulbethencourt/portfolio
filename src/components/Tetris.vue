@@ -15,9 +15,13 @@
             </v-row>
         </v-container>
 
-        <v-container class="mt-10 d-flex justify-center">
-            <v-row class="d-flex justify-center align-center tetris-container">
-                <v-col cols="3">
+        <v-container class="mt-10">
+            <v-row>
+                <v-col
+                    cols="10"
+                    offset="1"
+                    class="d-flex justify-space-around align-center"
+                >
                     <div
                         id="grid"
                         :class="
@@ -30,9 +34,7 @@
 
                         <div v-for="j in taken" :key="j" class="square takenBottom d-none"></div>
                     </div>
-                </v-col>
 
-                <v-col cols="3" offset="1">
                     <v-sheet
                         id="scoreblock"
                         :class="$vuetify.theme.dark ? `sheet-dark-bg` : `sheet-light-bg`"
