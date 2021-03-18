@@ -1,6 +1,9 @@
 .skills-section {
-    padding-top: 75px;
-    padding-bottom: 150px;
+    padding: 25px 0;
+
+    .skill__container {
+        margin: 10px;
+    }
 }
 
 .skills-light-bg {
@@ -9,4 +12,11 @@
 
 .skills-dark-bg {
     background-color: $bg_dark3;
+}
+
+@media #{$medium-up} {
+    .skills-section {
+        padding-top: 75px;
+        padding-bottom: 150px;
+    }
 }
