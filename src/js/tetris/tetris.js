@@ -6,6 +6,7 @@ import {
     yellow,
     width,
     colors,
+    colorsPhone,
     lTetromino,
     zTetromino,
     tTetromino,
@@ -16,7 +17,7 @@ import {
     upNextTetrominoes
 } from '~/js/tetris/tetris.setup.js';
 
-export function tetris() {
+export function tetris($vuetify) {
     //DOM objects
     const grid = document.getElementById('grid');
     const scoreDisplay = document.getElementById('score');
@@ -52,12 +53,20 @@ export function tetris() {
         if (timer) {
             clearInterval(timer);
             timer = null;
-
+            enableScroll();
+            //stop swipe direction
+            //determine swipe direction for movile playing
+            document.removeEventListener('touchstart', handleTouchStart, false);
+            document.removeEventListener('touchmove', handleTouchMove, false);
             //stop control
             document.removeEventListener('keydown', control);
             //stop music
             document.getElementById('audio').pause();
         } else {
+            //determine swipe direction for movile playing
+            document.addEventListener('touchstart', handleTouchStart, false);
+            document.addEventListener('touchmove', handleTouchMove, false);
+            disableScroll();
             play();
         }
     });
@@ -69,6 +78,7 @@ export function tetris() {
             square.classList.remove('tetromino');
             square.classList.remove('taken');
             square.style.backgroundImage = '';
+            square.style.backgroundColor = '';
         });
 
         //show gameOver
@@ -106,7 +116,11 @@ export function tetris() {
     function draw() {
         current.forEach(i => {
             squares[currentPosition + i].classList.add('tetromino');
-            squares[currentPosition + i].style.backgroundImage = colors[random];
+            if ($vuetify) {
+                squares[currentPosition + i].style.backgroundImage = colors[random];
+            } else {
+                squares[currentPosition + i].style.backgroundColor = colorsPhone[random];
+            }
             squares[currentPosition + i].style.backgroundSize = '100%';
         });
     }
@@ -116,6 +130,7 @@ export function tetris() {
         current.forEach(i => {
             squares[currentPosition + i].classList.remove('tetromino');
             squares[currentPosition + i].style.backgroundImage = '';
+            squares[currentPosition + i].style.backgroundColor = '';
         });
     }
 
@@ -241,12 +256,17 @@ export function tetris() {
         displaySquares.forEach(square => {
             square.classList.remove('tetromino');
             square.style.backgroundImage = '';
+            square.style.backgroundColor = '';
         });
 
         //display new tetromino
         upNextTetrominoes[nextRandom].forEach(i => {
             displaySquares[displayIndex + i].classList.add('tetromino');
-            displaySquares[displayIndex + i].style.backgroundImage = colors[nextRandom];
+            if ($vuetify) {
+                displaySquares[displayIndex + i].style.backgroundImage = colors[nextRandom];
+            } else {
+                displaySquares[displayIndex + i].style.backgroundColor = colorsPhone[nextRandom];
+            }
             displaySquares[displayIndex + i].style.backgroundSize = '100%';
         });
     }
@@ -273,6 +293,7 @@ export function tetris() {
                     squares[i].classList.remove('taken');
                     squares[i].classList.remove('tetromino');
                     squares[i].style.backgroundImage = '';
+                    squares[i].style.backgroundColor = '';
                 });
                 const squaresRemoved = squares.splice(i, width);
                 squares = squaresRemoved.concat(squares);
@@ -303,5 +324,99 @@ export function tetris() {
             //sotp music
             document.getElementById('audio').pause();
         }
+    }
+
+    let xDown = null;
+    let yDown = null;
+
+    function getTouches(evt) {
+        return (
+            evt.touches || evt.originalEvent.touches // browser API
+        ); // jQuery
+    }
+
+    function handleTouchStart(evt) {
+        const firstTouch = getTouches(evt)[0];
+        xDown = firstTouch.clientX;
+        yDown = firstTouch.clientY;
+    }
+
+    function handleTouchMove(evt) {
+        if (!xDown || !yDown) {
+            return;
+        }
+
+        let xUp = evt.touches[0].clientX;
+        let yUp = evt.touches[0].clientY;
+
+        let xDiff = xDown - xUp;
+        let yDiff = yDown - yUp;
+
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+            /*most significant*/
+            if (xDiff > 0) {
+                moveLeft();
+            } else {
+                moveRight();
+            }
+        } else {
+            if (yDiff > 0) {
+                rotate();
+            } else {
+                moveDown();
+            }
+        }
+        /* reset values */
+        xDown = null;
+        yDown = null;
+    }
+
+    //To stop scrolling when we slide but let key movement
+    // left: 37, up: 38, right: 39, down: 40,
+    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    const keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+    function preventDefault(e) {
+        e.preventDefault();
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    // modern Chrome requires { passive: false } when adding event
+    let supportsPassive = false;
+    try {
+        window.addEventListener(
+            'test',
+            null,
+            Object.defineProperty({}, 'passive', {
+                get: function() {
+                    supportsPassive = true;
+                }
+            })
+        );
+    } catch (e) {}
+
+    let wheelOpt = supportsPassive ? { passive: false } : false;
+    let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+    // call this to Disable
+    function disableScroll() {
+        window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+        window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+        window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+        window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+    }
+
+    // call this to Enable
+    function enableScroll() {
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+        window.removeEventListener('touchmove', preventDefault, wheelOpt);
+        window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 }

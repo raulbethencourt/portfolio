@@ -5,6 +5,7 @@ const peach = 'url(' + require(`@/assets/images/tetrisBlocks/peach_block.png`) +
 const green = 'url(' + require(`@/assets/images/tetrisBlocks/green_block.png`) + ')';
 const yellow = 'url(' + require(`@/assets/images/tetrisBlocks/yellow_block.png`) + ')';
 const colors = [blue, purple, peach, green, yellow];
+const colorsPhone = ['#fe8019', '#fb4934', '#d3869b', '#b8bb26', '#83a598'];
 
 //constants
 const width = 10;
@@ -66,6 +67,7 @@ export {
     yellow,
     width,
     colors,
+    colorsPhone,
     lTetromino,
     zTetromino,
     tTetromino,
@@ -73,5 +75,5 @@ export {
     theTetrominoes,
     displayWidth,
     displayIndex,
-    upNextTetrominoes,
+    upNextTetrominoes
 };
