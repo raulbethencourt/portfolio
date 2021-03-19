@@ -1,7 +1,6 @@
 .tetris-section {
-    min-height: 100vh;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    min-height: fit-content;
+    padding: 25px 0;
 
     .tetris-title {
         padding: 0 25px;
@@ -16,40 +15,38 @@
     }
 
     .tetris__grid {
-        max-width: 250px;
-        min-width: 250px;
+        width: 200px;
 
         .square {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
         }
     }
 
     .v-sheet {
-        width: fit-content;
-        padding: 0 20px;
+        height: fit-content;
+        padding: 5px;
+        font-family: 'DotGothic16', sans-serif;
 
         .mini-tetris__grid {
-            max-width: 100px;
-            min-width: 100px;
+            width: 80px;
 
             .square {
-                width: 25px;
-                height: 25px;
+                width: 20px;
+                height: 20px;
             }
         }
 
         .score {
-            font-family: 'DotGothic16', sans-serif;
+            font-weight: bold;
             letter-spacing: 2px;
 
-            .chip {
-                padding: 5px 15px;
+            .v-chip.v-size--default {
+                font-size: 0.75rem;
             }
         }
 
         .v-btn__content {
-            font-family: 'DotGothic16', sans-serif;
             font-size: 0.75rem;
             font-weight: bold;
             letter-spacing: 2px;
@@ -57,17 +54,25 @@
     }
 
     .gameover {
+        font-family: 'DotGothic16', sans-serif;
+
         .gameover-text {
-            font-size: 6rem;
-            font-family: 'DotGothic16', sans-serif;
+            font-size: 3rem;
             font-weight: bold;
             letter-spacing: 2px;
             white-space: nowrap;
         }
 
+        .score {
+            font-weight: bold;
+
+            .v-chip.v-size--default {
+                font-size: 0.75rem;
+            }
+        }
+
         .gameover-btn {
-            font-family: 'DotGothic16', sans-serif;
-            font-size: 1rem;
+            font-size: 1.25rem;
             font-weight: bold;
             letter-spacing: 2px;
         }
@@ -98,28 +103,16 @@
     background-color: $bg_dark2;
 }
 
-@media #{$large-up} {
+@media #{$medium-up} {
     .tetris-section {
-        min-height: 100vh;
-        padding-top: 75px;
-        padding-bottom: 100px;
-
         .tetris-title {
-            width: 550px;
-
-            border: 5px solid currentColor;
-            border-radius: 50px 10px;
-            background-color: $bright_aqua;
+            width: 280px;
             box-shadow: 0px 7px 20px 0px;
-
-            font-family: $bungee;
-            font-size: 6rem;
-            text-align: center;
+            font-size: 3rem;
         }
 
         .tetris__grid {
-            max-width: 300px;
-            min-width: 300px;
+            width: 300px;
 
             .square {
                 width: 30px;
@@ -128,17 +121,78 @@
         }
 
         .v-sheet {
-            width: fit-content;
-            padding: 0 20px;
+            padding: 10px;
 
             .mini-tetris__grid {
-                max-width: 120px;
-                min-width: 120px;
+                width: 120px;
 
                 .square {
                     width: 30px;
                     height: 30px;
                 }
+            }
+
+            .score {
+                .v-chip.v-size--default {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .gameover {
+            .gameover-text {
+                font-size: 4rem;
+            }
+
+            .score {
+                .v-chip.v-size--default {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .gameover-btn {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media #{$large-up} {
+    .tetris-section {
+        min-height: 100vh;
+        padding: 75px 0;
+
+        .tetris-title {
+            width: 550px;
+            font-size: 6rem;
+        }
+
+        .tetris__grid {
+            width: 350px;
+
+            .square {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        .v-sheet {
+            padding: 20px;
+
+            .mini-tetris__grid {
+                width: 140px;
+
+                .square {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+
+        .gameover {
+            .gameover-text {
+                font-size: 6rem;
+                letter-spacing: 2px;
             }
         }
     }

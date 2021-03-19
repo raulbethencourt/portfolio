@@ -6,7 +6,6 @@ import {
     yellow,
     width,
     colors,
-    colorsPhone,
     lTetromino,
     zTetromino,
     tTetromino,
@@ -17,7 +16,7 @@ import {
     upNextTetrominoes
 } from '~/js/tetris/tetris.setup.js';
 
-export function tetris($vuetify) {
+export function tetris() {
     //DOM objects
     const grid = document.getElementById('grid');
     const scoreDisplay = document.getElementById('score');
@@ -73,15 +72,18 @@ export function tetris($vuetify) {
 
     //restart btn
     restartBtn.addEventListener('click', () => {
+        //add grid
+        grid.classList.remove('d-none');
+        grid.classList.add('d-flex');
+
         //remove any trace of a tetromino form the entire grid
         displayGridSquares.forEach(square => {
             square.classList.remove('tetromino');
             square.classList.remove('taken');
             square.style.backgroundImage = '';
-            square.style.backgroundColor = '';
         });
 
-        //show gameOver
+        //hide gameOverBlock
         gameOverBlock.classList.add('d-none');
         gameOverBlock.classList.remove('d-flex');
 
@@ -116,11 +118,7 @@ export function tetris($vuetify) {
     function draw() {
         current.forEach(i => {
             squares[currentPosition + i].classList.add('tetromino');
-            if ($vuetify) {
-                squares[currentPosition + i].style.backgroundImage = colors[random];
-            } else {
-                squares[currentPosition + i].style.backgroundColor = colorsPhone[random];
-            }
+            squares[currentPosition + i].style.backgroundImage = colors[random];
             squares[currentPosition + i].style.backgroundSize = '100%';
         });
     }
@@ -130,7 +128,6 @@ export function tetris($vuetify) {
         current.forEach(i => {
             squares[currentPosition + i].classList.remove('tetromino');
             squares[currentPosition + i].style.backgroundImage = '';
-            squares[currentPosition + i].style.backgroundColor = '';
         });
     }
 
@@ -256,17 +253,12 @@ export function tetris($vuetify) {
         displaySquares.forEach(square => {
             square.classList.remove('tetromino');
             square.style.backgroundImage = '';
-            square.style.backgroundColor = '';
         });
 
         //display new tetromino
         upNextTetrominoes[nextRandom].forEach(i => {
             displaySquares[displayIndex + i].classList.add('tetromino');
-            if ($vuetify) {
-                displaySquares[displayIndex + i].style.backgroundImage = colors[nextRandom];
-            } else {
-                displaySquares[displayIndex + i].style.backgroundColor = colorsPhone[nextRandom];
-            }
+            displaySquares[displayIndex + i].style.backgroundImage = colors[nextRandom];
             displaySquares[displayIndex + i].style.backgroundSize = '100%';
         });
     }
@@ -293,7 +285,6 @@ export function tetris($vuetify) {
                     squares[i].classList.remove('taken');
                     squares[i].classList.remove('tetromino');
                     squares[i].style.backgroundImage = '';
-                    squares[i].style.backgroundColor = '';
                 });
                 const squaresRemoved = squares.splice(i, width);
                 squares = squaresRemoved.concat(squares);
@@ -312,6 +303,10 @@ export function tetris($vuetify) {
             //remove game score
             scoreBlock.classList.remove('d-flex');
             scoreBlock.classList.add('d-none');
+
+            //remove grid
+            grid.classList.remove('d-flex');
+            grid.classList.add('d-none');
 
             //add total score
             gScore.innerHTML = score;

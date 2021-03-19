@@ -128,7 +128,7 @@
             <slot />
             <v-footer v-bind="localAttrs" :padless="padless">
                 <v-card
-                    height="230px"
+                    height="190"
                     dark
                     flat
                     tile
