@@ -35,7 +35,7 @@
         "title": "Projets",
         "works": [
             {
-                "title": "Plataforme C&P",
+                "title": "lateforme pedgogique pour C&P",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/plataform",
                 "description": "Dans ce projet je réalise une plateforme pédagogique, spécialement conçue pour l'association Contact et promotion.",
@@ -64,10 +64,10 @@
                 "btn": false
             },
             {
-                "title": "Agence inmobilier",
+                "title": "Agence immobiliere",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/inmogence",
-                "description": "Dans ce projet j'ai suivi un tutoriel grafikart, pour apprendre la conception d'un site pur une agence immobilière. ",
+                "description": "Dans ce projet j'ai suivi un tutoriel grafikart, pour apprendre la conception d'un site pour une agence immobilière.",
                 "icons": [
                     { "name": "mdi-bootstrap", "color": "#fabd2f" },
                     { "name": "mdi-language-php", "color": "#b8bb26" },
@@ -81,7 +81,7 @@
                 "title": "Todo-list",
                 "url": "https://raulbethencourt.github.io/todo_list/",
                 "git": "https://github.com/raulbethencourt/todo_list",
-                "description": "Dans ce tutoriel, j'ai créée une application de liste de tâches avec HTML, SASS / CSS et Vanilla Javascript. L'application ToDo sera réactive en pensant d'abord au mobile. L'application ToDo sera également conçue avec l'accessibilité (A11y) à l'esprit pour la navigation au clavier et les lecteurs d'écran. Nous utiliserons également l'API de stockage Web pour créer un magasin de données persistant afin que nos éléments de liste réapparaissent à chaque fois que nous visitons l'application Web.",
+                "description": "Dans ce tutoriel, j'ai créé une application de liste de tâches avec HTML, SASS / CSS et Vanilla Javascript. L'application ToDo sera responsif en pensant d'abord au mobile. L'application sera également conçue avec l'accessibilité (A11y) à l'esprit pour la navigation au clavier et les lecteurs d'écran. Nous utiliserons également l'API de stockage Web pour créer un magasin des données persistants afin que nos éléments de liste réapparaissent à chaque fois que nous utilisons l'application Web.",
                 "icons": [
                     { "name": "mdi-language-javascript", "color": "#d3869b" },
                     { "name": "mdi-sass", "color": "#fabd2f" },
@@ -129,7 +129,7 @@
                 "company": "Agence My Client is Rich",
                 "city": "Strasbourg, Grand Est",
                 "description": [
-                    "Dans le cadre de cette poste,  j'ai été amené à réaliser les missions suivantes:",
+                    "Dans le cadre de ce poste,  j'ai été amené à réaliser les missions suivantes :",
                     "Développement de sites sur Wordpress",
                     "Maintenance de sites internet",
                     "Intégration HTML/CSS"
@@ -171,7 +171,7 @@
                 "school": "Elan formation",
                 "city": "strasbourg",
                 "description": [
-                    "Le développeur web et web mobile développe ou fait évoluer des applications orientées web, ou web mobile ou les deux à la fois, en respectant les normes et standards reconnus par la profession et en suivant l'état de l'art de la sécurité informatique à toutes les étapes. Ces applications sont destinées à des internautes ou des salariés d'entreprise."
+                    "Le développeur web et web mobile développe ou fait évoluer des applications orientées web, ou web mobile ou les deux à la fois, en respectant les normes et standards reconnus par la profession et en suivant l'état de l'art de la sécurité informatique à toutes les étapes."
                 ],
                 "year": "2020"
             },
@@ -198,7 +198,7 @@
                 "school": "Universidad de La Laguna",
                 "city": "la laguna - Spain",
                 "description": [
-                    "Le baccalauréat en beaux-arts de l'Université de La Laguna vise à former des artistes et des professionnels des arts visuels avec des compétences dans les processus de création et / ou d'expérimentation interdisciplinaire dans tous les domaines de travail qui englobent les arts visuels au 21e siècle."
+                    "Le Master en beaux-arts de l'Université de La Laguna vise à former des artistes et des professionnels des arts visuels avec des compétences dans les processus de création et / ou d'expérimentation interdisciplinaire dans tous les domaines de travail qui englobent les arts visuels au 21e siècle."
                 ],
                 "year": "2007"
             }
