@@ -12,7 +12,7 @@
                 </v-col>
             </v-row>
             <v-row>
-                <v-col cols="10" offset="1" md="8" offset-md="2" class="mb-15">
+                <v-col cols="10" offset="1" md="6" offset-md="3" class="mb-15">
                     <v-form
                         ref="form"
                         v-model="valid"
