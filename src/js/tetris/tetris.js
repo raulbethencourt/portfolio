@@ -80,7 +80,7 @@ export function tetris() {
         displayGridSquares.forEach(square => {
             square.classList.remove('tetromino');
             square.classList.remove('taken');
-            square.style.backgroundImage = '';
+            square.style.backgroundImage = 'none';
         });
 
         //hide gameOverBlock
@@ -127,7 +127,7 @@ export function tetris() {
     function undraw() {
         current.forEach(i => {
             squares[currentPosition + i].classList.remove('tetromino');
-            squares[currentPosition + i].style.backgroundImage = '';
+            squares[currentPosition + i].style.backgroundImage = 'none';
         });
     }
 
@@ -252,7 +252,7 @@ export function tetris() {
         //remove any trace of a tetromino form the entire grid
         displaySquares.forEach(square => {
             square.classList.remove('tetromino');
-            square.style.backgroundImage = '';
+            square.style.backgroundImage = 'none';
         });
 
         //display new tetromino
@@ -284,7 +284,7 @@ export function tetris() {
                 row.forEach(i => {
                     squares[i].classList.remove('taken');
                     squares[i].classList.remove('tetromino');
-                    squares[i].style.backgroundImage = '';
+                    squares[i].style.backgroundImage = 'none';
                 });
                 const squaresRemoved = squares.splice(i, width);
                 squares = squaresRemoved.concat(squares);
