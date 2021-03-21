@@ -26,7 +26,6 @@ module.exports = {
             }
         }
     ],
-    preload: { mask: '.js$' },
     chainWebpack(config) {
         // Load variables for all vue-files
         const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];

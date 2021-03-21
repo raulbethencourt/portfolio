@@ -9,6 +9,7 @@
                     ? require(`@/assets/images/dark-bg.png`)
                     : require(`@/assets/images/light-bg.png`)
             "
+            alt="landscape"
             height="auto"
         >
             <v-row class="d-flex justify-md-space-center justify-center align-center">
