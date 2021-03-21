@@ -1,11 +1,11 @@
-const path = require('path')
+const path = require('path');
 
 function addStyleResource(rule) {
     rule.use('style-resource')
         .loader('style-resources-loader')
         .options({
             patterns: [path.resolve(__dirname, './src/assets/sass/*.scss')]
-        })
+        });
 }
 
 module.exports = {
@@ -28,16 +28,16 @@ module.exports = {
     ],
     chainWebpack(config) {
         // Load variables for all vue-files
-        const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+        const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
 
-        types.forEach(type => {
-            addStyleResource(config.module.rule('scss').oneOf(type))
-        })
+        types.forEach((type) => {
+            addStyleResource(config.module.rule('scss').oneOf(type));
+        });
 
         config.module
             .rule('pdf')
             .test(/\.pdf$/)
             .use('file-loader')
-            .loader('file-loader')
+            .loader('file-loader');
     }
-}
+};

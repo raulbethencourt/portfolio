@@ -8,7 +8,49 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
-export default function(Vue, { appOptions, head }) {
+export default function (Vue, { appOptions, head }) {
+    head.meta.push({
+        name: 'title',
+        content: 'Raul Bethencourt(G) - Portfolio'
+    });
+
+    head.meta.push({
+        name: 'author',
+        content: 'Raul Bethencourt Gonzalez'
+    });
+
+    head.meta.push({
+        name: 'description',
+        content:
+            'This is my personal portfolio built with framework Gridsome based in the technologies Vue.Js and GraphQL.'
+    });
+
+    head.meta.push({
+        name: 'keywords',
+        content: 'Raul Bethencourt, Gridsome, Vuejs, Portfolio, GraphQL'
+    });
+
+    head.meta.push({
+        name: 'robots',
+        content: 'index,follow'
+    });
+
+    head.meta.push({
+        http: 'Content-Security-Policy',
+        content: 'default-src "self"'
+    });
+
+    //TODO fix CSP
+    head.meta.push({
+        'http-equiv': 'Content-Security-Policy',
+        content: "default-src 'self';"
+    });
+
+    head.link.push({
+        rel: 'canonical',
+        href: 'https://raulbethencourt.com'
+    });
+
     head.link.push({
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'

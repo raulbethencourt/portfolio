@@ -23,7 +23,7 @@ import Testimonials from '@/components/Testimonials.vue';
 
 export default {
     metaInfo: {
-        title: 'Raul Beta (G)'
+        title: 'Raul Beta(G)'
     },
     components: {
         About,

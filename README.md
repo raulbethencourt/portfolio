@@ -1,8 +1,6 @@
 # RAUL PORTFOLIO
 
-## This is my personal portfolio built with Vue.Js and Gridsome
-
-Gridsome use also the GraphQL technologie
+## This is my personal portfolio built with framework Gridsome based in the technologies Vue.Js and GraphQL
 
 ## Default starter for Gridsome
 
