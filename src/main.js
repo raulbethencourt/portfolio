@@ -32,18 +32,7 @@ export default function (Vue, { appOptions, head }) {
 
     head.meta.push({
         name: 'robots',
-        content: 'index,follow'
-    });
-
-    head.meta.push({
-        http: 'Content-Security-Policy',
-        content: 'default-src "self"'
-    });
-
-    //TODO fix CSP
-    head.meta.push({
-        'http-equiv': 'Content-Security-Policy',
-        content: "default-src 'self';"
+        content: 'index, follow'
     });
 
     head.link.push({
@@ -65,11 +54,6 @@ export default function (Vue, { appOptions, head }) {
         rel: 'stylesheet',
         href:
             'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&family=DotGothic16&display=swap'
-    });
-
-    head.link.push({
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/aos@next/dist/aos.css'
     });
 
     head.link.push({

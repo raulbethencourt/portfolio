@@ -205,7 +205,6 @@ export default {
         }
     },
     mounted() {
-        console.log(this.$vuetify.breakpoint.name);
         switch (this.$vuetify.breakpoint.name) {
             case 'xs':
                 this.mini = false;
