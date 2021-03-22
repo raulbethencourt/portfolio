@@ -19,7 +19,9 @@ module.exports = {
                     'en',
                     'es'
                 ],
+                fallbackLocale: 'fr',
                 defaultLocale: 'fr',
+                rewriteDefaultLanguage: true,
                 enablePathGeneration: false,
                 routes: require('./routes.js'), // load path translation declaration from external file
                 messages: {}

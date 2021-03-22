@@ -174,7 +174,7 @@ export default {
             pdfLink: require('@/assets/CV_Raul_Bethencourt.pdf'),
             drawer: false,
             group: null,
-            mini: true,
+            mini: null,
             padless: true,
             variant: 'default'
         };
