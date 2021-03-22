@@ -1,4 +1,10 @@
 module.exports = {
+    fr: [
+        {
+            path: '/fr/',
+            component: './src/pages/Index.vue'
+        }
+    ],
     en: [
         {
             path: '/en/',
@@ -10,11 +16,5 @@ module.exports = {
             path: '/es/',
             component: './src/pages/Index.vue'
         }
-    ],
-    fr: [
-        {
-            path: '/fr/',
-            component: './src/pages/Index.vue'
-        }
     ]
-}
+};

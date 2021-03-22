@@ -15,8 +15,8 @@ module.exports = {
             options: {
                 locales: [
                     // locales list
-                    'en',
                     'fr',
+                    'en',
                     'es'
                 ],
                 defaultLocale: 'fr',
