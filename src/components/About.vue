@@ -21,11 +21,7 @@
                                 ? require(`@/assets/images/profile-dark.png`)
                                 : require(`@/assets/images/profile-light.png`)
                         "
-                        :class="
-                            $vuetify.theme.dark
-                                ? 'dark-profile'
-                                : 'light-profile'
-                        "
+                        :class="$vuetify.theme.dark ? 'dark-profile' : 'light-profile'"
                         class="rounded-circle portrait"
                     />
                 </v-col>
@@ -39,14 +35,17 @@
                         {{ $page.texts.edges[0].node.about.description.text }}
                     </h6>
 
-                    <v-expansion-panels class="mt-5">
+                    <v-expansion-panels v-model="panel" class="mt-5" accordion multiple>
                         <v-expansion-panel
                             v-for="(text, i) in $page.texts.edges[0].node.about.description.list"
                             :key="i"
                             :class="$vuetify.theme.dark ? 'dark-panel' : 'light-panel'"
                         >
-                            <v-expansion-panel-header expand-icon="mdi-menu-down" class="font-weight-bold">
-                                {{ i + 1 }} 
+                            <v-expansion-panel-header
+                                expand-icon="mdi-menu-down"
+                                class="font-weight-bold"
+                            >
+                                {{ i + 1 }}
                             </v-expansion-panel-header>
                             <v-expansion-panel-content>
                                 {{ text }}
@@ -62,7 +61,8 @@
 <script>
 export default {
     data: () => ({
-        show: false
+        show: false,
+        panel: [0]
     })
 };
 </script>
