@@ -95,11 +95,6 @@ export default function (Vue, { appOptions, head }) {
         }
     };
 
-    // locals hot reload
-    appOptions.i18n.setLocaleMessage('fr', require('@/locales/fr.json'));
-    appOptions.i18n.setLocaleMessage('es', require('@/locales/es.json'));
-    appOptions.i18n.setLocaleMessage('en', require('@/locales/en.json'));
-
     //opts includes, vuetify themes, icons, etc.
     Vue.use(Vuetify);
     appOptions.vuetify = new Vuetify(opts);
