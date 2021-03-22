@@ -6,7 +6,7 @@
         <v-parallax
             :src="
                 $vuetify.theme.dark
-                    ? require(`@/assets/images/dark-bg.png`)
+                    ? require(`@/assets/images/dark-bg.jpg`)
                     : require(`@/assets/images/light-bg.png`)
             "
             alt="landscape"
@@ -18,8 +18,8 @@
                         alt="profile image"
                         :src="
                             $vuetify.theme.dark
-                                ? require(`@/assets/images/profile-dark.png`)
-                                : require(`@/assets/images/profile-light.png`)
+                                ? require(`@/assets/images/profile-dark.jpg`)
+                                : require(`@/assets/images/profile-light.jpg`)
                         "
                         :class="$vuetify.theme.dark ? 'dark-profile' : 'light-profile'"
                         class="rounded-circle portrait"

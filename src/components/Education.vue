@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 .v-window {
-    background-image: url('../assets/images/diplome.png');
+    background-image: url('../assets/images/diplome.jpg');
     background-size: 100% 100%;
 }
 </style>
