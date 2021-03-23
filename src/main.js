@@ -44,33 +44,37 @@ export default function (Vue, { appOptions, head }) {
 
     head.link.push({
         rel: 'preload',
+        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
         as: 'style',
-        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
+        crossorigin: true
     });
 
     head.link.push({
         rel: 'preload',
+        href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,900',
         as: 'style',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,900'
+        crossorigin: true
     });
 
     head.link.push({
         rel: 'preload',
-        as: 'style',
         href:
-            'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&family=DotGothic16&display=swap'
-    });
-
-    head.link.push({
-        rel: 'preload',
+            'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&family=DotGothic16&display=swap',
         as: 'style',
-        href: 'https://unpkg.com/aos@next/dist/aos.css'
+        crossorigin: true
     });
 
     head.link.push({
         rel: 'preload',
-        as: 'image',
-        href: darkBg
+        href: 'https://unpkg.com/aos@next/dist/aos.css',
+        as: 'style',
+        crossorigin: true
+    });
+
+    head.link.push({
+        rel: 'preload',
+        href: darkBg,
+        as: 'image'
     });
 
     head.script.push({
