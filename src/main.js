@@ -43,23 +43,27 @@ export default function (Vue, { appOptions, head }) {
     });
 
     head.link.push({
-        rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
+        rel: 'preload',
+        as: 'style',
+        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
     });
 
     head.link.push({
-        rel: 'stylesheet',
+        rel: 'preload',
+        as: 'style',
         href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,900'
     });
 
     head.link.push({
-        rel: 'stylesheet',
+        rel: 'preload',
+        as: 'style',
         href:
             'https://fonts.googleapis.com/css2?Space+Mono:wght@700&family=Bungee+Shade&family=Tomorrow:wght@800&family=DotGothic16&display=swap'
     });
 
     head.link.push({
-        rel: 'stylesheet',
+        rel: 'preload',
+        as: 'style',
         href: 'https://unpkg.com/aos@next/dist/aos.css'
     });
 
