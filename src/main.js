@@ -8,6 +8,8 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
+const darkBg = require(`@/assets/images/dark-bg.jpg`);
+
 export default function (Vue, { appOptions, head }) {
     head.meta.push({
         name: 'title',
@@ -42,12 +44,13 @@ export default function (Vue, { appOptions, head }) {
 
     head.link.push({
         rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
+        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
+        disabled: true
     });
 
     head.link.push({
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
+        href: 'https://fonts.googleapis.com/css?family=Roboto:500,900'
     });
 
     head.link.push({
@@ -59,6 +62,12 @@ export default function (Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
         href: 'https://unpkg.com/aos@next/dist/aos.css'
+    });
+
+    head.link.push({
+        rel: 'preload',
+        as: 'image',
+        href: darkBg
     });
 
     head.script.push({
