@@ -1,4 +1,4 @@
-const nodeExternals = require('webpack-node-externals');
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 
 module.exports = function (api) {
     api.chainWebpack((config, { isServer }) => {
