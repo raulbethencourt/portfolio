@@ -8,7 +8,7 @@ import DefaultLayout from '~/layouts/Default.vue';
 //custom scss
 import '~/assets/sass/styles.scss';
 
-const darkBg = require(`@/assets/images/dark-bg.jpg`);
+const darkBg = require(`@/assets/images/dark-bg.webp`);
 
 export default function (Vue, { appOptions, head }) {
     head.meta.push({
@@ -45,12 +45,11 @@ export default function (Vue, { appOptions, head }) {
     head.link.push({
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
-        disabled: true
     });
 
     head.link.push({
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:500,900'
+        href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,900'
     });
 
     head.link.push({

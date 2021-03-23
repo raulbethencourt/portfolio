@@ -6,8 +6,8 @@
         <v-parallax
             :src="
                 $vuetify.theme.dark
-                    ? require(`@/assets/images/dark-bg.jpg`)
-                    : require(`@/assets/images/light-bg.png`)
+                    ? require(`@/assets/images/dark-bg.webp`)
+                    : require(`@/assets/images/light-bg.webp`)
             "
             alt="landscape"
             height="auto"
@@ -15,11 +15,14 @@
             <v-row class="d-flex justify-md-space-center justify-center align-center">
                 <v-col cols="12" md="5" class="d-flex justify-center">
                     <g-image
+                        width="500"
+                        height="auto"
+                        quality="75"
                         alt="profile image"
                         :src="
                             $vuetify.theme.dark
-                                ? require(`@/assets/images/profile-dark.jpg`)
-                                : require(`@/assets/images/profile-light.jpg`)
+                                ? require(`@/assets/images/profile-dark.webp`)
+                                : require(`@/assets/images/profile-light.webp`)
                         "
                         :class="$vuetify.theme.dark ? 'dark-profile' : 'light-profile'"
                         class="rounded-circle portrait"

@@ -21,14 +21,17 @@
     "vuetify-loader": "^1.7.2"
   },
   "devDependencies": {
+    "deepmerge": "^4.2.2",
     "eslint": "^7.19.0",
     "eslint-plugin-gridsome": "^1.6.1",
     "eslint-plugin-vue": "^7.5.0",
+    "fibers": "^5.0.0",
     "netlify-plugin-minify-html": "^0.3.1",
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.1",
+    "sass": "^1.32.8",
+    "sass-loader": "7.3.1",
     "style-resources-loader": "^1.4.1",
     "vue-eslint-parser": "^7.4.1",
+    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-node-externals": "^2.5.2"
   }
 }

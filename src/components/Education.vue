@@ -45,7 +45,7 @@
                                         <div class="d-flex justify-center img-container">
                                             <g-image
                                                 alt="certified"
-                                                :src="require(`@/assets/images/certified.png`)"
+                                                :src="require(`@/assets/images/certified.webp`)"
                                                 class="diplome-img mr-10 mb-5"
                                             />
                                         </div>
@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 .v-window {
-    background-image: url('../assets/images/diplome.jpg');
+    background-image: url('../assets/images/diplome.webp');
     background-size: 100% 100%;
 }
 </style>

@@ -1,4 +1,5 @@
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 function addStyleResource(rule) {
     rule.use('style-resource')
@@ -25,7 +26,7 @@ module.exports = {
                 enablePathGeneration: false,
                 routes: require('./routes.js'), // load path translation declaration from external file
                 messages: {
-                    'fr': require('./src/locales/fr.json'),
+                    fr: require('./src/locales/fr.json')
                     // 'es': require('./src/locales/es.json'),
                     // 'en': require('./src/locales/en.json')
                 }
@@ -45,5 +46,9 @@ module.exports = {
             .test(/\.pdf$/)
             .use('file-loader')
             .loader('file-loader');
+
+        config
+            .plugin('BundleAnalyzerPlugin')
+            .use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }]);
     }
 };
