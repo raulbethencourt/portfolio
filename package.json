@@ -31,7 +31,6 @@
     "sass-loader": "7.3.1",
     "style-resources-loader": "^1.4.1",
     "vue-eslint-parser": "^7.4.1",
-    "webpack-bundle-analyzer": "^4.4.0",
     "webpack-node-externals": "^2.5.2"
   }
 }

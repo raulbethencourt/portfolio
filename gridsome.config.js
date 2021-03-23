@@ -1,5 +1,4 @@
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 function addStyleResource(rule) {
     rule.use('style-resource')
@@ -46,9 +45,5 @@ module.exports = {
             .test(/\.pdf$/)
             .use('file-loader')
             .loader('file-loader');
-
-        config
-            .plugin('BundleAnalyzerPlugin')
-            .use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }]);
     }
 };
