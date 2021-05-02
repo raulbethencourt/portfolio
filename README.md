@@ -2,6 +2,8 @@
 
 ## This is my personal portfolio built with framework Gridsome based in the technologies Vue.Js and GraphQL
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d5880a6-4507-47d6-90df-3d48c7d45c67/deploy-status)](https://app.netlify.com/sites/raulbethencourt/deploys)
+
 ## Default starter for Gridsome
 
 This is the project you get when you run `gridsome create new-project`.

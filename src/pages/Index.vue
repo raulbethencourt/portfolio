@@ -56,7 +56,6 @@ query sidebar($locale: String) {
                     }
                 }
                 about {
-                    path
                     title
                     description {
                         text

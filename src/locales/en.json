@@ -21,10 +21,9 @@
         ]
     },
     "about": {
-        "path": "about",
         "title": "Hi, I'm Raul.",
         "description": {
-            "text": "My goal today is to establish my expertise as a web developer for an agency. For this, I have three pillars which are:",
+            "text": "My goal today is to establish my expertise as a web developer. For this, I have three pillars which are:",
             "list": [
                 "A technical pillar. I did my training at Élan and I am a specialist in PHP and the Symfony framework.",
                 "My second pillar is curiosity for technical innovations. What drives me right now is the use of JavaScript and in particular the Vue.js framework.",
@@ -36,10 +35,10 @@
         "title": "projects",
         "works": [
             {
-                "title": "Plataforme",
+                "title": "Educational platform for C&P",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/plataform",
-                "description": "A pedagogique platafomr, handcraft made for Contact et propotion.",
+                "description": "In this project I am creating an educational platform, specially designed for the Contact and Promotion association.",
                 "icons": [
                     { "name": "mdi-symfony", "color": "#fb4934" },
                     { "name": "mdi-language-php", "color": "#b8bb26" },
@@ -54,7 +53,7 @@
                 "title": "Dynamo-Location",
                 "url": "https://dynamo-location.fr/fr/",
                 "git": "",
-                "description": "In this project I actuallised the front side.",
+                "description": "For the dynamo project, I worked with a colleague to update the dynamo-location site. My main work was the integration of a model given by a graphic designer and the addition of some minor functionalities.",
                 "icons": [
                     { "name": "mdi-nuxt", "color": "#b8bb26" },
                     { "name": "mdi-vuejs", "color": "#fb4934" },
@@ -68,7 +67,7 @@
                 "title": "Agence inmobilier",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/inmogence",
-                "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
+                "description": "In this project I followed a grafikart tutorial, to learn how to build a site for a real estate agency.",
                 "icons": [
                     { "name": "mdi-bootstrap", "color": "#fabd2f" },
                     { "name": "mdi-language-php", "color": "#b8bb26" },
@@ -79,10 +78,10 @@
                 "btn": false
             },
             {
-                "title": "todo-list",
+                "title": "Todo-list",
                 "url": "https://raulbethencourt.github.io/todo_list/",
                 "git": "https://github.com/raulbethencourt/todo_list",
-                "description": "This is a vanilla Javascript project, to creates a ToDo App.",
+                "description": "In this tutorial, I've created a ToDo list app with HTML, SASS / CSS, and Vanilla Javascript. The ToDo application will be responsive by thinking first of the mobile. The app will also be designed with accessibility (A11y) in mind for keyboard navigation and screen readers. We'll also use the web storage API to create a persistent data store so that our list items reappear every time we use the web app.",
                 "icons": [
                     { "name": "mdi-language-javascript", "color": "#d3869b" },
                     { "name": "mdi-sass", "color": "#fabd2f" },
@@ -92,7 +91,7 @@
                 "btn": false
             },
             {
-                "title": "morpion",
+                "title": "Morpion",
                 "url": "https://raulbethencourt.github.io/morpion/",
                 "git": "https://github.com/raulbethencourt/morpion",
                 "description": "This is a JQuery project to do a Morpion Game",
@@ -106,7 +105,7 @@
                 "btn": false
             },
             {
-                "title": "cauldron-overflow",
+                "title": "Cauldron-overflow",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Here I have another Symfony project",
@@ -121,45 +120,45 @@
                 "btn": false
             }
         ],
-        "btns": ["explorer", "description"]
+        "btns": ["explore", "description", "exit"]
     },
     "experience": {
-        "title": "experience",
+        "title": "Experience",
         "jobs": [
             {
-                "title": "Développeur web front-end",
+                "title": "Développeur web",
                 "company": "Agence My Client is Rich",
                 "city": "Strasbourg, Grand Est",
                 "description": [
-                    "Dans le cadre de cette poste,  j'ai été amené à réaliser les missions suivantes:",
-                    "Développement de sites sur Wordpress",
-                    "Maintenance de sites internet",
-                    "Intégration HTML/CSS"
+                    "As part of this position, I was led to carry out the following missions:",
+                    "Website development on Wordpress",
+                    "Website maintenance",
+                    "HTML/CSS integration"
                 ],
                 "year": "2020"
             },
             {
-                "title": "Assistant charpentier",
+                "title": "Assistant carpenter",
                 "company": "Charpente Cri Gasser Fils",
                 "city": "Strasbourg, Grand Est",
-                "description": ["Fabrication et pose de charpentes. Pose de bardages."],
+                "description": ["Manufacture and installation of frames. Laying of cladding"],
                 "year": "2017"
             },
             {
-                "title": "Menuisier",
+                "title": "Joiner",
                 "company": "\"Arguion\", \"La Moderna\" et \"Ehalt\"",
                 "city": "Tenerife, Espagne et Strasbourg, Grand Est",
                 "description": [
-                    "Plusieurs postes comme menuisier (atelier et pose) dans différentes entreprises."
+                    "Several positions as joiner (workshop and installation) in different companies."
                 ],
                 "year": "2017"
             },
             {
-                "title": "Encadreur qualité",
+                "title": "Quality framer",
                 "company": "Artedrago sl",
                 "city": "La Orotava, Canaries, Espagne",
                 "description": [
-                    "Participation à toutes les étapes du processus de fabrication dans l'élaboration des cadres."
+                    "Participation in all stages of the manufacturing process in the development of frames."
                 ],
                 "year": "2012"
             }
