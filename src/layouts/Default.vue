@@ -158,6 +158,10 @@
                         <strong>{{ $page.texts.edges[0].node.footer.author }}</strong> /
                         {{ $page.texts.edges[0].node.footer.version }}
                     </v-card-text>
+
+                    <v-card-text class="white--text">
+                        {{ $page.texts.edges[0].node.footer.thanks}}
+                    </v-card-text>
                 </v-card>
             </v-footer>
         </v-main>

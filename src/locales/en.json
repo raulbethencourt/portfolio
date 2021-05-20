@@ -4,20 +4,56 @@
         "title": "raul",
         "subtitle": "dev web",
         "items": [
-            { "title": "About", "icon": "mdi-account-box-outline" },
-            { "title": "Projects", "icon": "mdi-console" },
-            { "title": "Experience", "icon": "mdi-account-hard-hat" },
-            { "title": "Education", "icon": "mdi-school-outline" },
-            { "title": "Skills", "icon": "mdi-hammer-wrench" },
-            { "title": "Testimonials", "icon": "mdi-account-voice" },
-            { "title": "Tetris", "icon": "mdi-nintendo-game-boy" },
-            { "title": "Contact", "icon": "mdi-message-text-outline" }
+            {
+                "title": "About",
+                "icon": "mdi-account-box-outline"
+            },
+            {
+                "title": "Projects",
+                "icon": "mdi-console"
+            },
+            {
+                "title": "Experience",
+                "icon": "mdi-account-hard-hat"
+            },
+            {
+                "title": "Education",
+                "icon": "mdi-school-outline"
+            },
+            {
+                "title": "Skills",
+                "icon": "mdi-hammer-wrench"
+            },
+            {
+                "title": "Testimonials",
+                "icon": "mdi-account-voice"
+            },
+            {
+                "title": "Tetris",
+                "icon": "mdi-nintendo-game-boy"
+            },
+            {
+                "title": "Contact",
+                "icon": "mdi-message-text-outline"
+            }
         ],
         "append": [
-            { "title": "Curriculum", "icon": "mdi-pdf-box" },
-            { "title": "", "icon": "mdi-map" },
-            { "title": "", "icon": "mdi-invert-colors" },
-            { "title": "Github", "icon": "mdi-github" }
+            {
+                "title": "Curriculum",
+                "icon": "mdi-pdf-box"
+            },
+            {
+                "title": "",
+                "icon": "mdi-map"
+            },
+            {
+                "title": "",
+                "icon": "mdi-invert-colors"
+            },
+            {
+                "title": "Github",
+                "icon": "mdi-github"
+            }
         ]
     },
     "about": {
@@ -40,11 +76,26 @@
                 "git": "https://github.com/raulbethencourt/plataform",
                 "description": "In this project I am creating an educational platform, specially designed for the Contact and Promotion association.",
                 "icons": [
-                    { "name": "mdi-symfony", "color": "#fb4934" },
-                    { "name": "mdi-language-php", "color": "#b8bb26" },
-                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
-                    { "name": "mdi-sass", "color": "#83a598" },
-                    { "name": "mdi-language-javascript", "color": "#d3869b" }
+                    {
+                        "name": "mdi-symfony",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-language-php",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-bootstrap",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-sass",
+                        "color": "#83a598"
+                    },
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    }
                 ],
                 "image": "plateforme",
                 "btn": false
@@ -55,10 +106,22 @@
                 "git": "",
                 "description": "For the dynamo project, I worked with a colleague to update the dynamo-location site. My main work was the integration of a model given by a graphic designer and the addition of some minor functionalities.",
                 "icons": [
-                    { "name": "mdi-nuxt", "color": "#b8bb26" },
-                    { "name": "mdi-vuejs", "color": "#fb4934" },
-                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
-                    { "name": "mdi-sass", "color": "#83a598" }
+                    {
+                        "name": "mdi-nuxt",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-vuejs",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-bootstrap",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-sass",
+                        "color": "#83a598"
+                    }
                 ],
                 "image": "dynamo",
                 "btn": false
@@ -69,10 +132,22 @@
                 "git": "https://github.com/raulbethencourt/inmogence",
                 "description": "In this project I followed a grafikart tutorial, to learn how to build a site for a real estate agency.",
                 "icons": [
-                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
-                    { "name": "mdi-language-php", "color": "#b8bb26" },
-                    { "name": "mdi-symfony", "color": "#fb4934" },
-                    { "name": "mdi-language-javascript", "color": "#d3869b" }
+                    {
+                        "name": "mdi-bootstrap",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-language-php",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-symfony",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    }
                 ],
                 "image": "inmoagence",
                 "btn": false
@@ -83,9 +158,18 @@
                 "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "In this tutorial, I've created a ToDo list app with HTML, SASS / CSS, and Vanilla Javascript. The ToDo application will be responsive by thinking first of the mobile. The app will also be designed with accessibility (A11y) in mind for keyboard navigation and screen readers. We'll also use the web storage API to create a persistent data store so that our list items reappear every time we use the web app.",
                 "icons": [
-                    { "name": "mdi-language-javascript", "color": "#d3869b" },
-                    { "name": "mdi-sass", "color": "#fabd2f" },
-                    { "name": "mdi-language-html5", "color": "#83a598" }
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    },
+                    {
+                        "name": "mdi-sass",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-language-html5",
+                        "color": "#83a598"
+                    }
                 ],
                 "image": "todo",
                 "btn": false
@@ -96,11 +180,19 @@
                 "git": "https://github.com/raulbethencourt/morpion",
                 "description": "This is a JQuery project to do a Morpion Game",
                 "icons": [
-                    { "name": "mdi-language-javascript", "color": "#83a598" },
-                    { "name": "mdi-language-html5", "color": "#b8bb26" },
-                    { "name": "mdi-language-css3", "color": "#fabd2f" }
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#83a598"
+                    },
+                    {
+                        "name": "mdi-language-html5",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-language-css3",
+                        "color": "#fabd2f"
+                    }
                 ],
-
                 "image": "morpion",
                 "btn": false
             },
@@ -110,17 +202,32 @@
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Here I have another Symfony project",
                 "icons": [
-                    { "name": "mdi-symfony", "color": "#fb4934" },
-                    { "name": "mdi-language-php", "color": "#b8bb26" },
-                    { "name": "mdi-language-javascript", "color": "#d3869b" },
-                    { "name": "mdi-language-css3", "color": "#fabd2f" }
+                    {
+                        "name": "mdi-symfony",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-language-php",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    },
+                    {
+                        "name": "mdi-language-css3",
+                        "color": "#fabd2f"
+                    }
                 ],
-
                 "image": "cauldron",
                 "btn": false
             }
         ],
-        "btns": ["explore", "description", "exit"]
+        "btns": [
+            "explore",
+            "description",
+            "exit"
+        ]
     },
     "experience": {
         "title": "Experience",
@@ -141,7 +248,9 @@
                 "title": "Assistant carpenter",
                 "company": "Charpente Cri Gasser Fils",
                 "city": "Strasbourg, Grand Est",
-                "description": ["Manufacture and installation of frames. Laying of cladding"],
+                "description": [
+                    "Manufacture and installation of frames. Laying of cladding"
+                ],
                 "year": "2017"
             },
             {
@@ -208,39 +317,126 @@
     "skills": {
         "title": "skills",
         "logos": [
-            { "icon": "vue", "url": "https://vuejs.org" },
-            { "icon": "js", "url": "https://www.javascript.com" },
-            { "icon": "gridsome", "url": "https://gridsome.org" },
-            { "icon": "nuxt", "url": "https://nuxtjs.org" },
-            { "icon": "php", "url": "https://www.php.net" },
-            { "icon": "symfony", "url": "https://symfony.com" },
-            { "icon": "linux", "url": "https://www.linux.org" },
-            { "icon": "mysql", "url": "https://www.mysql.com" },
-            { "icon": "css", "url": "https://www.w3.org/Style/CSS" },
-            { "icon": "html", "url": "https://html.com" },
-            { "icon": "docker", "url": "https://www.docker.com" },
-            { "icon": "git", "url": "https://git-scm.com" },
-            { "icon": "sass", "url": "https://sass-lang.com/" },
-            { "icon": "vsc", "url": "https://code.visualstudio.com" },
-            { "icon": "bootstrap", "url": "https://getbootstrap.com" },
-            { "icon": "devilbox", "url": "http://devilbox.org" },
-            { "icon": "doctrine", "url": "https://www.doctrine-project.org" },
-            { "icon": "jquery", "url": "https://jquery.com" },
-            { "icon": "gitkraken", "url": "https://www.gitkraken.com" },
-            { "icon": "node", "url": "https://nodejs.org/en" },
-            { "icon": "wordpress", "url": "http://https://wordpress.com" },
-            { "icon": "twig", "url": "https://twig.symfony.com" },
-            { "icon": "webpack", "url": "https://webpack.js.org" },
-            { "icon": "python", "url": "https://www.python.org" },
-            { "icon": "phpstorm", "url": "https://www.jetbrains.com/phpstorm" },
-            { "icon": "npm", "url": "https://www.npmjs.com" },
-            { "icon": "graphql", "url": "https://www.graphql.com" },
+            {
+                "icon": "vue",
+                "url": "https://vuejs.org"
+            },
+            {
+                "icon": "js",
+                "url": "https://www.javascript.com"
+            },
+            {
+                "icon": "gridsome",
+                "url": "https://gridsome.org"
+            },
+            {
+                "icon": "nuxt",
+                "url": "https://nuxtjs.org"
+            },
+            {
+                "icon": "php",
+                "url": "https://www.php.net"
+            },
+            {
+                "icon": "symfony",
+                "url": "https://symfony.com"
+            },
+            {
+                "icon": "linux",
+                "url": "https://www.linux.org"
+            },
+            {
+                "icon": "mysql",
+                "url": "https://www.mysql.com"
+            },
+            {
+                "icon": "css",
+                "url": "https://www.w3.org/Style/CSS"
+            },
+            {
+                "icon": "html",
+                "url": "https://html.com"
+            },
+            {
+                "icon": "docker",
+                "url": "https://www.docker.com"
+            },
+            {
+                "icon": "git",
+                "url": "https://git-scm.com"
+            },
+            {
+                "icon": "sass",
+                "url": "https://sass-lang.com/"
+            },
+            {
+                "icon": "vsc",
+                "url": "https://code.visualstudio.com"
+            },
+            {
+                "icon": "bootstrap",
+                "url": "https://getbootstrap.com"
+            },
+            {
+                "icon": "devilbox",
+                "url": "http://devilbox.org"
+            },
+            {
+                "icon": "doctrine",
+                "url": "https://www.doctrine-project.org"
+            },
+            {
+                "icon": "jquery",
+                "url": "https://jquery.com"
+            },
+            {
+                "icon": "gitkraken",
+                "url": "https://www.gitkraken.com"
+            },
+            {
+                "icon": "node",
+                "url": "https://nodejs.org/en"
+            },
+            {
+                "icon": "wordpress",
+                "url": "http://https://wordpress.com"
+            },
+            {
+                "icon": "twig",
+                "url": "https://twig.symfony.com"
+            },
+            {
+                "icon": "webpack",
+                "url": "https://webpack.js.org"
+            },
+            {
+                "icon": "python",
+                "url": "https://www.python.org"
+            },
+            {
+                "icon": "phpstorm",
+                "url": "https://www.jetbrains.com/phpstorm"
+            },
+            {
+                "icon": "npm",
+                "url": "https://www.npmjs.com"
+            },
+            {
+                "icon": "graphql",
+                "url": "https://www.graphql.com"
+            },
             {
                 "icon": "ajax",
                 "url": "https://developer.mozilla.org/fr/docs/Web/Guide/AJAX"
             },
-            { "icon": "composer", "url": "https://getcomposer.org" },
-            { "icon": "apache", "url": "https://apache.org" }
+            {
+                "icon": "composer",
+                "url": "https://getcomposer.org"
+            },
+            {
+                "icon": "apache",
+                "url": "https://apache.org"
+            }
         ]
     },
     "testimonials": {
@@ -267,7 +463,11 @@
     },
     "tetris": {
         "title": "tetris",
-        "data": ["score:", "lines:", "0"],
+        "data": [
+            "score:",
+            "lines:",
+            "0"
+        ],
         "btn": "Start/Pause"
     },
     "contact": {
@@ -296,6 +496,7 @@
             }
         ],
         "author": "Raul Bethencourt Gonzalez",
-        "version": "v1.0"
+        "version": "v1.0",
+        "thanks": "Un grand merci à Théodore Vogel pour l'illustration du portrait"
     }
 }

@@ -129,6 +129,7 @@ query sidebar($locale: String) {
                     }
                     author
                     version
+                    thanks
                 }
             }
         }
