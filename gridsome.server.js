@@ -18,7 +18,7 @@ module.exports = function (api) {
         });
 
         documents.addNode(English);
-        documents.addNode(French);
         documents.addNode(Spanish);
+        documents.addNode(French);
     });
 };
