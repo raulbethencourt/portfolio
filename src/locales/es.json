@@ -4,20 +4,56 @@
         "title": "raul",
         "subtitle": "prog web",
         "items": [
-            { "title": "Presentación", "icon": "mdi-account-box-outline" },
-            { "title": "Proyectos", "icon": "mdi-console" },
-            { "title": "Experiencia", "icon": "mdi-account-hard-hat" },
-            { "title": "Estudios", "icon": "mdi-school-outline" },
-            { "title": "Competencias", "icon": "mdi-hammer-wrench" },
-            { "title": "Testimonios", "icon": "mdi-account-voice" },
-            { "title": "Tetris", "icon": "mdi-nintendo-game-boy" },
-            { "title": "Contacto", "icon": "mdi-message-text-outline" }
+            {
+                "title": "Presentación",
+                "icon": "mdi-account-box-outline"
+            },
+            {
+                "title": "Proyectos",
+                "icon": "mdi-console"
+            },
+            {
+                "title": "Experiencia",
+                "icon": "mdi-account-hard-hat"
+            },
+            {
+                "title": "Estudios",
+                "icon": "mdi-school-outline"
+            },
+            {
+                "title": "Competencias",
+                "icon": "mdi-hammer-wrench"
+            },
+            {
+                "title": "Testimonios",
+                "icon": "mdi-account-voice"
+            },
+            {
+                "title": "Tetris",
+                "icon": "mdi-nintendo-game-boy"
+            },
+            {
+                "title": "Contacto",
+                "icon": "mdi-message-text-outline"
+            }
         ],
         "append": [
-            { "title": "Currículo", "icon": "mdi-pdf-box" },
-            { "title": "", "icon": "mdi-map" },
-            { "title": "", "icon": "mdi-invert-colors" },
-            { "title": "Github", "icon": "mdi-github" }
+            {
+                "title": "Currículo",
+                "icon": "mdi-pdf-box"
+            },
+            {
+                "title": "",
+                "icon": "mdi-map"
+            },
+            {
+                "title": "",
+                "icon": "mdi-invert-colors"
+            },
+            {
+                "title": "Github",
+                "icon": "mdi-github"
+            }
         ]
     },
     "about": {
@@ -35,18 +71,32 @@
         "title": "Proyectos",
         "works": [
             {
-                "title": "Plataforme",
+                "title": "Plataforma pedagogica para C&P",
                 "url": "https://www.youtube.com/channel/UClNOoE51btehVc78oOEIoig",
                 "git": "https://github.com/raulbethencourt/plataform",
-                "description": "A pedagogique platafomr, handcraft made for Contact et propotion.",
+                "description": "En este proyecto estoy creando una plataforma educativa, especialmente diseñada para la asociación Contacto y Promoción.",
                 "icons": [
-                    { "name": "mdi-symfony", "color": "#fb4934" },
-                    { "name": "mdi-language-php", "color": "#b8bb26" },
-                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
-                    { "name": "mdi-sass", "color": "#83a598" },
-                    { "name": "mdi-language-javascript", "color": "#d3869b" }
+                    {
+                        "name": "mdi-symfony",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-language-php",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-bootstrap",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-sass",
+                        "color": "#83a598"
+                    },
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    }
                 ],
-
                 "image": "plateforme",
                 "btn": false
             },
@@ -54,14 +104,25 @@
                 "title": "Dynamo-Location",
                 "url": "https://dynamo-location.fr/fr/",
                 "git": "",
-                "description": "In this project I actuallised the front side.",
+                "description": "Para el proyecto de dynamo, trabajé en equipo para actualizar la pagina web de Dynamo-Location. Mi trabajo principal fue la integración de una maqueta creada por un diseñador gráfico y la adición de algunas funcionalidades menores.",
                 "icons": [
-                    { "name": "mdi-nuxt", "color": "#b8bb26" },
-                    { "name": "mdi-vuejs", "color": "#fb4934" },
-                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
-                    { "name": "mdi-sass", "color": "#83a598" }
+                    {
+                        "name": "mdi-nuxt",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-vuejs",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-bootstrap",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-sass",
+                        "color": "#83a598"
+                    }
                 ],
-
                 "image": "dynamo",
                 "btn": false
             },
@@ -71,12 +132,23 @@
                 "git": "https://github.com/raulbethencourt/inmogence",
                 "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
                 "icons": [
-                    { "name": "mdi-bootstrap", "color": "#fabd2f" },
-                    { "name": "mdi-language-php", "color": "#b8bb26" },
-                    { "name": "mdi-symfony", "color": "#fb4934" },
-                    { "name": "mdi-language-javascript", "color": "#d3869b" }
+                    {
+                        "name": "mdi-bootstrap",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-language-php",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-symfony",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    }
                 ],
-
                 "image": "inmoagence",
                 "btn": false
             },
@@ -86,11 +158,19 @@
                 "git": "https://github.com/raulbethencourt/todo_list",
                 "description": "This is a vanilla Javascript project, to creates a ToDo App.",
                 "icons": [
-                    { "name": "mdi-language-javascript", "color": "#d3869b" },
-                    { "name": "mdi-sass", "color": "#fabd2f" },
-                    { "name": "mdi-language-html5", "color": "#83a598" }
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    },
+                    {
+                        "name": "mdi-sass",
+                        "color": "#fabd2f"
+                    },
+                    {
+                        "name": "mdi-language-html5",
+                        "color": "#83a598"
+                    }
                 ],
-
                 "image": "todo",
                 "btn": false
             },
@@ -100,11 +180,19 @@
                 "git": "https://github.com/raulbethencourt/morpion",
                 "description": "This is a JQuery project to do a Morpion Game",
                 "icons": [
-                    { "name": "mdi-language-javascript", "color": "#83a598" },
-                    { "name": "mdi-language-html5", "color": "#b8bb26" },
-                    { "name": "mdi-language-css3", "color": "#fabd2f" }
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#83a598"
+                    },
+                    {
+                        "name": "mdi-language-html5",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-language-css3",
+                        "color": "#fabd2f"
+                    }
                 ],
-
                 "image": "morpion",
                 "btn": false
             },
@@ -114,17 +202,31 @@
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
                 "description": "Here I have another Symfony project",
                 "icons": [
-                    { "name": "mdi-symfony", "color": "#fb4934" },
-                    { "name": "mdi-language-php", "color": "#b8bb26" },
-                    { "name": "mdi-language-javascript", "color": "#d3869b" },
-                    { "name": "mdi-language-css3", "color": "#fabd2f" }
+                    {
+                        "name": "mdi-symfony",
+                        "color": "#fb4934"
+                    },
+                    {
+                        "name": "mdi-language-php",
+                        "color": "#b8bb26"
+                    },
+                    {
+                        "name": "mdi-language-javascript",
+                        "color": "#d3869b"
+                    },
+                    {
+                        "name": "mdi-language-css3",
+                        "color": "#fabd2f"
+                    }
                 ],
-
                 "image": "cauldron",
                 "btn": false
             }
         ],
-        "btns": ["explorer", "description"]
+        "btns": [
+            "explorer",
+            "description"
+        ]
     },
     "experience": {
         "title": "Experiencia",
@@ -145,7 +247,9 @@
                 "title": "Assistant charpentier",
                 "company": "Charpente Cri Gasser Fils",
                 "city": "Strasbourg, Grand Est",
-                "description": ["Fabrication et pose de charpentes. Pose de bardages."],
+                "description": [
+                    "Fabrication et pose de charpentes. Pose de bardages."
+                ],
                 "year": "2017"
             },
             {
@@ -212,39 +316,126 @@
     "skills": {
         "title": "Skills",
         "logos": [
-            { "icon": "vue", "url": "https://vuejs.org" },
-            { "icon": "js", "url": "https://www.javascript.com" },
-            { "icon": "gridsome", "url": "https://gridsome.org" },
-            { "icon": "nuxt", "url": "https://nuxtjs.org" },
-            { "icon": "php", "url": "https://www.php.net" },
-            { "icon": "symfony", "url": "https://symfony.com" },
-            { "icon": "linux", "url": "https://www.linux.org" },
-            { "icon": "mysql", "url": "https://www.mysql.com" },
-            { "icon": "css", "url": "https://www.w3.org/Style/CSS" },
-            { "icon": "html", "url": "https://html.com" },
-            { "icon": "docker", "url": "https://www.docker.com" },
-            { "icon": "git", "url": "https://git-scm.com" },
-            { "icon": "sass", "url": "https://sass-lang.com/" },
-            { "icon": "vsc", "url": "https://code.visualstudio.com" },
-            { "icon": "bootstrap", "url": "https://getbootstrap.com" },
-            { "icon": "devilbox", "url": "http://devilbox.org" },
-            { "icon": "doctrine", "url": "https://www.doctrine-project.org" },
-            { "icon": "jquery", "url": "https://jquery.com" },
-            { "icon": "gitkraken", "url": "https://www.gitkraken.com" },
-            { "icon": "node", "url": "https://nodejs.org/en" },
-            { "icon": "wordpress", "url": "http://https://wordpress.com" },
-            { "icon": "twig", "url": "https://twig.symfony.com" },
-            { "icon": "webpack", "url": "https://webpack.js.org" },
-            { "icon": "python", "url": "https://www.python.org" },
-            { "icon": "phpstorm", "url": "https://www.jetbrains.com/phpstorm" },
-            { "icon": "npm", "url": "https://www.npmjs.com" },
-            { "icon": "graphql", "url": "https://www.graphql.com" },
+            {
+                "icon": "vue",
+                "url": "https://vuejs.org"
+            },
+            {
+                "icon": "js",
+                "url": "https://www.javascript.com"
+            },
+            {
+                "icon": "gridsome",
+                "url": "https://gridsome.org"
+            },
+            {
+                "icon": "nuxt",
+                "url": "https://nuxtjs.org"
+            },
+            {
+                "icon": "php",
+                "url": "https://www.php.net"
+            },
+            {
+                "icon": "symfony",
+                "url": "https://symfony.com"
+            },
+            {
+                "icon": "linux",
+                "url": "https://www.linux.org"
+            },
+            {
+                "icon": "mysql",
+                "url": "https://www.mysql.com"
+            },
+            {
+                "icon": "css",
+                "url": "https://www.w3.org/Style/CSS"
+            },
+            {
+                "icon": "html",
+                "url": "https://html.com"
+            },
+            {
+                "icon": "docker",
+                "url": "https://www.docker.com"
+            },
+            {
+                "icon": "git",
+                "url": "https://git-scm.com"
+            },
+            {
+                "icon": "sass",
+                "url": "https://sass-lang.com/"
+            },
+            {
+                "icon": "vsc",
+                "url": "https://code.visualstudio.com"
+            },
+            {
+                "icon": "bootstrap",
+                "url": "https://getbootstrap.com"
+            },
+            {
+                "icon": "devilbox",
+                "url": "http://devilbox.org"
+            },
+            {
+                "icon": "doctrine",
+                "url": "https://www.doctrine-project.org"
+            },
+            {
+                "icon": "jquery",
+                "url": "https://jquery.com"
+            },
+            {
+                "icon": "gitkraken",
+                "url": "https://www.gitkraken.com"
+            },
+            {
+                "icon": "node",
+                "url": "https://nodejs.org/en"
+            },
+            {
+                "icon": "wordpress",
+                "url": "http://https://wordpress.com"
+            },
+            {
+                "icon": "twig",
+                "url": "https://twig.symfony.com"
+            },
+            {
+                "icon": "webpack",
+                "url": "https://webpack.js.org"
+            },
+            {
+                "icon": "python",
+                "url": "https://www.python.org"
+            },
+            {
+                "icon": "phpstorm",
+                "url": "https://www.jetbrains.com/phpstorm"
+            },
+            {
+                "icon": "npm",
+                "url": "https://www.npmjs.com"
+            },
+            {
+                "icon": "graphql",
+                "url": "https://www.graphql.com"
+            },
             {
                 "icon": "ajax",
                 "url": "https://developer.mozilla.org/fr/docs/Web/Guide/AJAX"
             },
-            { "icon": "composer", "url": "https://getcomposer.org" },
-            { "icon": "apache", "url": "https://apache.org" }
+            {
+                "icon": "composer",
+                "url": "https://getcomposer.org"
+            },
+            {
+                "icon": "apache",
+                "url": "https://apache.org"
+            }
         ]
     },
     "testimonials": {
@@ -271,12 +462,22 @@
     },
     "tetris": {
         "title": "Tetris",
-        "data": ["marcador:", "lineas:", "0"],
+        "data": [
+            "marcador:",
+            "lineas:",
+            "0"
+        ],
         "btn": "Iniciar/Pausa"
     },
     "contact": {
         "title": "contact",
-        "items": ["name", "email", "message", "submit", "reset reCaptcha"]
+        "items": [
+            "name",
+            "email",
+            "message",
+            "submit",
+            "reset reCaptcha"
+        ]
     },
     "footer": {
         "icons": [
