@@ -127,10 +127,10 @@
                 "btn": false
             },
             {
-                "title": "Agence inmobilier",
+                "title": "Agencia inmobiliaria",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/inmogence",
-                "description": "Grafikart tutorial to learn how to use Symfony. Its realstates agency project.",
+                "description": "En este proyecto seguí un tutorial de grafikart, para aprender a diseñar una pagina web para una agencia inmobiliaria.",
                 "icons": [
                     {
                         "name": "mdi-bootstrap",
@@ -153,10 +153,10 @@
                 "btn": false
             },
             {
-                "title": "todo-list",
+                "title": "Todo-list",
                 "url": "https://raulbethencourt.github.io/todo_list/",
                 "git": "https://github.com/raulbethencourt/todo_list",
-                "description": "This is a vanilla Javascript project, to creates a ToDo App.",
+                "description": "En este tutorial, creé una aplicación de Todo-List con HTML, SASS / CSS y Vanilla Javascript. La aplicación ToDo responderá pensando primero en el móvil. La aplicación también esta diseñarada teniendo en cuenta la accesibilidad (A11y) para la navegación por teclado y los lectores de pantalla. También usé la API de almacenamiento web para crear un almacén de datos persistente para que los elementos de nuestra lista reaparezcan cada vez que usemos la aplicación web.",
                 "icons": [
                     {
                         "name": "mdi-language-javascript",
@@ -175,10 +175,10 @@
                 "btn": false
             },
             {
-                "title": "morpion",
+                "title": "3 en raya",
                 "url": "https://raulbethencourt.github.io/morpion/",
                 "git": "https://github.com/raulbethencourt/morpion",
-                "description": "This is a JQuery project to do a Morpion Game",
+                "description": "Este es un proyecto de JQuery para hacer un juego de Morpion.",
                 "icons": [
                     {
                         "name": "mdi-language-javascript",
@@ -197,10 +197,10 @@
                 "btn": false
             },
             {
-                "title": "cauldron-overflow",
+                "title": "Cauldron-overflow",
                 "url": "",
                 "git": "https://github.com/raulbethencourt/cauldron_overflow",
-                "description": "Here I have another Symfony project",
+                "description": "Aquí tengo otro proyecto de Symfony.",
                 "icons": [
                     {
                         "name": "mdi-symfony",
@@ -232,41 +232,41 @@
         "title": "Experiencia",
         "jobs": [
             {
-                "title": "Développeur web front-end",
-                "company": "Agence My Client is Rich",
+                "title": "Programador web front-end",
+                "company": "Agencia My Client is Rich",
                 "city": "Strasbourg, Grand Est",
                 "description": [
-                    "Dans le cadre de cette poste,  j'ai été amené à réaliser les missions suivantes:",
-                    "Développement de sites sur Wordpress",
-                    "Maintenance de sites internet",
-                    "Intégration HTML/CSS"
+                    "Como parte de este puesto, se me requirió realizar las siguientes misiones:",
+                    "Desarrollo de sitios en Wordpress",
+                    "Mantenimiento del sitio web",
+                    "Integración HTML / CSS"
                 ],
                 "year": "2020"
             },
             {
-                "title": "Assistant charpentier",
-                "company": "Charpente Cri Gasser Fils",
+                "title": "Ayudante de carpintero",
+                "company": "Carpinteria Cri Gasser Fils",
                 "city": "Strasbourg, Grand Est",
                 "description": [
-                    "Fabrication et pose de charpentes. Pose de bardages."
+                    "Fabricación e instalación de marcos. Instalación de revestimiento " 
                 ],
                 "year": "2017"
             },
             {
-                "title": "Menuisier",
+                "title": "Carpintero",
                 "company": "\"Arguion\", \"La Moderna\" et \"Ehalt\"",
-                "city": "Tenerife, Espagne et Strasbourg, Grand Est",
+                "city": "Tenerife, España y Estrasburgo, Grand Est ",                
                 "description": [
-                    "Plusieurs postes comme menuisier (atelier et pose) dans différentes entreprises."
+                    "Varios puestos como carpintero (taller e instalación) en diferentes empresas."                
                 ],
                 "year": "2017"
             },
             {
-                "title": "Encadreur qualité",
+                "title": "Enmarcador de calidad",
                 "company": "Artedrago sl",
                 "city": "La Orotava, Canaries, Espagne",
                 "description": [
-                    "Participation à toutes les étapes du processus de fabrication dans l'élaboration des cadres."
+                    "Participación en todas las etapas del proceso de fabricación en el desarrollo de marcos. "                
                 ],
                 "year": "2012"
             }
